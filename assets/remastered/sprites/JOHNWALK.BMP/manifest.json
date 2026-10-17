@@ -1,0 +1,696 @@
+{
+  "atlas": "johnwalk-remade-atlas.png",
+  "kind": "imagegen-redrawn",
+  "dimensions": [
+    1580,
+    995
+  ],
+  "columns": 10,
+  "rows": 4,
+  "frames": [
+    {
+      "index": 0,
+      "width": 160,
+      "height": 304,
+      "atlas_cell": [
+        0,
+        0,
+        182,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        33,
+        76
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 1,
+      "width": 192,
+      "height": 288,
+      "atlas_cell": [
+        134,
+        0,
+        340,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        42,
+        72
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    },
+    {
+      "index": 2,
+      "width": 192,
+      "height": 292,
+      "atlas_cell": [
+        292,
+        0,
+        498,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        41,
+        73
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 3,
+      "width": 160,
+      "height": 304,
+      "atlas_cell": [
+        450,
+        0,
+        656,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        33,
+        76
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 4,
+      "width": 160,
+      "height": 296,
+      "atlas_cell": [
+        608,
+        0,
+        814,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        39,
+        74
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 5,
+      "width": 192,
+      "height": 288,
+      "atlas_cell": [
+        766,
+        0,
+        972,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        43,
+        72
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    },
+    {
+      "index": 6,
+      "width": 192,
+      "height": 296,
+      "atlas_cell": [
+        924,
+        0,
+        1130,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        41,
+        74
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 7,
+      "width": 128,
+      "height": 300,
+      "atlas_cell": [
+        1082,
+        0,
+        1288,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        30,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 8,
+      "width": 160,
+      "height": 300,
+      "atlas_cell": [
+        1240,
+        0,
+        1446,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        37,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    },
+    {
+      "index": 9,
+      "width": 160,
+      "height": 296,
+      "atlas_cell": [
+        1398,
+        0,
+        1580,
+        274
+      ],
+      "source_bounds": [
+        0,
+        0,
+        37,
+        74
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 10,
+      "width": 160,
+      "height": 296,
+      "atlas_cell": [
+        0,
+        224,
+        182,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        35,
+        74
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 5
+    },
+    {
+      "index": 11,
+      "width": 128,
+      "height": 312,
+      "atlas_cell": [
+        134,
+        224,
+        340,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        27,
+        78
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 7
+    },
+    {
+      "index": 12,
+      "width": 160,
+      "height": 292,
+      "atlas_cell": [
+        292,
+        224,
+        498,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        37,
+        73
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 13,
+      "width": 32,
+      "height": 4,
+      "atlas_cell": [
+        450,
+        224,
+        656,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 5
+    },
+    {
+      "index": 14,
+      "width": 160,
+      "height": 292,
+      "atlas_cell": [
+        608,
+        224,
+        814,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        35,
+        73
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 8
+    },
+    {
+      "index": 15,
+      "width": 160,
+      "height": 292,
+      "atlas_cell": [
+        766,
+        224,
+        972,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        34,
+        73
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 5
+    },
+    {
+      "index": 16,
+      "width": 128,
+      "height": 296,
+      "atlas_cell": [
+        924,
+        224,
+        1130,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        32,
+        74
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 6
+    },
+    {
+      "index": 17,
+      "width": 160,
+      "height": 300,
+      "atlas_cell": [
+        1082,
+        224,
+        1288,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        36,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 18,
+      "width": 128,
+      "height": 308,
+      "atlas_cell": [
+        1240,
+        224,
+        1446,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        28,
+        77
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 19,
+      "width": 128,
+      "height": 304,
+      "atlas_cell": [
+        1398,
+        224,
+        1580,
+        523
+      ],
+      "source_bounds": [
+        0,
+        0,
+        27,
+        76
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 20,
+      "width": 96,
+      "height": 300,
+      "atlas_cell": [
+        0,
+        473,
+        182,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        24,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 21,
+      "width": 128,
+      "height": 300,
+      "atlas_cell": [
+        134,
+        473,
+        340,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        26,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 22,
+      "width": 128,
+      "height": 296,
+      "atlas_cell": [
+        292,
+        473,
+        498,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        30,
+        74
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 23,
+      "width": 128,
+      "height": 312,
+      "atlas_cell": [
+        450,
+        473,
+        656,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        25,
+        78
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 24,
+      "width": 128,
+      "height": 300,
+      "atlas_cell": [
+        608,
+        473,
+        814,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        28,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 25,
+      "width": 160,
+      "height": 296,
+      "atlas_cell": [
+        766,
+        473,
+        972,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        37,
+        74
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 26,
+      "width": 160,
+      "height": 292,
+      "atlas_cell": [
+        924,
+        473,
+        1130,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        38,
+        73
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 27,
+      "width": 128,
+      "height": 288,
+      "atlas_cell": [
+        1082,
+        473,
+        1288,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        29,
+        72
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 28,
+      "width": 128,
+      "height": 288,
+      "atlas_cell": [
+        1240,
+        473,
+        1446,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        32,
+        72
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 29,
+      "width": 128,
+      "height": 300,
+      "atlas_cell": [
+        1398,
+        473,
+        1580,
+        771
+      ],
+      "source_bounds": [
+        0,
+        0,
+        32,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 30,
+      "width": 160,
+      "height": 304,
+      "atlas_cell": [
+        0,
+        721,
+        182,
+        995
+      ],
+      "source_bounds": [
+        0,
+        0,
+        37,
+        76
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    },
+    {
+      "index": 31,
+      "width": 160,
+      "height": 288,
+      "atlas_cell": [
+        134,
+        721,
+        340,
+        995
+      ],
+      "source_bounds": [
+        0,
+        0,
+        34,
+        72
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 32,
+      "width": 160,
+      "height": 304,
+      "atlas_cell": [
+        292,
+        721,
+        498,
+        995
+      ],
+      "source_bounds": [
+        0,
+        0,
+        36,
+        76
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 33,
+      "width": 128,
+      "height": 308,
+      "atlas_cell": [
+        450,
+        721,
+        656,
+        995
+      ],
+      "source_bounds": [
+        0,
+        0,
+        32,
+        77
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 34,
+      "width": 160,
+      "height": 292,
+      "atlas_cell": [
+        608,
+        721,
+        814,
+        995
+      ],
+      "source_bounds": [
+        0,
+        0,
+        33,
+        73
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 35,
+      "width": 128,
+      "height": 300,
+      "atlas_cell": [
+        766,
+        721,
+        972,
+        995
+      ],
+      "source_bounds": [
+        0,
+        0,
+        30,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    }
+  ]
+}

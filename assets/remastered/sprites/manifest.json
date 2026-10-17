@@ -1,0 +1,662 @@
+{
+  "source": "Built-in image_gen",
+  "atlas": "johnwalk-remade-atlas.png",
+  "generated_dimensions": [
+    1580,
+    995
+  ],
+  "columns": 10,
+  "rows": 4,
+  "scale": 4,
+  "kind": "AI-redrawn artwork, source pose grid; per-cell crop registered to original nontransparent bounds",
+  "frames": [
+    {
+      "index": 0,
+      "file": "sprites/JOHNWALK.BMP/000.rgba",
+      "width": 160,
+      "height": 304,
+      "source_bounds": [
+        0,
+        0,
+        33,
+        76
+      ],
+      "atlas_cell": [
+        0,
+        0,
+        158,
+        249
+      ]
+    },
+    {
+      "index": 1,
+      "file": "sprites/JOHNWALK.BMP/001.rgba",
+      "width": 192,
+      "height": 288,
+      "source_bounds": [
+        0,
+        0,
+        42,
+        72
+      ],
+      "atlas_cell": [
+        158,
+        0,
+        316,
+        249
+      ]
+    },
+    {
+      "index": 2,
+      "file": "sprites/JOHNWALK.BMP/002.rgba",
+      "width": 192,
+      "height": 292,
+      "source_bounds": [
+        0,
+        0,
+        41,
+        73
+      ],
+      "atlas_cell": [
+        316,
+        0,
+        474,
+        249
+      ]
+    },
+    {
+      "index": 3,
+      "file": "sprites/JOHNWALK.BMP/003.rgba",
+      "width": 160,
+      "height": 304,
+      "source_bounds": [
+        0,
+        0,
+        33,
+        76
+      ],
+      "atlas_cell": [
+        474,
+        0,
+        632,
+        249
+      ]
+    },
+    {
+      "index": 4,
+      "file": "sprites/JOHNWALK.BMP/004.rgba",
+      "width": 160,
+      "height": 296,
+      "source_bounds": [
+        0,
+        0,
+        39,
+        74
+      ],
+      "atlas_cell": [
+        632,
+        0,
+        790,
+        249
+      ]
+    },
+    {
+      "index": 5,
+      "file": "sprites/JOHNWALK.BMP/005.rgba",
+      "width": 192,
+      "height": 288,
+      "source_bounds": [
+        0,
+        0,
+        43,
+        72
+      ],
+      "atlas_cell": [
+        790,
+        0,
+        948,
+        249
+      ]
+    },
+    {
+      "index": 6,
+      "file": "sprites/JOHNWALK.BMP/006.rgba",
+      "width": 192,
+      "height": 296,
+      "source_bounds": [
+        0,
+        0,
+        41,
+        74
+      ],
+      "atlas_cell": [
+        948,
+        0,
+        1106,
+        249
+      ]
+    },
+    {
+      "index": 7,
+      "file": "sprites/JOHNWALK.BMP/007.rgba",
+      "width": 128,
+      "height": 300,
+      "source_bounds": [
+        0,
+        0,
+        30,
+        75
+      ],
+      "atlas_cell": [
+        1106,
+        0,
+        1264,
+        249
+      ]
+    },
+    {
+      "index": 8,
+      "file": "sprites/JOHNWALK.BMP/008.rgba",
+      "width": 160,
+      "height": 300,
+      "source_bounds": [
+        0,
+        0,
+        37,
+        75
+      ],
+      "atlas_cell": [
+        1264,
+        0,
+        1422,
+        249
+      ]
+    },
+    {
+      "index": 9,
+      "file": "sprites/JOHNWALK.BMP/009.rgba",
+      "width": 160,
+      "height": 296,
+      "source_bounds": [
+        0,
+        0,
+        37,
+        74
+      ],
+      "atlas_cell": [
+        1422,
+        0,
+        1580,
+        249
+      ]
+    },
+    {
+      "index": 10,
+      "file": "sprites/JOHNWALK.BMP/010.rgba",
+      "width": 160,
+      "height": 296,
+      "source_bounds": [
+        0,
+        0,
+        35,
+        74
+      ],
+      "atlas_cell": [
+        0,
+        249,
+        158,
+        498
+      ]
+    },
+    {
+      "index": 11,
+      "file": "sprites/JOHNWALK.BMP/011.rgba",
+      "width": 128,
+      "height": 312,
+      "source_bounds": [
+        0,
+        0,
+        27,
+        78
+      ],
+      "atlas_cell": [
+        158,
+        249,
+        316,
+        498
+      ]
+    },
+    {
+      "index": 12,
+      "file": "sprites/JOHNWALK.BMP/012.rgba",
+      "width": 160,
+      "height": 292,
+      "source_bounds": [
+        0,
+        0,
+        37,
+        73
+      ],
+      "atlas_cell": [
+        316,
+        249,
+        474,
+        498
+      ]
+    },
+    {
+      "index": 13,
+      "file": "sprites/JOHNWALK.BMP/013.rgba",
+      "width": 32,
+      "height": 4,
+      "source_bounds": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "atlas_cell": [
+        474,
+        249,
+        632,
+        498
+      ]
+    },
+    {
+      "index": 14,
+      "file": "sprites/JOHNWALK.BMP/014.rgba",
+      "width": 160,
+      "height": 292,
+      "source_bounds": [
+        0,
+        0,
+        35,
+        73
+      ],
+      "atlas_cell": [
+        632,
+        249,
+        790,
+        498
+      ]
+    },
+    {
+      "index": 15,
+      "file": "sprites/JOHNWALK.BMP/015.rgba",
+      "width": 160,
+      "height": 292,
+      "source_bounds": [
+        0,
+        0,
+        34,
+        73
+      ],
+      "atlas_cell": [
+        790,
+        249,
+        948,
+        498
+      ]
+    },
+    {
+      "index": 16,
+      "file": "sprites/JOHNWALK.BMP/016.rgba",
+      "width": 128,
+      "height": 296,
+      "source_bounds": [
+        0,
+        0,
+        32,
+        74
+      ],
+      "atlas_cell": [
+        948,
+        249,
+        1106,
+        498
+      ]
+    },
+    {
+      "index": 17,
+      "file": "sprites/JOHNWALK.BMP/017.rgba",
+      "width": 160,
+      "height": 300,
+      "source_bounds": [
+        0,
+        0,
+        36,
+        75
+      ],
+      "atlas_cell": [
+        1106,
+        249,
+        1264,
+        498
+      ]
+    },
+    {
+      "index": 18,
+      "file": "sprites/JOHNWALK.BMP/018.rgba",
+      "width": 128,
+      "height": 308,
+      "source_bounds": [
+        0,
+        0,
+        28,
+        77
+      ],
+      "atlas_cell": [
+        1264,
+        249,
+        1422,
+        498
+      ]
+    },
+    {
+      "index": 19,
+      "file": "sprites/JOHNWALK.BMP/019.rgba",
+      "width": 128,
+      "height": 304,
+      "source_bounds": [
+        0,
+        0,
+        27,
+        76
+      ],
+      "atlas_cell": [
+        1422,
+        249,
+        1580,
+        498
+      ]
+    },
+    {
+      "index": 20,
+      "file": "sprites/JOHNWALK.BMP/020.rgba",
+      "width": 96,
+      "height": 300,
+      "source_bounds": [
+        0,
+        0,
+        24,
+        75
+      ],
+      "atlas_cell": [
+        0,
+        498,
+        158,
+        746
+      ]
+    },
+    {
+      "index": 21,
+      "file": "sprites/JOHNWALK.BMP/021.rgba",
+      "width": 128,
+      "height": 300,
+      "source_bounds": [
+        0,
+        0,
+        26,
+        75
+      ],
+      "atlas_cell": [
+        158,
+        498,
+        316,
+        746
+      ]
+    },
+    {
+      "index": 22,
+      "file": "sprites/JOHNWALK.BMP/022.rgba",
+      "width": 128,
+      "height": 296,
+      "source_bounds": [
+        0,
+        0,
+        30,
+        74
+      ],
+      "atlas_cell": [
+        316,
+        498,
+        474,
+        746
+      ]
+    },
+    {
+      "index": 23,
+      "file": "sprites/JOHNWALK.BMP/023.rgba",
+      "width": 128,
+      "height": 312,
+      "source_bounds": [
+        0,
+        0,
+        25,
+        78
+      ],
+      "atlas_cell": [
+        474,
+        498,
+        632,
+        746
+      ]
+    },
+    {
+      "index": 24,
+      "file": "sprites/JOHNWALK.BMP/024.rgba",
+      "width": 128,
+      "height": 300,
+      "source_bounds": [
+        0,
+        0,
+        28,
+        75
+      ],
+      "atlas_cell": [
+        632,
+        498,
+        790,
+        746
+      ]
+    },
+    {
+      "index": 25,
+      "file": "sprites/JOHNWALK.BMP/025.rgba",
+      "width": 160,
+      "height": 296,
+      "source_bounds": [
+        0,
+        0,
+        37,
+        74
+      ],
+      "atlas_cell": [
+        790,
+        498,
+        948,
+        746
+      ]
+    },
+    {
+      "index": 26,
+      "file": "sprites/JOHNWALK.BMP/026.rgba",
+      "width": 160,
+      "height": 292,
+      "source_bounds": [
+        0,
+        0,
+        38,
+        73
+      ],
+      "atlas_cell": [
+        948,
+        498,
+        1106,
+        746
+      ]
+    },
+    {
+      "index": 27,
+      "file": "sprites/JOHNWALK.BMP/027.rgba",
+      "width": 128,
+      "height": 288,
+      "source_bounds": [
+        0,
+        0,
+        29,
+        72
+      ],
+      "atlas_cell": [
+        1106,
+        498,
+        1264,
+        746
+      ]
+    },
+    {
+      "index": 28,
+      "file": "sprites/JOHNWALK.BMP/028.rgba",
+      "width": 128,
+      "height": 288,
+      "source_bounds": [
+        0,
+        0,
+        32,
+        72
+      ],
+      "atlas_cell": [
+        1264,
+        498,
+        1422,
+        746
+      ]
+    },
+    {
+      "index": 29,
+      "file": "sprites/JOHNWALK.BMP/029.rgba",
+      "width": 128,
+      "height": 300,
+      "source_bounds": [
+        0,
+        0,
+        32,
+        75
+      ],
+      "atlas_cell": [
+        1422,
+        498,
+        1580,
+        746
+      ]
+    },
+    {
+      "index": 30,
+      "file": "sprites/JOHNWALK.BMP/030.rgba",
+      "width": 160,
+      "height": 304,
+      "source_bounds": [
+        0,
+        0,
+        37,
+        76
+      ],
+      "atlas_cell": [
+        0,
+        746,
+        158,
+        995
+      ]
+    },
+    {
+      "index": 31,
+      "file": "sprites/JOHNWALK.BMP/031.rgba",
+      "width": 160,
+      "height": 288,
+      "source_bounds": [
+        0,
+        0,
+        34,
+        72
+      ],
+      "atlas_cell": [
+        158,
+        746,
+        316,
+        995
+      ]
+    },
+    {
+      "index": 32,
+      "file": "sprites/JOHNWALK.BMP/032.rgba",
+      "width": 160,
+      "height": 304,
+      "source_bounds": [
+        0,
+        0,
+        36,
+        76
+      ],
+      "atlas_cell": [
+        316,
+        746,
+        474,
+        995
+      ]
+    },
+    {
+      "index": 33,
+      "file": "sprites/JOHNWALK.BMP/033.rgba",
+      "width": 128,
+      "height": 308,
+      "source_bounds": [
+        0,
+        0,
+        32,
+        77
+      ],
+      "atlas_cell": [
+        474,
+        746,
+        632,
+        995
+      ]
+    },
+    {
+      "index": 34,
+      "file": "sprites/JOHNWALK.BMP/034.rgba",
+      "width": 160,
+      "height": 292,
+      "source_bounds": [
+        0,
+        0,
+        33,
+        73
+      ],
+      "atlas_cell": [
+        632,
+        746,
+        790,
+        995
+      ]
+    },
+    {
+      "index": 35,
+      "file": "sprites/JOHNWALK.BMP/035.rgba",
+      "width": 128,
+      "height": 300,
+      "source_bounds": [
+        0,
+        0,
+        30,
+        75
+      ],
+      "atlas_cell": [
+        790,
+        746,
+        948,
+        995
+      ]
+    }
+  ]
+}

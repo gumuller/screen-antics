@@ -1,0 +1,13 @@
+/target/
+/original/
+/captures/
+
+# Reproducible exports of the supplied game's original artwork and scripts.
+/evidence/sprite-review/original/
+/evidence/**/*.png
+/evidence/**/*.jpg
+/evidence/**/*.ppm
+/evidence/**/*.bin
+
+__pycache__/
+*.pyc

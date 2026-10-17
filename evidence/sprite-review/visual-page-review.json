@@ -1,0 +1,452 @@
+[
+  {
+    "page": 1,
+    "first_frame": [
+      "BACKGRND.BMP",
+      0
+    ],
+    "last_frame": [
+      "DRUNKJON.BMP",
+      15
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Background shoreline strips, trunk and crown are separate sprites; clouds and cropped body/head parts coherent."
+  },
+  {
+    "page": 2,
+    "first_frame": [
+      "DRUNKJON.BMP",
+      16
+    ],
+    "last_frame": [
+      "FIRE2.BMP",
+      8
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Tiny source frame marks and detached FIRE body/arm/leg components appear alongside coherent action sequence; fire phases coherent."
+  },
+  {
+    "page": 3,
+    "first_frame": [
+      "FIRE2.BMP",
+      9
+    ],
+    "last_frame": [
+      "GJANGRY.BMP",
+      20
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "FIRE fish/hat/boot fragments and squash-stretch bodies coherent; GJANGRY bird wing phases orderly."
+  },
+  {
+    "page": 4,
+    "first_frame": [
+      "GJANGRY.BMP",
+      21
+    ],
+    "last_frame": [
+      "GJCATCH1.BMP",
+      15
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Bird, raft/biplane and fishing-line partial layers coherent; no row/stride corruption observed."
+  },
+  {
+    "page": 5,
+    "first_frame": [
+      "GJCATCH1.BMP",
+      16
+    ],
+    "last_frame": [
+      "GJDIVE.BMP",
+      24
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Octopus transformations, fish fragments and multipart splashes have coherent contours and progression."
+  },
+  {
+    "page": 6,
+    "first_frame": [
+      "GJDIVE.BMP",
+      25
+    ],
+    "last_frame": [
+      "GJGULL1.BMP",
+      15
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Scoring cards/dolphin/shark/gull sources legible; water ripples intentionally sparse in source."
+  },
+  {
+    "page": 7,
+    "first_frame": [
+      "GJGULL1.BMP",
+      16
+    ],
+    "last_frame": [
+      "GJGULL2.BMP",
+      13
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Gull nest and body action frames follow sequence; one-row source markers retained."
+  },
+  {
+    "page": 8,
+    "first_frame": [
+      "GJGULL2.BMP",
+      14
+    ],
+    "last_frame": [
+      "GJGULL3A.BMP",
+      3
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Gulls carrying separate hats/fish and half-submerged torso frames coherent; tiny marks genuine source data."
+  },
+  {
+    "page": 9,
+    "first_frame": [
+      "GJGULL3A.BMP",
+      4
+    ],
+    "last_frame": [
+      "GJKINGKO.BMP",
+      12
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Gull cap/paddle composites, heat-fanning and King Kong squash-stretch poses readable."
+  },
+  {
+    "page": 10,
+    "first_frame": [
+      "GJKINGKO.BMP",
+      13
+    ],
+    "last_frame": [
+      "GJNAT3.BMP",
+      26
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Masked/dancing characters, smoke and lightning effects visibly coherent; detached limbs are explicit source frames."
+  },
+  {
+    "page": 11,
+    "first_frame": [
+      "GJNAT3.BMP",
+      27
+    ],
+    "last_frame": [
+      "GJVIS5.BMP",
+      24
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Leaf/mask fragments, ship propeller/rotor and running streak frames coherent; long black motion outlines visible."
+  },
+  {
+    "page": 12,
+    "first_frame": [
+      "GJVIS5.BMP",
+      25
+    ],
+    "last_frame": [
+      "JOHNWALK.BMP",
+      24
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Plane/parachute/holiday/hat transformations and walk sequence coherent; JOHNWALK13 tiny source mark confirmed."
+  },
+  {
+    "page": 13,
+    "first_frame": [
+      "JOHNWALK.BMP",
+      25
+    ],
+    "last_frame": [
+      "LILIPUTS.BMP",
+      42
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Detached hats, shrinking hat phases and tiny LILIPUTS characters readable; no source index displacement observed."
+  },
+  {
+    "page": 14,
+    "first_frame": [
+      "LILIPUTS.BMP",
+      43
+    ],
+    "last_frame": [
+      "MEANWHIL.BMP",
+      15
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "LILIPUTS walking/rope sequence, lightbulb overlays and MEANWHIL clock/worm phases coherent."
+  },
+  {
+    "page": 15,
+    "first_frame": [
+      "MEANWHIL.BMP",
+      16
+    ],
+    "last_frame": [
+      "MJBOTTLE.BMP",
+      33
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Bath partial torso/hat/catch sequence and bottle water patches coherent; blue rectangular source patches genuine."
+  },
+  {
+    "page": 16,
+    "first_frame": [
+      "MJBOTTLE.BMP",
+      34
+    ],
+    "last_frame": [
+      "MJCOCO.BMP",
+      24
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Bottle partial-body/missing-head layers and coconut gloves/limbs are explicit source images, not decode omissions."
+  },
+  {
+    "page": 17,
+    "first_frame": [
+      "MJCOCO.BMP",
+      25
+    ],
+    "last_frame": [
+      "MJFISH1.BMP",
+      27
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Dive foliage/tree patch cells are rectangular restoration/occlusion-shaped source artwork; fishing lines/partial legs genuine."
+  },
+  {
+    "page": 18,
+    "first_frame": [
+      "MJFISH1.BMP",
+      28
+    ],
+    "last_frame": [
+      "MJJOG1.BMP",
+      12
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Fishing hands/rods/fish/starfish and jog1 long-sleeved tracksuit sequence coherent."
+  },
+  {
+    "page": 19,
+    "first_frame": [
+      "MJJOG1.BMP",
+      13
+    ],
+    "last_frame": [
+      "MJREAD.BMP",
+      7
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Jog2 source tracksuit and gait phase progression confirmed; raft partial logs and tiny marks genuine."
+  },
+  {
+    "page": 20,
+    "first_frame": [
+      "MJREAD.BMP",
+      8
+    ],
+    "last_frame": [
+      "MJ_AMB.BMP",
+      14
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Reading book-page phases and bareheaded23/cap24 layer separation confirmed; telescope torso/legs/optic layers explicit."
+  },
+  {
+    "page": 21,
+    "first_frame": [
+      "MJ_AMB.BMP",
+      15
+    ],
+    "last_frame": [
+      "SHARK.BMP",
+      2
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Head/body separations, raft phases, disintegrating sandcastle particles and mermaid breakup poses coherent."
+  },
+  {
+    "page": 22,
+    "first_frame": [
+      "SHARK.BMP",
+      3
+    ],
+    "last_frame": [
+      "SJGFTASK.BMP",
+      1
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Shark walk and leap phases, cap/pipe fragments, ship waterwake strips and cannonballs coherent."
+  },
+  {
+    "page": 23,
+    "first_frame": [
+      "SJGFTASK.BMP",
+      2
+    ],
+    "last_frame": [
+      "SJMSUZY3.BMP",
+      11
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Gift gesture partial arms, sailor body transformations and woman/man combined interaction frames coherent."
+  },
+  {
+    "page": 24,
+    "first_frame": [
+      "SJMSUZY3.BMP",
+      12
+    ],
+    "last_frame": [
+      "SLEVEJC3.BMP",
+      7
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Working character, sleep phases, sleepingbag parts, detached arms and paddle motion sequence coherent."
+  },
+  {
+    "page": 25,
+    "first_frame": [
+      "SLEVEJC3.BMP",
+      8
+    ],
+    "last_frame": [
+      "SMDATE11.BMP",
+      11
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Mermaid swim/shark interplay and tuxedo transformation sequence coherent; sparse water/ripple frames genuine."
+  },
+  {
+    "page": 26,
+    "first_frame": [
+      "SMDATE11.BMP",
+      12
+    ],
+    "last_frame": [
+      "SMDATE6.BMP",
+      14
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Tuxedo partial body, chair/table layers, mermaid tail and disconnected hands are explicit source pieces."
+  },
+  {
+    "page": 27,
+    "first_frame": [
+      "SMDATE6.BMP",
+      15
+    ],
+    "last_frame": [
+      "SMGIFT.BMP",
+      22
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Date table/gramophone/shattered chair layers and swim/waving/tail/mermaid gestures coherent."
+  },
+  {
+    "page": 28,
+    "first_frame": [
+      "SMGIFT.BMP",
+      23
+    ],
+    "last_frame": [
+      "SSUZY2.BMP",
+      11
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Mermaid cap/trafficlight props, splashes, raft and reclining/standing woman phases coherent."
+  },
+  {
+    "page": 29,
+    "first_frame": [
+      "SSUZY2.BMP",
+      12
+    ],
+    "last_frame": [
+      "THEEND1.BMP",
+      16
+    ],
+    "frames": 80,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Woman partial body/head layers, thought bubbles, tanker and dark parachute final scenes coherent."
+  },
+  {
+    "page": 30,
+    "first_frame": [
+      "THEEND1.BMP",
+      17
+    ],
+    "last_frame": [
+      "ZZZZS.BMP",
+      2
+    ],
+    "frames": 71,
+    "visually_reviewed": true,
+    "decode_or_indexing_error_detected": false,
+    "notes": "Thought bubbles, trunk/crown separate layers, fantasy-couple/background pieces and Z glyphs coherent."
+  }
+]

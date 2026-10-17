@@ -1,0 +1,696 @@
+{
+  "atlas": "MJREAD.BMP.remade-atlas.png",
+  "kind": "imagegen-redrawn",
+  "dimensions": [
+    2141,
+    734
+  ],
+  "columns": 10,
+  "rows": 4,
+  "frames": [
+    {
+      "index": 0,
+      "width": 224,
+      "height": 268,
+      "atlas_cell": [
+        0,
+        0,
+        246,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        50,
+        67
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 1,
+      "width": 224,
+      "height": 256,
+      "atlas_cell": [
+        182,
+        0,
+        460,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        50,
+        64
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 0
+    },
+    {
+      "index": 2,
+      "width": 224,
+      "height": 236,
+      "atlas_cell": [
+        396,
+        0,
+        674,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        51,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 0
+    },
+    {
+      "index": 3,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        610,
+        0,
+        888,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        48,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 0
+    },
+    {
+      "index": 4,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        824,
+        0,
+        1102,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 5,
+      "width": 192,
+      "height": 220,
+      "atlas_cell": [
+        1038,
+        0,
+        1317,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        55
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 6,
+      "width": 192,
+      "height": 240,
+      "atlas_cell": [
+        1253,
+        0,
+        1531,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        60
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 7,
+      "width": 192,
+      "height": 196,
+      "atlas_cell": [
+        1467,
+        0,
+        1745,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        49
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 8,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        1681,
+        0,
+        1959,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 9,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        1895,
+        0,
+        2141,
+        202
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 10,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        0,
+        166,
+        246,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 11,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        182,
+        166,
+        460,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    },
+    {
+      "index": 12,
+      "width": 192,
+      "height": 232,
+      "atlas_cell": [
+        396,
+        166,
+        674,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        45,
+        58
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 13,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        610,
+        166,
+        888,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        47,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 14,
+      "width": 192,
+      "height": 244,
+      "atlas_cell": [
+        824,
+        166,
+        1102,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        43,
+        61
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 15,
+      "width": 192,
+      "height": 232,
+      "atlas_cell": [
+        1038,
+        166,
+        1317,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        43,
+        58
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 16,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        1253,
+        166,
+        1531,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        43,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 17,
+      "width": 192,
+      "height": 244,
+      "atlas_cell": [
+        1467,
+        166,
+        1745,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        44,
+        61
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 18,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        1681,
+        166,
+        1959,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        44,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 19,
+      "width": 192,
+      "height": 152,
+      "atlas_cell": [
+        1895,
+        166,
+        2141,
+        385
+      ],
+      "source_bounds": [
+        0,
+        0,
+        43,
+        38
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 20,
+      "width": 192,
+      "height": 208,
+      "atlas_cell": [
+        0,
+        367,
+        214,
+        550
+      ],
+      "source_bounds": [
+        0,
+        0,
+        45,
+        52
+      ],
+      "isolation": "original multipart object/effect",
+      "discarded_components": 3
+    },
+    {
+      "index": 21,
+      "width": 192,
+      "height": 240,
+      "atlas_cell": [
+        182,
+        349,
+        460,
+        568
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        60
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    },
+    {
+      "index": 22,
+      "width": 192,
+      "height": 240,
+      "atlas_cell": [
+        396,
+        349,
+        674,
+        568
+      ],
+      "source_bounds": [
+        0,
+        0,
+        44,
+        60
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 23,
+      "width": 192,
+      "height": 224,
+      "atlas_cell": [
+        610,
+        349,
+        888,
+        568
+      ],
+      "source_bounds": [
+        0,
+        0,
+        46,
+        56
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 1
+    },
+    {
+      "index": 24,
+      "width": 96,
+      "height": 52,
+      "atlas_cell": [
+        856,
+        367,
+        1070,
+        550
+      ],
+      "source_bounds": [
+        0,
+        0,
+        22,
+        13
+      ],
+      "isolation": "original multipart object/effect",
+      "discarded_components": 0
+    },
+    {
+      "index": 25,
+      "width": 96,
+      "height": 104,
+      "atlas_cell": [
+        1070,
+        367,
+        1285,
+        550
+      ],
+      "source_bounds": [
+        0,
+        0,
+        23,
+        26
+      ],
+      "isolation": "original multipart object/effect",
+      "discarded_components": 1
+    },
+    {
+      "index": 26,
+      "width": 192,
+      "height": 240,
+      "atlas_cell": [
+        1253,
+        349,
+        1531,
+        568
+      ],
+      "source_bounds": [
+        0,
+        0,
+        44,
+        60
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    },
+    {
+      "index": 27,
+      "width": 224,
+      "height": 184,
+      "atlas_cell": [
+        1467,
+        349,
+        1745,
+        568
+      ],
+      "source_bounds": [
+        0,
+        0,
+        55,
+        46
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 2
+    },
+    {
+      "index": 28,
+      "width": 192,
+      "height": 236,
+      "atlas_cell": [
+        1681,
+        349,
+        1959,
+        568
+      ],
+      "source_bounds": [
+        0,
+        0,
+        43,
+        59
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 29,
+      "width": 192,
+      "height": 276,
+      "atlas_cell": [
+        1895,
+        349,
+        2141,
+        568
+      ],
+      "source_bounds": [
+        0,
+        0,
+        42,
+        69
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 3
+    },
+    {
+      "index": 30,
+      "width": 160,
+      "height": 300,
+      "atlas_cell": [
+        0,
+        532,
+        246,
+        734
+      ],
+      "source_bounds": [
+        0,
+        0,
+        36,
+        75
+      ],
+      "isolation": "largest connected silhouette",
+      "discarded_components": 4
+    },
+    {
+      "index": 31,
+      "width": 192,
+      "height": 132,
+      "atlas_cell": [
+        214,
+        550,
+        428,
+        734
+      ],
+      "source_bounds": [
+        0,
+        0,
+        47,
+        32
+      ],
+      "isolation": "original multipart object/effect",
+      "discarded_components": 0
+    },
+    {
+      "index": 32,
+      "width": 256,
+      "height": 140,
+      "atlas_cell": [
+        428,
+        550,
+        642,
+        734
+      ],
+      "source_bounds": [
+        0,
+        0,
+        57,
+        34
+      ],
+      "isolation": "original multipart object/effect",
+      "discarded_components": 0
+    },
+    {
+      "index": 33,
+      "width": 256,
+      "height": 124,
+      "atlas_cell": [
+        642,
+        550,
+        856,
+        734
+      ],
+      "source_bounds": [
+        0,
+        0,
+        57,
+        31
+      ],
+      "isolation": "original multipart object/effect",
+      "discarded_components": 0
+    },
+    {
+      "index": 34,
+      "width": 352,
+      "height": 44,
+      "atlas_cell": [
+        856,
+        550,
+        1070,
+        734
+      ],
+      "source_bounds": [
+        0,
+        0,
+        82,
+        11
+      ],
+      "isolation": "original multipart object/effect",
+      "discarded_components": 0
+    },
+    {
+      "index": 35,
+      "width": 32,
+      "height": 20,
+      "atlas_cell": [
+        1143,
+        608,
+        1174,
+        637
+      ],
+      "source_bounds": [
+        0,
+        0,
+        5,
+        5
+      ],
+      "isolation": "original multipart object/effect",
+      "discarded_components": 0
+    }
+  ]
+}

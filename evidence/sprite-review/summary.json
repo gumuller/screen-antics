@@ -1,0 +1,16 @@
+{
+  "source": "Native Rust decode of original/RESOURCE.001; SAHD replacement packs",
+  "original_sheets": 116,
+  "original_frames": 2391,
+  "original_empty_frames": 8,
+  "replacement_frames": 96,
+  "replacement_sheets": 3,
+  "shape_iou_mean": 0.7580537295313461,
+  "shape_iou_median": 0.7745488121781114,
+  "frames_below_065_iou": 8,
+  "frames_below_045_iou": 3,
+  "another_pose_better_by_010": 2,
+  "empty_mismatches": 1,
+  "dimension_mismatches": 0,
+  "limitations": "IoU and nearest silhouette are screening metrics only. Different drawn proportions, alpha coverage and original anatomical exaggeration can change shape despite correct pose. Semantic pose correctness requires reviewing paired sheets."
+}
