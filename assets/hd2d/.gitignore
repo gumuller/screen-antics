@@ -1,0 +1,3 @@
+# Derived runtime cache; Play.sh regenerates it from PNGs.
+**/*.rgba
+**/*.tmp

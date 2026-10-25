@@ -1,0 +1,60 @@
+{
+  "asset_pack": "assets/gemini-remaster",
+  "counts": {
+    "sprite_sheets": 116,
+    "sprite_frames": 2391,
+    "sprite_overrides": 116,
+    "backgrounds": 10,
+    "widescreen": 30,
+    "audio": 23
+  },
+  "release_tests_passed": 50,
+  "scene_timelines_completed": 41,
+  "scene_frames_compared_to_original_indexed_output": 55014,
+  "review_captures": 328,
+  "mapped_sound_requests": 572,
+  "panoramas_rendered_pixel_exact": 30,
+  "runtime_sprite_frames_pixel_exact": 2391,
+  "runtime_backgrounds_and_panoramas_pixel_exact": 40,
+  "runtime_audio_clips_sample_exact": 23,
+  "native_benchmarks": {
+    "1920x1080": {
+      "frames": 478,
+      "seconds": 8.004,
+      "fps": 59.72,
+      "audio_clips_queued": 5,
+      "audio_source": "remastered",
+      "scene": "FISHWALK"
+    },
+    "3440x1440": {
+      "frames": 470,
+      "seconds": 8.005,
+      "fps": 58.71,
+      "audio_clips_queued": 5,
+      "audio_source": "original",
+      "scene": "FISHWALK"
+    }
+  },
+  "previous_pack_backup": "/home/gmuller/Projects/screen-antics/exports/remaster-backups/20261024T183227484204Z",
+  "source_import_manifest_sha256": "8a02353c655af97b56da9c59a02d15170ba0ab8d7f22079cde180ced2247f2a5",
+  "review_directory": "captures/flicker-fixed-review",
+  "art_direction": "Castaway Animated Storybook (PyCairo Vector-Gouache)",
+  "additional_ultrawide_benchmark": {
+    "resolution": "3440x1440",
+    "scene": "FISHWALK",
+    "audio_source": "remastered",
+    "frames": 717,
+    "seconds": 12.003,
+    "fps": 59.73,
+    "audio_clips_queued": 7
+  },
+  "temporal_fix_evidence": "evidence/flicker-fix.json",
+  "flicker_fix_benchmark": {
+    "scene": "MJBATH",
+    "resolution": "3440x1440",
+    "frames": 717,
+    "seconds": 12.005,
+    "fps": 59.72,
+    "muted": true
+  }
+}

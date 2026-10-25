@@ -1,0 +1,21 @@
+{
+  "gemini_folder": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff",
+  "download_zip": "/home/gmuller/Downloads/screen-antics-remaster-handoff.zip",
+  "zip_bytes": 105051135,
+  "zip_sha256": "83a7611a345553a516639c95ee331f0a050d5bb8ac87d47fae05ddb821949a9f",
+  "verified_files": 998,
+  "all_41_videos_decoded_without_errors": true,
+  "return_validator_valid_assets_accepted": true,
+  "return_validator_changed_core_and_gutters_rejected": true,
+  "counts": {
+    "backgrounds": 10,
+    "widescreen_templates": 30,
+    "sprite_style_atlases": 116,
+    "scene_previews": 41,
+    "scene_ticks": 55014,
+    "reference_stills": 328,
+    "audio_files": 23,
+    "audio_samples": 167534,
+    "unique_scripted_placements": 5910
+  }
+}

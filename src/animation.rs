@@ -1,10 +1,18 @@
 //! Native interpreter for the DGDS TTM drawing stream used by Screen Antics.
 //! Opcodes are decoded from the supplied archive, never translated to canned motion.
 use crate::resources::{chunks, decompress, AssetStore, Image};
-use std::collections::BTreeMap;
+use std::{
+    collections::BTreeMap,
+    hash::{Hash, Hasher},
+    sync::Arc,
+};
 
 pub const WIDTH: usize = 640;
 pub const HEIGHT: usize = 480;
+// One extra original stage on either side covers the supported panoramic ratios.
+const MARGIN_LEFT: i32 = -640;
+const MARGIN_RIGHT: i32 = 1280;
+type Margin = BTreeMap<(i32, i32), u32>; // (y, x) -> provenance; absent = panorama
 
 #[derive(Clone, Debug)]
 pub struct Command {
@@ -17,6 +25,9 @@ pub struct Frame {
     pub commands: Vec<Command>,
     pub delay_ticks: u32,
 }
+/// Synthetic presentation tick. Native opcodes are masked to multiples of 16,
+/// so this value cannot occur in a recovered TTM instruction stream.
+pub const PRESENTATION_HOLD: u16 = 0xffe1;
 #[derive(Clone, Debug)]
 pub struct Clip {
     pub name: String,
@@ -141,6 +152,8 @@ pub struct Draw {
     pub width: u32,
     pub height: u32,
     pub clip: [i32; 4],
+    /// Original indexed content, independent of duplicate resource/frame names.
+    pub pose_signature: u64,
 }
 
 /// Provenance travels with a pixel through saves, restores and stored areas.
@@ -150,6 +163,12 @@ pub struct Draw {
 pub enum PixelSource {
     Background(String),
     Sprite(Draw),
+    Palette(u8),
+    /// Custom RGBA artwork over the exact surface present before its draw.
+    Layer {
+        top: u32,
+        under: u32,
+    },
 }
 
 /// Presentation events carry source-scene coordinates. Wipes copy the current
@@ -160,7 +179,10 @@ pub enum TransitionKind {
     Immediate,
     OutsideIn,
     Interlaced,
+    // Frontend effects retained for tests; native A050/A060 are capture/restore.
+    #[allow(dead_code)]
     LeftToRight,
+    #[allow(dead_code)]
     RightToLeft,
     TopToBottom,
     BottomToTop,
@@ -180,8 +202,13 @@ pub struct Transition {
 pub struct Player {
     pub pixels: Vec<u8>,
     pub origins: Vec<u32>,
+    pub margin_origins: Margin,
+    stored_margin: Margin,
+    scene_margin_captures: BTreeMap<i16, Margin>,
     pub sources: Vec<PixelSource>,
     source_ids: BTreeMap<PixelSource, u32>,
+    sprite_coverage: Option<Arc<BTreeMap<String, Vec<Vec<u8>>>>>,
+    sprite_signatures: BTreeMap<(String, usize), u64>,
     pub width: u32,
     pub height: u32,
     pub frame: usize,
@@ -195,10 +222,11 @@ pub struct Player {
     background_origins: Vec<u32>,
     stored_origins: Vec<u32>,
     slots: BTreeMap<i16, String>,
-    getputs: BTreeMap<i16, (i32, i32, Image, Vec<u32>)>,
+    /// Scheduler-only TTM environment identity; raw clips use environment zero.
+    environment: i16,
+    scene_captures: BTreeMap<i16, (i32, i32, Image, Vec<u32>)>,
     bmp: i16,
     brush: i16,
-    getput: i16,
     fg: u8,
     bg: u8,
     clip: [i32; 4],
@@ -213,8 +241,13 @@ impl Player {
         Self {
             pixels: vec![0; WIDTH * HEIGHT],
             origins: vec![0; WIDTH * HEIGHT],
+            margin_origins: Margin::new(),
+            stored_margin: Margin::new(),
+            scene_margin_captures: BTreeMap::new(),
             sources: Vec::new(),
             source_ids: BTreeMap::new(),
+            sprite_coverage: None,
+            sprite_signatures: BTreeMap::new(),
             background: vec![0; WIDTH * HEIGHT],
             stored: vec![0; WIDTH * HEIGHT],
             background_origins: vec![0; WIDTH * HEIGHT],
@@ -228,32 +261,42 @@ impl Player {
             transition: None,
             last_transition: None,
             slots: BTreeMap::new(),
-            getputs: BTreeMap::new(),
+            environment: 0,
+            scene_captures: BTreeMap::new(),
             bmp: 0,
             brush: 0,
-            getput: 0,
             fg: 15,
             bg: 15,
             clip: [0, 0, 640, 480],
         }
     }
     pub fn reset(&mut self) {
+        let coverage = self.sprite_coverage.clone();
         *self = Self::new();
+        self.sprite_coverage = coverage;
+    }
+    /// Per-native-pixel classes: 0 transparent, 1 mixed/partial, 2 fully opaque.
+    /// This affects HD provenance only; indexed/retro playback stays exact.
+    pub fn set_sprite_coverage(&mut self, coverage: BTreeMap<String, Vec<Vec<u8>>>) {
+        self.sprite_coverage = Some(Arc::new(coverage));
     }
     pub fn step(&mut self, clip: &Clip, assets: &AssetStore) -> Option<u32> {
         self.sounds.clear();
-        self.draws.clear();
         self.transition = None;
         let frame = clip.frames.get(self.frame)?;
-        // DGDS assembles every frame from its persistent background and stored area.
-        self.pixels.copy_from_slice(&self.background);
-        self.origins.copy_from_slice(&self.background_origins);
-        for i in 0..self.pixels.len() {
-            if self.stored[i] != 0 {
-                self.pixels[i] = self.stored[i];
-                self.origins[i] = self.stored_origins[i];
-            }
+        if frame.commands.len() == 1 && frame.commands[0].opcode == PRESENTATION_HOLD {
+            // A presentation hold preserves the composed image and contacts;
+            // an empty script frame would restore the backing and erase them.
+            self.frame += 1;
+            return Some(1);
         }
+        self.draws.clear();
+        // Screen Antics keeps an opaque stored backing initialized from the SCR.
+        // Restoring the whole backing is our equivalent of its dirty-rect restore.
+        // In particular, palette zero is black, not a transparent overlay key.
+        self.pixels.copy_from_slice(&self.stored);
+        self.origins.copy_from_slice(&self.stored_origins);
+        self.margin_origins.clone_from(&self.stored_margin);
         for command in &frame.commands {
             self.execute(command, assets);
         }
@@ -287,9 +330,14 @@ impl Player {
         let a = &command.args;
         let arg = |n: usize| a.get(n).copied().unwrap_or(0) as i32;
         match command.opcode {
+            // Internal scheduler marker: captures belong to a TTM environment,
+            // shared by its actors, independent of the legacy get/put selector.
+            0xffe0 => self.environment = arg(0) as i16,
             0xf010 => {
                 if let Some(image) = assets.backgrounds.get(&command.text) {
                     self.current_background = Some(command.text.clone());
+                    self.margin_origins.clear();
+                    self.stored_margin.clear();
                     self.width = image.width;
                     self.height = image.height;
                     self.pixels.fill(0);
@@ -298,8 +346,8 @@ impl Player {
                     self.blit(image, 0, 0, false, false, false, None, id);
                     self.background.copy_from_slice(&self.pixels);
                     self.background_origins.copy_from_slice(&self.origins);
-                    self.stored.fill(0);
-                    self.stored_origins.fill(0);
+                    self.stored.copy_from_slice(&self.pixels);
+                    self.stored_origins.copy_from_slice(&self.origins);
                 }
             }
             0xc050 | 0x1300 => {
@@ -315,7 +363,6 @@ impl Player {
             0x0080 => {
                 self.slots.remove(&self.bmp);
             }
-            0x1120 => self.getput = arg(0) as i16,
             0x2000 => {
                 self.fg = arg(0) as u8;
                 self.bg = arg(1) as u8;
@@ -329,10 +376,16 @@ impl Player {
                 ]
             }
             0x0020 => {
-                self.background.copy_from_slice(&self.pixels);
-                self.background_origins.copy_from_slice(&self.origins);
+                self.stored_margin.clone_from(&self.margin_origins);
+                self.stored.copy_from_slice(&self.pixels);
+                self.stored_origins.copy_from_slice(&self.origins);
             }
             0x4200 => {
+                copy_margin(
+                    &self.margin_origins,
+                    &mut self.stored_margin,
+                    [arg(0), arg(1), arg(2), arg(3)],
+                );
                 let mut buffer = self.stored.clone();
                 copy_region(&self.pixels, &mut buffer, arg(0), arg(1), arg(2), arg(3));
                 self.stored = buffer;
@@ -345,38 +398,10 @@ impl Player {
                     arg(3),
                 );
             }
-            0x4210 => {
-                let (x, y, w, h) = (arg(0), arg(1), arg(2).clamp(0, 640), arg(3).clamp(0, 480));
-                let mut image = Image {
-                    width: w as u32,
-                    height: h as u32,
-                    pixels: vec![0; (w * h) as usize],
-                };
-                let mut origins = vec![0; (w * h) as usize];
-                for yy in 0..h {
-                    for xx in 0..w {
-                        if (0..640).contains(&(x + xx)) && (0..480).contains(&(y + yy)) {
-                            image.pixels[(yy * w + xx) as usize] =
-                                self.pixels[((y + yy) * 640 + x + xx) as usize];
-                            origins[(yy * w + xx) as usize] =
-                                self.origins[((y + yy) * 640 + x + xx) as usize];
-                        }
-                    }
-                }
-                self.getputs.insert(self.getput, (x, y, image, origins));
-            }
-            0xa600 => {
-                if let Some((x, y, image, origins)) = self.getputs.get(&(arg(0) as i16)).cloned() {
-                    // Restore rectangles ignore the drawing clip and preserve black pixels.
-                    self.blit(&image, x, y, false, false, false, None, 0);
-                    for yy in 0.max(-y)..(image.height as i32).min(480 - y) {
-                        for xx in 0.max(-x)..(image.width as i32).min(640 - x) {
-                            self.origins[((y + yy) * 640 + x + xx) as usize] =
-                                origins[yy as usize * image.width as usize + xx as usize];
-                        }
-                    }
-                }
-            }
+            // These legacy get/put commands are stubs in SCRANTIC.EXE (Win16):
+            // 4214 -> 12:0860 and A601 -> 12:02d8. Implementing the DOS-engine
+            // capture/restore semantics here leaves frozen copies of moving actors.
+            0x4210 | 0xa600 | 0x1120 => {}
             0xa500 | 0xa510 | 0xa520 | 0xa530 => {
                 let (frame, slot) = if a.len() >= 4 {
                     (arg(2) as usize, arg(3) as i16)
@@ -394,8 +419,19 @@ impl Player {
                     } else {
                         None
                     };
+                    let name = self.slots.get(&slot).cloned().unwrap_or_default();
+                    let pose_signature = *self
+                        .sprite_signatures
+                        .entry((name.clone(), frame))
+                        .or_insert_with(|| {
+                            let mut hash = std::collections::hash_map::DefaultHasher::new();
+                            image.width.hash(&mut hash);
+                            image.height.hash(&mut hash);
+                            image.pixels.hash(&mut hash);
+                            hash.finish()
+                        });
                     let draw = Draw {
-                        name: self.slots.get(&slot).cloned().unwrap_or_default(),
+                        name,
                         frame,
                         x: arg(0),
                         y: arg(1),
@@ -404,6 +440,7 @@ impl Player {
                         width: scale.map_or(image.width, |(w, _)| w as u32),
                         height: scale.map_or(image.height, |(_, h)| h as u32),
                         clip: self.clip,
+                        pose_signature,
                     };
                     let id = self.source_id(PixelSource::Sprite(draw.clone()));
                     self.draws.push(draw);
@@ -419,14 +456,58 @@ impl Player {
                     );
                 }
             }
+            0xa050 => {
+                // Win16 A054 (12:1747) captures the current composition, not a wipe.
+                let (x, y, w, h) = (arg(0), arg(1), arg(2).clamp(0, 640), arg(3).clamp(0, 480));
+                let mut image = Image {
+                    width: w as u32,
+                    height: h as u32,
+                    pixels: vec![0; (w * h) as usize],
+                };
+                let mut origins = vec![0; (w * h) as usize];
+                for yy in 0..h {
+                    for xx in 0..w {
+                        if (0..640).contains(&(x + xx)) && (0..480).contains(&(y + yy)) {
+                            let from = ((y + yy) * 640 + x + xx) as usize;
+                            let to = (yy * w + xx) as usize;
+                            image.pixels[to] = self.pixels[from];
+                            origins[to] = self.origins[from];
+                        }
+                    }
+                }
+                let mut margin = Margin::new();
+                copy_margin(&self.margin_origins, &mut margin, [x, y, w, h]);
+                self.scene_margin_captures.insert(self.environment, margin);
+                self.scene_captures
+                    .insert(self.environment, (x, y, image, origins));
+            }
+            0xa060 => {
+                // Win16 A064 (12:1801) restores saved bounds; its args are unused.
+                if let Some((x, y, image, origins)) =
+                    self.scene_captures.get(&self.environment).cloned()
+                {
+                    if let Some(margin) = self.scene_margin_captures.get(&self.environment) {
+                        copy_margin(
+                            margin,
+                            &mut self.margin_origins,
+                            [x, y, image.width as i32, image.height as i32],
+                        );
+                    }
+                    self.blit(&image, x, y, false, false, false, None, 0);
+                    for yy in 0.max(-y)..(image.height as i32).min(480 - y) {
+                        for xx in 0.max(-x)..(image.width as i32).min(640 - x) {
+                            self.origins[((y + yy) * 640 + x + xx) as usize] =
+                                origins[yy as usize * image.width as usize + xx as usize];
+                        }
+                    }
+                }
+            }
             0xa010..=0xa090 => {
                 let kind = match command.opcode {
                     0xa010 => TransitionKind::Dissolve,
                     0xa020 => TransitionKind::Immediate,
                     0xa030 => TransitionKind::OutsideIn,
                     0xa040 => TransitionKind::Interlaced,
-                    0xa050 => TransitionKind::LeftToRight,
-                    0xa060 => TransitionKind::RightToLeft,
                     0xa070 => TransitionKind::TopToBottom,
                     0xa080 => TransitionKind::BottomToTop,
                     _ => TransitionKind::InsideOut,
@@ -494,27 +575,42 @@ impl Player {
                 }
             }
             0xb600 => {
+                // Native 12:14e0 maps 0=display, 1=composition, 2=stored.
+                // All shipped scripts use stored(2) -> composition(1).
+                let margin = match arg(4) {
+                    0 => Margin::new(),
+                    2 => self.stored_margin.clone(),
+                    _ => self.margin_origins.clone(),
+                };
+                let target = match arg(5) {
+                    2 => Some(&mut self.stored_margin),
+                    0 => None,
+                    _ => Some(&mut self.margin_origins),
+                };
+                if let Some(target) = target {
+                    copy_margin(&margin, target, [arg(0), arg(1), arg(2), arg(3)]);
+                }
                 let source = match arg(4) {
                     0 => &self.background,
-                    1 => &self.stored,
+                    2 => &self.stored,
                     _ => &self.pixels,
                 }
                 .clone();
                 let target = match arg(5) {
                     0 => &mut self.background,
-                    1 => &mut self.stored,
+                    2 => &mut self.stored,
                     _ => &mut self.pixels,
                 };
                 copy_region(&source, target, arg(0), arg(1), arg(2), arg(3));
                 let source = match arg(4) {
                     0 => &self.background_origins,
-                    1 => &self.stored_origins,
+                    2 => &self.stored_origins,
                     _ => &self.origins,
                 }
                 .clone();
                 let target = match arg(5) {
                     0 => &mut self.background_origins,
-                    1 => &mut self.stored_origins,
+                    2 => &mut self.stored_origins,
                     _ => &mut self.origins,
                 };
                 copy_region(&source, target, arg(0), arg(1), arg(2), arg(3));
@@ -525,6 +621,10 @@ impl Player {
         }
     }
     fn pixel(&mut self, x: i32, y: i32, color: u8) {
+        if !(0..640).contains(&x) && self.margin_visible(x, y) {
+            let origin = self.source_id(PixelSource::Palette(color));
+            self.margin_origins.insert((y, x), origin);
+        }
         if x >= self.clip[0]
             && x < self.clip[2]
             && y >= self.clip[1]
@@ -573,6 +673,20 @@ impl Player {
         if w <= 0 || h <= 0 || image.width == 0 || image.height == 0 {
             return;
         }
+        let coverage = self.sprite_coverage.clone();
+        let mask = if transparent && origin > 0 {
+            match self.sources.get(origin as usize - 1) {
+                Some(PixelSource::Sprite(draw)) => coverage
+                    .as_ref()
+                    .and_then(|m| m.get(&draw.name))
+                    .and_then(|f| f.get(draw.frame)),
+                _ => None,
+            }
+        } else {
+            None
+        };
+        let mut layers = BTreeMap::new();
+        let mut stripped = BTreeMap::new();
         for yy in 0.max(-y)..h.min(480 - y) {
             for xx in 0.max(-x)..w.min(640 - x) {
                 let mut sx = xx * image.width as i32 / w;
@@ -585,7 +699,48 @@ impl Player {
                 }
                 if let Some(&color) = image.pixels.get((sy * image.width as i32 + sx) as usize) {
                     if transparent {
-                        if color != 0 {
+                        if let Some(mask) = mask {
+                            if x + xx < self.clip[0]
+                                || x + xx >= self.clip[2]
+                                || y + yy < self.clip[1]
+                                || y + yy >= self.clip[3]
+                            {
+                                continue;
+                            }
+                            let p = ((y + yy) * 640 + x + xx) as usize;
+                            // Resized logical cells may sample across native-cell
+                            // boundaries. Keep the underlay for their entire area.
+                            let class = if w == image.width as i32 && h == image.height as i32 {
+                                mask[(sy * image.width as i32 + sx) as usize]
+                            } else {
+                                1
+                            };
+                            if self.same_front_pose(self.origins[p], origin) {
+                                // Indexed drawing is idempotent. Repainting a saved
+                                // pose must not accumulate its new antialiased alpha,
+                                // including copies of the pose in another resource.
+                            } else if class == 2 {
+                                self.origins[p] = origin;
+                            } else {
+                                let under = if self.origins[p] == 0 {
+                                    self.source_id(PixelSource::Palette(self.pixels[p]))
+                                } else {
+                                    self.origins[p]
+                                };
+                                self.origins[p] = if class == 0 {
+                                    under
+                                } else {
+                                    *layers.entry(under).or_insert_with(|| {
+                                        let under =
+                                            self.without_pose_layers(under, origin, &mut stripped);
+                                        self.source_id(PixelSource::Layer { top: origin, under })
+                                    })
+                                };
+                            }
+                            if color != 0 {
+                                self.pixels[p] = color;
+                            }
+                        } else if color != 0 {
                             self.pixel(x + xx, y + yy, color);
                             if x + xx >= self.clip[0]
                                 && x + xx < self.clip[2]
@@ -602,7 +757,131 @@ impl Player {
                 }
             }
         }
+        // Preserve authored sprite pixels beyond the historical stage as well.
+        // This follows the same alpha/provenance rules as the central canvas.
+        if transparent && origin > 0 && (x < 0 || x + w > 640) {
+            for yy in 0.max(-y)..h.min(480 - y) {
+                for xx in 0.max(MARGIN_LEFT - x)..w.min(MARGIN_RIGHT - x) {
+                    let (px, py) = (x + xx, y + yy);
+                    if (0..640).contains(&px) || !self.margin_visible(px, py) {
+                        continue;
+                    }
+                    let mut sx = xx * image.width as i32 / w;
+                    let mut sy = yy * image.height as i32 / h;
+                    if flip_x {
+                        sx = image.width as i32 - 1 - sx;
+                    }
+                    if flip_y {
+                        sy = image.height as i32 - 1 - sy;
+                    }
+                    let at = (sy * image.width as i32 + sx) as usize;
+                    let under = self.margin_origins.get(&(py, px)).copied().unwrap_or(0);
+                    if self.same_front_pose(under, origin) {
+                        continue;
+                    }
+                    let class = mask
+                        .map(|m| {
+                            if w == image.width as i32 && h == image.height as i32 {
+                                m[at]
+                            } else {
+                                1
+                            }
+                        })
+                        .unwrap_or(if image.pixels[at] == 0 { 0 } else { 2 });
+                    let result = match class {
+                        0 => continue,
+                        2 => origin,
+                        _ => *layers.entry(under).or_insert_with(|| {
+                            let under = self.without_pose_layers(under, origin, &mut stripped);
+                            self.source_id(PixelSource::Layer { top: origin, under })
+                        }),
+                    };
+                    self.margin_origins.insert((py, px), result);
+                }
+            }
+        }
     }
+    fn margin_visible(&self, x: i32, y: i32) -> bool {
+        (MARGIN_LEFT..MARGIN_RIGHT).contains(&x)
+            && (0..480).contains(&y)
+            && y >= self.clip[1]
+            && y < self.clip[3]
+            && (x >= self.clip[0] || self.clip[0] == 0)
+            && (x < self.clip[2] || self.clip[2] == 640)
+    }
+    fn same_front_pose(&self, under: u32, top: u32) -> bool {
+        let Some(PixelSource::Sprite(b)) = top
+            .checked_sub(1)
+            .and_then(|i| self.sources.get(i as usize))
+        else {
+            return false;
+        };
+        let mut source = under
+            .checked_sub(1)
+            .and_then(|i| self.sources.get(i as usize));
+        if let Some(PixelSource::Layer { top, .. }) = source {
+            source = top
+                .checked_sub(1)
+                .and_then(|i| self.sources.get(i as usize));
+        }
+        matches!(source,Some(PixelSource::Sprite(a)) if a.pose_signature==b.pose_signature && a.x==b.x && a.y==b.y && a.width==b.width && a.height==b.height && a.flip_x==b.flip_x && a.flip_y==b.flip_y)
+    }
+    /// Repainting overlapping parts may hide an older copy farther down a saved
+    /// alpha chain. Remove only that identical pose, keeping intervening artwork
+    /// and painter order. Opaque terminal surfaces retain their existing identity.
+    fn without_pose_layers(
+        &mut self,
+        source: u32,
+        pose: u32,
+        cache: &mut BTreeMap<u32, u32>,
+    ) -> u32 {
+        let mut id = source;
+        let mut path = Vec::new();
+        let mut tail = loop {
+            if let Some(&clean) = cache.get(&id) {
+                break clean;
+            }
+            match id.checked_sub(1).and_then(|i| self.sources.get(i as usize)) {
+                Some(PixelSource::Layer { top, under }) => {
+                    path.push((id, *top, *under));
+                    id = *under;
+                }
+                _ => break id,
+            }
+        };
+        for (id, top, under) in path.into_iter().rev() {
+            if !self.same_front_pose(top, pose) {
+                tail = if tail == under {
+                    id
+                } else {
+                    self.source_id(PixelSource::Layer { top, under: tail })
+                };
+            }
+            cache.insert(id, tail);
+        }
+        tail
+    }
+}
+/// Stage-edge buffer operations include the associated panorama margin. Interior
+/// masks stay interior, so a saved backdrop cannot erase unrelated side actors.
+fn copy_margin(source: &Margin, target: &mut Margin, [x, y, w, h]: [i32; 4]) {
+    if w <= 0 || h <= 0 {
+        return;
+    }
+    let left = if x <= 0 && x + w > 0 { MARGIN_LEFT } else { x };
+    let right = if x < 640 && x + w >= 640 {
+        MARGIN_RIGHT
+    } else {
+        x + w
+    };
+    let inside = |&(py, px): &(i32, i32)| py >= y && py < y + h && px >= left && px < right;
+    target.retain(|pos, _| !inside(pos));
+    target.extend(
+        source
+            .iter()
+            .filter(|(pos, _)| inside(pos))
+            .map(|(p, id)| (*p, *id)),
+    );
 }
 fn copy_region<T: Copy>(source: &[T], target: &mut [T], x: i32, y: i32, w: i32, h: i32) {
     for yy in y.max(0)..(y + h).min(480) {
@@ -688,7 +967,7 @@ mod tests {
     fn wipe_events_have_source_regions_and_held_repaints_do_not_restart() {
         let assets = empty_assets();
         let wipe = Frame {
-            commands: vec![op(0xa050, &[194, 123, 175, 142])],
+            commands: vec![op(0xa010, &[194, 123, 175, 142])],
             delay_ticks: 1,
         };
         let clip = Clip {
@@ -709,7 +988,7 @@ mod tests {
         assert_eq!(
             player.transition,
             Some(Transition {
-                kind: TransitionKind::LeftToRight,
+                kind: TransitionKind::Dissolve,
                 rect: [194, 123, 175, 142],
                 duration_ms: 350
             })
@@ -725,7 +1004,7 @@ mod tests {
         );
     }
     #[test]
-    fn actual_gulliver_script_exposes_both_original_wipe_directions() {
+    fn actual_gulliver_script_uses_native_scene_capture_instead_of_wipes() {
         let assets = AssetStore::load(
             std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
                 .join("original")
@@ -740,19 +1019,15 @@ mod tests {
                 events.push(event);
             }
         }
-        assert_eq!(
-            events.iter().map(|e| e.kind).collect::<Vec<_>>(),
-            vec![TransitionKind::LeftToRight, TransitionKind::RightToLeft]
-        );
-        assert!(events.iter().all(|e| e.rect == [194, 123, 175, 142]));
+        assert!(events.is_empty(), "native A050/A060 are not transitions");
+        let (x, y, image, _) = &player.scene_captures[&0];
+        assert_eq!((*x, *y, image.width, image.height), (194, 123, 175, 142));
     }
     #[test]
-    fn stored_area_uses_zero_key_but_getput_restores_zero_opaquely() {
-        // DGDS composition intentionally transBlits the stored overlay. A captured
-        // get/put rectangle, in contrast, is an opaque copy including index zero.
+    fn native_backing_restores_black_and_legacy_getput_is_inert() {
         let assets = empty_assets();
         let clip = Clip {
-            name: "overlay".into(),
+            name: "backing".into(),
             frames: vec![Frame {
                 commands: vec![],
                 delay_ticks: 1,
@@ -763,12 +1038,97 @@ mod tests {
         player.background.fill(5);
         player.stored[1] = 2;
         player.step(&clip, &assets);
-        assert_eq!(&player.pixels[..2], &[5, 2]);
-        player.pixels[0] = 0;
+        assert_eq!(&player.pixels[..2], &[0, 2]);
         player.execute(&op(0x4210, &[0, 0, 1, 1]), &assets);
         player.pixels[0] = 5;
         player.execute(&op(0xa600, &[0]), &assets);
-        assert_eq!(player.pixels[0], 0);
+        assert_eq!(
+            player.pixels[0], 5,
+            "native get/put must not restore a stale pose"
+        );
+    }
+
+    #[test]
+    fn native_buffer_two_restores_composition_without_overwriting_backing() {
+        let assets = empty_assets();
+        let mut player = Player::new();
+        player.stored[640 + 1] = 7;
+        player.stored_origins[640 + 1] = 23;
+        player.pixels[640 + 1] = 9;
+        player.execute(&op(0xb600, &[1, 1, 1, 1, 2, 1]), &assets);
+        assert_eq!(player.pixels[641], 7);
+        assert_eq!(player.origins[641], 23);
+        assert_eq!(player.stored[641], 7);
+    }
+
+    #[test]
+    fn native_scene_capture_is_per_environment_opaque_and_uses_saved_bounds() {
+        let assets = empty_assets();
+        let mut player = Player::new();
+        player.execute(&op(0xffe0, &[1]), &assets);
+        player.pixels[641] = 0;
+        player.origins[641] = 17;
+        player.execute(&op(0xa050, &[1, 1, 1, 1]), &assets);
+        player.execute(&op(0xffe0, &[2]), &assets);
+        player.pixels[641] = 8;
+        player.origins[641] = 23;
+        player.execute(&op(0xa050, &[1, 1, 1, 1]), &assets);
+        player.execute(&op(0xffe0, &[1]), &assets);
+        player.execute(&op(0x1120, &[99]), &assets);
+        player.execute(&op(0x4000, &[20, 20, 30, 30]), &assets);
+        player.execute(&op(0xa060, &[40, 40, 2, 2]), &assets);
+        assert_eq!((player.pixels[641], player.origins[641]), (0, 17));
+        player.execute(&op(0xffe0, &[2]), &assets);
+        player.execute(&op(0xa060, &[]), &assets);
+        assert_eq!((player.pixels[641], player.origins[641]), (8, 23));
+        assert!(player.transition.is_none());
+    }
+
+    #[test]
+    fn gulliver_departure_has_no_frozen_ship_behind_the_moving_ship() {
+        let assets =
+            AssetStore::load(std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("original"))
+                .unwrap();
+        let raw = assets
+            .raw
+            .iter()
+            .filter(|(name, _)| name.ends_with(".TTM"))
+            .map(|(name, bytes)| Clip::parse(name, bytes).unwrap())
+            .collect::<Vec<_>>();
+        let clips = crate::scheduler::build_scene_clips(&assets, &raw).unwrap();
+        let clip = clips.iter().find(|c| c.name == "GJGULIVR.TTM").unwrap();
+        let mut player = Player::new();
+        // This is the actual compiled ADS departure, including the legacy get/put
+        // commands which previously restored ship 9 at (196,124) every tick.
+        while player.frame < 2040 {
+            assert!(player.step(clip, &assets).is_some());
+            if player.frame >= 1900 {
+                assert!(player
+                    .draws
+                    .iter()
+                    .any(|d| d.name == "SHIPS.BMP" && d.frame == 7));
+                for &id in &player.origins {
+                    if let Some(PixelSource::Sprite(draw)) = id
+                        .checked_sub(1)
+                        .and_then(|i| player.sources.get(i as usize))
+                    {
+                        assert!(
+                            draw.name != "SHIPS.BMP" || ![8, 9].contains(&draw.frame),
+                            "frozen ship at tick {}: {:?}",
+                            player.frame,
+                            draw
+                        );
+                    }
+                }
+            }
+        }
+        assert!(
+            player.margin_origins.iter().any(|(&(y, x), &id)| x >= 640
+                && y < 350
+                && matches!(id.checked_sub(1).and_then(|i|player.sources.get(i as usize)),
+                Some(PixelSource::Sprite(draw)) if draw.name=="SHIPS.BMP" && draw.frame==7)),
+            "departing ship must remain visible beyond the old stage edge"
+        );
     }
 
     #[test]

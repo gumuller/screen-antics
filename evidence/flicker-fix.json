@@ -1,0 +1,44 @@
+{
+  "release_tests_passed": 50,
+  "scene_entries": 41,
+  "script_frames_checked": 55014,
+  "indexed_output_unchanged": true,
+  "panorama_checks": 30,
+  "causes_fixed": [
+    "Repeated alpha accumulation from saved copies of the same original pose, including duplicates in other sprite resources and overlapping parts.",
+    "Texture sampling phase depended on frame canvas dimensions and used a different boundary rule for mirrored texels."
+  ],
+  "matching_indexed_pose_candidates_before": {
+    "MJBATH.TTM": 72,
+    "MJREAD.TTM": 5,
+    "MJSAND.TTM": 3,
+    "SJLEAVES.TTM": 4,
+    "SJMSSGE.TTM": 5,
+    "SMDATE.TTM": 1
+  },
+  "matching_indexed_pose_candidates_after": [
+    {
+      "scene": "MJREAD.TTM",
+      "frame": "595",
+      "changed_hd_pixels": "29",
+      "nested_same_sprite_layers": "0"
+    },
+    {
+      "scene": "MJREAD.TTM",
+      "frame": "699",
+      "changed_hd_pixels": "29",
+      "nested_same_sprite_layers": "0"
+    }
+  ],
+  "remaining_candidate_explanation": "MJREAD frames 595 and 699 change their captured underlay through the legacy one-shot GETPUT restore; these are not repeated-alpha accumulation. The restore remains one-shot, following the primary interpreter.",
+  "reference": "https://github.com/scummvm/scummvm/blob/master/engines/dgds/ttm.cpp#L969",
+  "artwork_files_changed": false,
+  "native_benchmark": {
+    "scene": "MJBATH",
+    "resolution": "3440x1440",
+    "frames": 717,
+    "seconds": 12.005,
+    "fps": 59.72,
+    "muted": true
+  }
+}

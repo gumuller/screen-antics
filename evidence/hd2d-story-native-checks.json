@@ -1,0 +1,92 @@
+{
+  "scene": "FIRE.TTM",
+  "paused_style_round_trip": [
+    "HD-2D",
+    "Original",
+    "Storybook",
+    "HD-2D"
+  ],
+  "paused_frame_identical": true,
+  "resumed_frame_changes": true,
+  "audio_toggle_round_trip": true,
+  "native_diving": {
+    "seconds": 55.008,
+    "presented_frames": 3294,
+    "fps": 59.88,
+    "audio_cues": 21
+  },
+  "release_tests": {
+    "passed": 78,
+    "failed": 0
+  },
+  "native_gulliver": {
+    "seconds": 41.008,
+    "presented_frames": 2454,
+    "fps": 59.84,
+    "audio_cues": 24
+  },
+  "native_rain_dance": {
+    "seconds": 34.007,
+    "presented_frames": 2039,
+    "fps": 59.96,
+    "audio_cues": 43
+  },
+  "native_coconut": {
+    "seconds": 30.006,
+    "presented_frames": 1799,
+    "fps": 59.95,
+    "audio_cues": 8
+  },
+  "preserved_styles": {
+    "scene": "GJGULIVR.TTM",
+    "frame": 2040,
+    "original": {
+      "sha256": "2a67613bf3b5ecc7e43554a7b505214c60ad4edca28f584ffc27cfe367cf25d4",
+      "reference_match": true,
+      "capture": "captures/story-preserved-original.ppm",
+      "aspect": "original",
+      "size": [
+        960,
+        720
+      ]
+    },
+    "remaster": {
+      "sha256": "f3fcf2bb5a33d4d5df6bf2969ca68929bf5e5c0c47e0d65371f44059f12fbe27",
+      "reference_match": true,
+      "capture": "captures/story-preserved-remaster-wide.ppm",
+      "aspect": "43:18",
+      "size": [
+        1290,
+        540
+      ]
+    }
+  },
+  "native_fishwalk": {
+    "seconds": 14.006,
+    "presented_frames": 836,
+    "fps": 59.69,
+    "audio_cues": 10,
+    "log": "captures/story-native-fishwalk.log"
+  },
+  "native_mjbath": {
+    "seconds": 28.007,
+    "presented_frames": 1676,
+    "fps": 59.84,
+    "audio_cues": 17,
+    "log": "captures/story-native-mjbath.log"
+  },
+  "native_gjgull1": {
+    "seconds": 48.007,
+    "presented_frames": 2878,
+    "fps": 59.95,
+    "audio_cues": 13,
+    "log": "captures/story-native-gjgull1.log"
+  },
+  "native_mjcoco1": {
+    "seconds": 45.006,
+    "presented_frames": 2696,
+    "fps": 59.9,
+    "audio_cues": 8,
+    "log": "captures/story-native-mjcoco1.log"
+  }
+}

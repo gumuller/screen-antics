@@ -1,0 +1,68 @@
+Screen Antics: Johnny Castaway - Castaway Animated Storybook Overhaul Return Notes
+==================================================================================
+
+Overview
+--------
+Every single visual and audio asset in the screensaver has been completely re-illustrated
+from the ground up in an original, cohesive 24-bit "Castaway Animated Storybook" style
+(Watertight Planar Vector-Gouache rendered via 8x->4x supersampled PyCairo), eliminating
+all 1992 EGA/VGA checkerboard dithering, pixel staircases, and upscaling artifacts while
+maintaining 100% geometric registration, stage anchors, horizons, and widescreen crop identity.
+
+1. Core 4x Storybook Backgrounds (`edited/backgrounds/*.SCR.png` - 10 files)
+----------------------------------------------------------------------------
+- Built via `storybook_backgrounds.py` (`pycairo` + 8x supersampled Vector-Gouache).
+- All 10 `.SCR` backgrounds (`INTRO.SCR`, `ISLAND2.SCR`, `ISLETEMP.SCR`, `JOFFICE.SCR`,
+  `NIGHT.SCR`, `OCEAN00.SCR`, `OCEAN01.SCR`, `OCEAN02.SCR`, `SUZBEACH.SCR`, `THEEND.SCR`)
+  are supplied at exact 4x `runtime_size` (`2560x1920` or `2560x1400`), 100% opaque (`RGB`/`RGBA`).
+- Artistic & Geometric Highlights:
+  - `ISLAND2.SCR` & `ISLETEMP.SCR`: Painted directly on full `3440x1440` (`43:18`) master canvases
+    with cerulean-to-turquoise tropical sky gradients, volumetric cumulus cloud banks with lavender
+    undersides, cobalt-to-aqua lagoon swells, concentric shoreline foam ripples, 3D sunlit sandbar
+    domes, and 8x Vector-Gouache mahogany palms & emerald canopies (`ISLETEMP` registered at exact
+    `+1088px` horizontal offset, horizon locked to `y = 740`).
+  - `NIGHT.SCR`: Painted on a full `4816x2016` (`43:18`) master canvas with deep indigo-to-midnight
+    twilight sky, multi-pointed diamond starbursts at exact native star coordinates, cratered pearl
+    full moon with soft atmospheric corona, and silver-aqua lunar water reflection cone (`y = 820`).
+  - `OCEAN00.SCR`, `OCEAN01.SCR`, `OCEAN02.SCR`: Painted on full `4816x2016` (`43:18`) master
+    canvases with sunlit sky/cloud horizon (`y = 640`), translucent wave meniscus (`y = 760`),
+    sweeping diagonal underwater sunbeam caustics, and C1-continuous panoramic multi-depth violet
+    & indigo coral reef formations traced from native reef depth profiles.
+  - `INTRO.SCR`, `SUZBEACH.SCR`, `JOFFICE.SCR`, `THEEND.SCR`: Bespoke continuous `pycairo` skies,
+    bays, molten sunset coronas, interior architectural planes, and curved bamboo fishing rod/line
+    paired with 8x Vector-Gouache foreground characters, scrolls, city skylines, and furniture on
+    pure `(0, 0, 0)` exterior framing.
+
+2. True Panoramic Widescreen Variants (`edited/widescreen/{16_9,21_9,43_18}/*.SCR.png` - 30 files)
+--------------------------------------------------------------------------------------------------
+- All 30 widescreen variants across `16:9`, `21:9`, and `43:18` preserve their corresponding core
+  4x background byte-for-byte inside `stage_rect_xywh` (`wide.crop(stage_rect) == core`).
+- Panoramic scenes (`ISLAND2.SCR`, `ISLETEMP.SCR`, `NIGHT.SCR`, `OCEAN00..02.SCR`) are cropped
+  directly from single continuous `43:18` `pycairo` master paintings — zero mirror seams, zero
+  stage-box boundaries, and zero duplicated islands or moons.
+- Framed scenes (`INTRO.SCR`, `JOFFICE.SCR`, `SUZBEACH.SCR`, `THEEND.SCR`) preserve clean
+  intentional `(0, 0, 0)` outer framing.
+
+3. All 116 Vector-Gouache Sprite Tilemaps (`edited/sprite_tilemaps/*.png` - 116 files / 2,391 frames)
+-----------------------------------------------------------------------------------------------------
+- Built via `vector_sprite_engine.py` across all 116 atlases (`2,391` frames):
+  - Context-aware semantic 1x de-dithering resolving sun-bronzed castaway skin tones, incandescent
+    campfire flames, unified dark espresso-charcoal hair & beard silhouettes, cyan sunglasses gleams,
+    mahogany bark, emerald palm fronds, and tropical lagoon water.
+  - Watertight planar region boundary graph with Kopf-Lischinski (`BEV = 0.28`) diagonal saddle
+    beveling, Taubin `(0.45, -0.47) * 5` zero-shrinkage curve fairing, and 2-pass Chaikin B-spline
+    subdivision — completely eliminating pixel staircases without cracking adjacent color regions.
+  - `8x -> 4x` supersampled `pycairo` linear/radial gouache gradients, sunlit rim highlights,
+    color-tinted calligraphic ink contours, and universal gaze-matched vector cartoon eyes with
+    clipped pupils and crisp white specular catchlights.
+
+4. Remastered Audio (`edited/audio/WAVESFX*.wav` - 23 files)
+------------------------------------------------------------
+- All 23 sound effects upgraded from 8-bit `11025` Hz mono PCM to clean 16-bit `44100` Hz mono PCM
+  (`0.000s` duration delta) with adaptive 1-LSB quantization chatter smoothing and 4x Catmull-Rom
+  cubic oversampling.
+
+5. Validation
+-------------
+- Verified via `tools/validate_remaster_edits.py --pack . --edited edited`:
+  `{"ok": true, "checked": {"backgrounds": 10, "widescreen": 30, "sprite_tilemaps": 116, "audio": 23}, "warnings": [], "errors": []}`

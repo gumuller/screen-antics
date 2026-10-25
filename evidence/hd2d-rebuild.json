@@ -1,0 +1,67 @@
+{
+  "status": "superseded-static-review",
+  "mode": "HD-2D standalone scene presentation",
+  "pack": "assets/hd2d-v2",
+  "art": {
+    "masters": 12,
+    "clips_or_poses": 129,
+    "extracted_frames": 204,
+    "legacy_sprite_textures_loaded_by_scene_renderer": 0,
+    "all_source_families_have_explicit_roles": 116,
+    "source_frames_covered_by_binding_test": 2391
+  },
+  "scene_review": {
+    "scenes": 41,
+    "ticks": 55014,
+    "action_and_regular_captures": 716,
+    "background_aspect_captures": 40,
+    "runtime_source_families_exercised": 105,
+    "all_panorama_core_crops_identical": 30,
+    "exact_audio_files": 23,
+    "targeted_final_rechecks": [
+      "SUZYCITY",
+      "MJRAFT",
+      "MEANWHIL"
+    ],
+    "inventory": "evidence/hd2d-rebuild-scenes.tsv",
+    "bindings": "evidence/hd2d-rebuild-bindings.tsv"
+  },
+  "release_tests": {
+    "passed": 66,
+    "failed": 0,
+    "log": "captures/hd2d-v2-tests.log"
+  },
+  "original_and_storybook": {
+    "original": {
+      "exact_reference_match": true,
+      "sha256": "2a67613bf3b5ecc7e43554a7b505214c60ad4edca28f584ffc27cfe367cf25d4"
+    },
+    "remaster": {
+      "exact_reference_match": true,
+      "sha256": "f3fcf2bb5a33d4d5df6bf2969ca68929bf5e5c0c47e0d65371f44059f12fbe27"
+    }
+  },
+  "native": {
+    "browser_entries_opened": 41,
+    "control_events": 60,
+    "exit_code": 0,
+    "controls_log": "captures/hd2d-v2-live-controls.json",
+    "ultrawide": {
+      "resolution": [
+        3440,
+        1440
+      ],
+      "effects": true,
+      "frames": 713,
+      "seconds": 12.007,
+      "fps": 59.38,
+      "log": "captures/hd2d-v2-fps.log"
+    },
+    "visually_reviewed_native_capture": "captures/hd2d-v2-native-read.png"
+  },
+  "limitations": [
+    "Semantic reinterpretation with complete cycles and key poses; not 2391 individually remade source frames.",
+    "Native CPU/SDL2 2D composition and postprocessing; no 3D geometry or GPU shader backend."
+  ],
+  "superseded_reason": "User reported animation and ending failures. These static checks did not validate motion. See hd2d-motion-review.json for the subsequent continuous simulation and native validation."
+}

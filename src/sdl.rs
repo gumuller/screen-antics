@@ -148,11 +148,15 @@ impl Display {
                 return Err(error());
             }
             let spec = AudioSpec {
-                freq: 11025,
-                format: 8,
+                freq: crate::audio::OUTPUT_RATE as c_int,
+                format: if cfg!(target_endian = "little") {
+                    0x8010
+                } else {
+                    0x9010
+                },
                 channels: 1,
-                silence: 128,
-                samples: 1024,
+                silence: 0,
+                samples: 512,
                 padding: 0,
                 size: 0,
                 callback: None,
@@ -288,13 +292,20 @@ impl Display {
             }
         }
     }
-    pub fn sound(&self, pcm: &[u8]) {
+    pub fn audio_available(&self) -> bool {
+        self.audio != 0
+    }
+    pub fn sound(&self, pcm: &[i16]) -> Result<bool, String> {
         if self.audio != 0 {
             unsafe {
                 SDL_ClearQueuedAudio(self.audio);
-                SDL_QueueAudio(self.audio, pcm.as_ptr().cast(), pcm.len() as u32);
+                if SDL_QueueAudio(self.audio, pcm.as_ptr().cast(), (pcm.len() * 2) as u32) != 0 {
+                    return Err(error());
+                }
             }
+            return Ok(true);
         }
+        Ok(false)
     }
     pub fn silence(&self) {
         if self.audio != 0 {

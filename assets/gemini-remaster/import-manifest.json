@@ -1,0 +1,965 @@
+{
+  "format": "screen-antics-complete-remaster-v1",
+  "handoff": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff",
+  "base_atlases": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/edited_deterministic",
+  "sprites": [
+    {
+      "sheet": "BACKGRND.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/BACKGRND.png",
+      "sha256": "331009ea527a185c9daf07af909f054e0cfe4195ffe88ca23c08b133243bbf81",
+      "handoff_override": true
+    },
+    {
+      "sheet": "BOAT.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/BOAT.png",
+      "sha256": "09020d27d3ddc547faf6cd90ae6408c641aae316a71c43edbade078b6a93c802",
+      "handoff_override": true
+    },
+    {
+      "sheet": "CLOUDS.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/CLOUDS.png",
+      "sha256": "15685cf39e4ee50043705c93f63329c26d9f5e6f672785395399c1706d6b955c",
+      "handoff_override": true
+    },
+    {
+      "sheet": "COCOHEAD.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/COCOHEAD.png",
+      "sha256": "1eaba0e4b14d9533c3e57d08a8b31d932ffeae8d02a7a311a3c7ad6b3357d1da",
+      "handoff_override": true
+    },
+    {
+      "sheet": "COCONUTS.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/COCONUTS.png",
+      "sha256": "7c6c90c88c10494e4760d564a83743836c7c31ba4df360254c5abb3c2e69f012",
+      "handoff_override": true
+    },
+    {
+      "sheet": "DRUNKJON.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/DRUNKJON.png",
+      "sha256": "43e8357f9134a4de0671a4160cced95c47f2cf61b98c89d84bfbde264d42a826",
+      "handoff_override": true
+    },
+    {
+      "sheet": "ENDCRDTS.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/ENDCRDTS.png",
+      "sha256": "0b8c83841767f1bdf7a23836af135d0b5d4ac9cdb1208ad2ffee1dbd8b9df00b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "FIRE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/FIRE.png",
+      "sha256": "1d0b5b66d48c25ac2d862b805375f546fd73d6cb7d6609b418b35554059964bb",
+      "handoff_override": true
+    },
+    {
+      "sheet": "FIRE1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/FIRE1.png",
+      "sha256": "f058a9319561f7c451e2e5fd69e8beb7068a07964bda4717450ccc6c66525f8a",
+      "handoff_override": true
+    },
+    {
+      "sheet": "FIRE2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/FIRE2.png",
+      "sha256": "f618478afe38e757c57c89d53cf66ab309229ae8db7a269378b0cfbce79393b5",
+      "handoff_override": true
+    },
+    {
+      "sheet": "FIRE3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/FIRE3.png",
+      "sha256": "c72cb9b51d58e4b10c4b2f67c48dda1d7f560824ab9b8209b1dc05c0dfa2b886",
+      "handoff_override": true
+    },
+    {
+      "sheet": "FIRE4.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/FIRE4.png",
+      "sha256": "b60a1dd4ec327bdfaa98447ce9b6cd5713445c875b9e2dc52352773166f26d68",
+      "handoff_override": true
+    },
+    {
+      "sheet": "FIRE5.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/FIRE5.png",
+      "sha256": "b1a5220184d331b0a4f5bcbc941af47099abfec8c4e1542a08fbf6d5c95c1cca",
+      "handoff_override": true
+    },
+    {
+      "sheet": "FISHMAN.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/FISHMAN.png",
+      "sha256": "6ece8cabee2455fee88fef5ff90c0ed1a210d015166a29e18e2a44b9161eb980",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJANGRY.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJANGRY.png",
+      "sha256": "ee40c5ed8c8063da4b13ea0e4822b2a3f4e0d502c3beca584da1cc77265b7424",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJBIPLAN.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJBIPLAN.png",
+      "sha256": "cd243040a353219672d375bfd9931a1e48c6f6cce8e2cb9257f1c6eb9f6c323f",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJCASTLE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJCASTLE.png",
+      "sha256": "a38552a8f2e7a90699c64bb7e982b3acca46e7154246a9a5da9ae8b91d923b4a",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJCATCH1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJCATCH1.png",
+      "sha256": "f25b9a6b853f5249497c4610d501374e325b7192c14a6bc46098ff2d10f23e7f",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJCATCH2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJCATCH2.png",
+      "sha256": "c87b2f0acb32cda6e11767094d636a87227f284faa7954778f5dd5b3416c9ac9",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJCATCH3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJCATCH3.png",
+      "sha256": "718d801d68e4284724e71e4736da9be42072db4d908b00cbf6fef9eb157f3154",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJDIVE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJDIVE.png",
+      "sha256": "6fc9eab01e00d95a3def4d9f60bd8d2ca1865e64ad6ff9194f074be9fc930642",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJFFFOOD.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJFFFOOD.png",
+      "sha256": "a1566f3b52187b0dae9767566bc9630dbe0dde5f82ae3283f8709854bea95911",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJGULL1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJGULL1.png",
+      "sha256": "37bd410841a0f7d19c7afce2d22666b96e65860595cd650d6a1a7f5d7dad4d7d",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJGULL1A.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJGULL1A.png",
+      "sha256": "f88d2ac3a9e9243a8b82db1aaf9d7831454780cb0d110e73208ae4f36f71bc10",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJGULL2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJGULL2.png",
+      "sha256": "619373c71bb9454f2de9e2c075e7f94bd68204d97dca89f097e76cf258594d6b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJGULL2A.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJGULL2A.png",
+      "sha256": "2a11bf9c19931710219999c170d634d6f76f6a3bb12782b602fe62a59e0bbfaa",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJGULL3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJGULL3.png",
+      "sha256": "abaca6d8590e5cdd6d55cc757bf30b1291aa9840ea3f646b9890b3eb042cdeab",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJGULL3A.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJGULL3A.png",
+      "sha256": "0042b8c8e848db5342cb7f5ffd94cd67f86c22e9b7c6caea4e977feb69c41574",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJHOT.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJHOT.png",
+      "sha256": "e6e35703b2e7d9a0c213bd149b1b7bb781b036f72e1adda7848ce651311459f9",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJKINGKO.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJKINGKO.png",
+      "sha256": "90269eb8351108e9896018dac7aa4bcd31605437a3001e729965c8e090a80fa7",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJNAT1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJNAT1.png",
+      "sha256": "837476530ec477b1bb416ee5df9f967479e96929dfb14a4e227674b05a551ff4",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJNAT1LI.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJNAT1LI.png",
+      "sha256": "1e82b69f5549d53a9f786354aa09d00cd428c53d6caed3198551946e7db37598",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJNAT3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJNAT3.png",
+      "sha256": "94df344f9c0e1174144e7ecf83ecc5190b4535d10020750ea22cc6ff0fb5a776",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJPROW.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJPROW.png",
+      "sha256": "2dd70bc5d7d7ec8df78b60a61d563155664d9175329cec7f794e8ce5eade71bd",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJRUNAWA.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJRUNAWA.png",
+      "sha256": "e5ef389c10f7be0607a13bac12649c9b66e2409cc8e2175478acec18d24f5832",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJVIS3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJVIS3.png",
+      "sha256": "59c054cbd5b285fd5fe250e33ff840311f4bd7cc4944c577736ec1d97df536a5",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJVIS5.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJVIS5.png",
+      "sha256": "bd62164166adf1ff9e4b32b04ccb54b0915d042a9d7482fa1c68a329d9f15a09",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJVIS52.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJVIS52.png",
+      "sha256": "4408f6fd558c3b32ebffd454c415870e04e4851d10169a748df6c7728b5593c4",
+      "handoff_override": true
+    },
+    {
+      "sheet": "GJVIS6.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/GJVIS6.png",
+      "sha256": "367825279f97dade65f18547e59704281d17f3fe28dde67eecf4f39998fba6f5",
+      "handoff_override": true
+    },
+    {
+      "sheet": "HOLIDAY.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/HOLIDAY.png",
+      "sha256": "225e32366e1fc4d240a16c311b03f57d0bb1608cf0201f371cc7129132cd9755",
+      "handoff_override": true
+    },
+    {
+      "sheet": "JATA.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/JATA.png",
+      "sha256": "7f91abf8300e32c77c19fed8ce047d7056137ad6eca4db9bca159cf42ddeb000",
+      "handoff_override": true
+    },
+    {
+      "sheet": "JCHANGE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/JCHANGE.png",
+      "sha256": "1c23882b72d8f8f9b8df4461cc4eff916474a0e617f22b9e48787bff70a88c8b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "JOHNWALK.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/JOHNWALK.png",
+      "sha256": "1f1940d64c71a6902d8e117a72ebd199fadef18a806414b9c0453cddd7974ca9",
+      "handoff_override": true
+    },
+    {
+      "sheet": "JOHNWOUL.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/JOHNWOUL.png",
+      "sha256": "5b1b6d367bdf5adeed1632f1fd4fb3a9da38a673374e825d405b95a1a3015bbf",
+      "handoff_override": true
+    },
+    {
+      "sheet": "LILFISH.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/LILFISH.png",
+      "sha256": "355e12d107248ace727142dc0aaea8cb689a1070600c7469aa1394edd7c79046",
+      "handoff_override": true
+    },
+    {
+      "sheet": "LILIPUTS.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/LILIPUTS.png",
+      "sha256": "25dc0fd1aeac0af7038c2867510cd6308fb52d06c84c998607f13528f5af1255",
+      "handoff_override": true
+    },
+    {
+      "sheet": "LITEBULB.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/LITEBULB.png",
+      "sha256": "26ab848c4b7e7285b933e6e0affcd0fc3d1fa1bc5a435320e89f154b1e0ca1c3",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MEANWHIL.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MEANWHIL.png",
+      "sha256": "8697a498b1fa7ffd811bbd5db2a6f03f5c106bfed6b9d5501444b60b4fa98f4f",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MEXCWALK.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MEXCWALK.png",
+      "sha256": "6fa5ed138accede3efba750f64b8621dad14cae58a2ca691c21cc652a9b21138",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJBATH.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJBATH.png",
+      "sha256": "ddb4ff4449d66635b3a2a3b249a6aa3205a9ff831cc8991674f03e9e4a7e2a34",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJBOTTLE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJBOTTLE.png",
+      "sha256": "dbc1499b026a535868c201640a05e470fb4f0bdb9cb5d772e09f6bb402edfc3a",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJBTL2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJBTL2.png",
+      "sha256": "8b35c60bb35f9eedadc17f77dce337b63df1ca743c093ae5f38ccaf80c06585b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJCOCO.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJCOCO.png",
+      "sha256": "bbd21b0205e7eee6b124c357e60dd53eac3afea51a68f384f8ab0aad4e3dd201",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJDIVE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJDIVE.png",
+      "sha256": "6cd80bcf784be4353d6e05694aa5a5223262536e55e13a2a8f75dded342db642",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJFISH1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJFISH1.png",
+      "sha256": "57af9dc2e3b834a05663fd2bfefd12c476176c6602ca199d99a1596172a1ec25",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJFISH2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJFISH2.png",
+      "sha256": "807e760372d431acf24186bcb4613be5f15727fb0a89cb76135086044486a3d4",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJFISH3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJFISH3.png",
+      "sha256": "3b355cb5c53e6fa546f6369fcb18a5fd74fd0236e5b5c39c9dd1c4b3413a3cdb",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJJOG1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJJOG1.png",
+      "sha256": "1085449bb324326e98e2ae859d4319f6639edf9addb949004297619c9dfaf38d",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJJOG2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJJOG2.png",
+      "sha256": "2f7823a00e894fe9998ce9d937da8fd6f980eb71f4cb180dba4a6f8ab6cab8ec",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJRAFT2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJRAFT2.png",
+      "sha256": "657037dc46a77a8f1e9c6a5aa480fdd6366d211ee10db61a1339808c91976532",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJREAD.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJREAD.png",
+      "sha256": "d5d7da7c300b345ddcf7b6dc8d2be454a22e46604d8299dffba2e9fb5186ecba",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJSANDC.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJSANDC.png",
+      "sha256": "75ceb58d725ac7059530f91e05a98fbff394df23e01db8192fd2e0e68982890b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJTELE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJTELE.png",
+      "sha256": "82a8d5b790a7b527b5bffbc42c22fe926c690f3a269b2a690d231defcec30809",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJTELE2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJTELE2.png",
+      "sha256": "b704899054c391e7ef98ebd383aa13a0f9badbae58988e20893e4beb879fff92",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MJ_AMB.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MJ_AMB.png",
+      "sha256": "2a6c502afa9d9c50fa9aeda5e850e2c3424ac5593ddaaeafe9977875d4590927",
+      "handoff_override": true
+    },
+    {
+      "sheet": "MRAFT.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/MRAFT.png",
+      "sha256": "3a2cccfdcb3f762e1d601391d2a1132a19bcc47b396b805d45f07d43441d32bc",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SANDCAST.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SANDCAST.png",
+      "sha256": "316e9b6427df7671e4f70fa76f7a9e7eafb2a56249c6e0121addd33e6c3b4f55",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SBREAKUP.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SBREAKUP.png",
+      "sha256": "cbcce4110b9ca8f1124321263e1c19c6f1d9abaed59a96c1035b53e887575d4b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SHARK.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SHARK.png",
+      "sha256": "8c5d613e1826b2e08ea62dd917176fef23f1cf46f195d9c908376b8ec99fa568",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SHARKWLK.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SHARKWLK.png",
+      "sha256": "a40bfc4be223418bcdb6543eeb62ae4b4ab1cce9344f0f021e1c1d2a80067716",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SHIPS.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SHIPS.png",
+      "sha256": "3059023813a12b1166f3aa3b4d14c05d35075baafdd8b6299d09496c4e06c121",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SHKNFIST.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SHKNFIST.png",
+      "sha256": "b33652f2a13378bf21046a80596d28f96df7d4ce3ed0cd42230c7203e5c3f094",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJBRAKUP.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJBRAKUP.png",
+      "sha256": "98dcd8d0652844355015e5f7156072eef65c9136db1f0a02a2d9976fc0194381",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJGFTASK.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJGFTASK.png",
+      "sha256": "8fab022948025d0564fc037d72aab449c735abada491056b4215abfea25a0833",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJGFTJMP.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJGFTJMP.png",
+      "sha256": "a24142ccd5d39387e0c7b2b04caa1e74aead32e6ff2839d902a1d24b536fb81f",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJGFTSHY.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJGFTSHY.png",
+      "sha256": "bd5e276a8868799373ff817e3e50e61ca7bcc683a33edd0f094b73bf7c58f575",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJGFTXCH.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJGFTXCH.png",
+      "sha256": "72e327bfada76233e13715613281a3bcd4ddd5e729e9abaabb0be4e87b8d65f7",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJMSUZY1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJMSUZY1.png",
+      "sha256": "76db70e352e5e434568fd8f66455c456097c015d634aa2b96d0c68f754c0a104",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJMSUZY2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJMSUZY2.png",
+      "sha256": "a30a50f4167c81234b22d637f57b21ce8eb5c5311f6c4c03941c3a49a22abbd0",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJMSUZY3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJMSUZY3.png",
+      "sha256": "aadfcd378d4af12058826bd9a0c01b19dadf6019c88727e90453691409fe60f0",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJRAFT1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJRAFT1.png",
+      "sha256": "a02992abb15b071517c6dfd7a86f357da47ae3c8f82f2b80546e554aad81935d",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SJWORK.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SJWORK.png",
+      "sha256": "649635ed763705bd602cf9d1a06fd6b103d2897a10beeee6ea2a0d59e340eb3d",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SLEEP.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SLEEP.png",
+      "sha256": "c2414c84822d3eb1b7fe433a4b15773daba6dd229e532918c3d47d3822a0878e",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SLEVEJC1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SLEVEJC1.png",
+      "sha256": "b6eee9078a9e91f8e50b9bf03c7b2e81098d6cbb37a1d38edce745e3e57745f3",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SLEVEJC2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SLEVEJC2.png",
+      "sha256": "21351721c585e8ba8255a94c3392cf1d17dcb724d4738cb04370458a5caacee9",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SLEVEJC3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SLEVEJC3.png",
+      "sha256": "90fde4ee31bed52713b3ab937096281c3fdce8b8fb6e16d21c6066a00e2aff43",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SLEVEJM1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SLEVEJM1.png",
+      "sha256": "6704f5ed46f1409bf61e22f08387fc477e7d48b14a9fe827cf810381c8364e5b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SLEVEJM2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SLEVEJM2.png",
+      "sha256": "690b5ff502fd8dd85797c388058b6417eddc5f70e1352f2255cbe3a51bab1ecd",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SLEVEJM3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SLEVEJM3.png",
+      "sha256": "614733a225832bb1e9897fd8d18a9b26853d081beb4f8406c58fea2f2aaf5750",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE1.png",
+      "sha256": "90019e9969fd587191fceb3ea1b7efafd6a9dbb78cfa3325512e3e4b8109d810",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE10.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE10.png",
+      "sha256": "fa15bb6884a710fa6771a4dcd166afd274968ad4cc6e5807290b94024a126d1b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE11.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE11.png",
+      "sha256": "9a7082d127340b7fdc0fa4cc7ef021962161601696c46a96067989e834d9178d",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE12.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE12.png",
+      "sha256": "7672b71efc80b5f57d48e8449b714acb64fb648be0538a66174f8efa23d2ad7c",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE2.png",
+      "sha256": "9b6a7b81bebb97a963c55f250aa760de12c33889991dbd91f64f84bd7fdf0aa1",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE3.png",
+      "sha256": "98680eedae8b1c569d406da55a4a8168980c43702c769972ba602b9d5b49c3c0",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE4.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE4.png",
+      "sha256": "a9cc5d08a75a5c0edb22368e072af76921f72875b53c7f556f2f4506b1f5269b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE5.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE5.png",
+      "sha256": "cea55f0142e5b9c38682db83c2b4810190d092ba205ba1ebbc5915f4457e7246",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE6.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE6.png",
+      "sha256": "4163183b177b9b6970e8cf14af60edf1277eef2703ca275dacdab2edd8cf301f",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE7.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE7.png",
+      "sha256": "861503ebe212c211f6a92174768e4f4c05799b65cca4f9b03f8ed6979f7ad151",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE8.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE8.png",
+      "sha256": "91a9aaf1b38f18fb36348442b5c837baa2651029d11736cfcc9292fd31412392",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMDATE9.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMDATE9.png",
+      "sha256": "c28e72b3ee781f4cf188594e6184c3c7b631cdba326fa858dbb28e9cb5aed326",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMGFTWAV.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMGFTWAV.png",
+      "sha256": "85cf7c5bec6a6c1880004664ded4473255261f3747ceea5a7883fe758809d71b",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMGIFT.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMGIFT.png",
+      "sha256": "c7d9ee4436fadd0e724333ad2953653ccc237b110a60b200113b4753cb925180",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SMGLIMSE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SMGLIMSE.png",
+      "sha256": "8c2cd43c3fdf7b8c10dc22cd6c44e428e125bbb6a847de8b64d49efef558098e",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SPLASH.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SPLASH.png",
+      "sha256": "1ae419342fc50ea195fdd925db3dc9c5f0d4222759e15f169bd683913857dbae",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SRAFT.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SRAFT.png",
+      "sha256": "60481e4db6ebef6b2f8c2d107dd9edea22d9775b778a9bfa28e1d1fc2d04fb6a",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SSUZY1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SSUZY1.png",
+      "sha256": "0151046d19105b9334716fe7e9edeeaaec5e9fea4f89217a0677dc913c4b28b0",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SSUZY2.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SSUZY2.png",
+      "sha256": "55e54602f58c81abfc18030ead88374cfdeb57525dccefb10f6a56bc252433ba",
+      "handoff_override": true
+    },
+    {
+      "sheet": "SSUZY3.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/SSUZY3.png",
+      "sha256": "155fd1254c4b961c336cf9b83cb10022f2d9692fbf2086273c1279df4b209c02",
+      "handoff_override": true
+    },
+    {
+      "sheet": "STNDLAY.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/STNDLAY.png",
+      "sha256": "a403ef8ce41de59d2590370034edbfa1e05c535c7b5654eaaf167346315c2486",
+      "handoff_override": true
+    },
+    {
+      "sheet": "TANKER.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/TANKER.png",
+      "sha256": "876beaa43634954eb3debba47ab30813089325f5cfc7b47832a0536a7d847713",
+      "handoff_override": true
+    },
+    {
+      "sheet": "THEEND1.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/THEEND1.png",
+      "sha256": "c0e9ef1b1f010d9bb78177ec4dd433acd4b18b82bfda933bbb7a70d94e4b2c34",
+      "handoff_override": true
+    },
+    {
+      "sheet": "THNKBUBL.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/THNKBUBL.png",
+      "sha256": "b0245429be20983dbb91b353e351517cc5c9abb6a8fb9bd798929f0a04b4c13c",
+      "handoff_override": true
+    },
+    {
+      "sheet": "TRUNK.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/TRUNK.png",
+      "sha256": "c05d84106fdfc88db8162d5060bf4316f5a02e836411ec7a3d38b9cbcf5197b7",
+      "handoff_override": true
+    },
+    {
+      "sheet": "WOULDBE.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/WOULDBE.png",
+      "sha256": "80b838ad9ded9202d220d63f3e58a4a87255724576d534fdd9a7b6160a8aebd0",
+      "handoff_override": true
+    },
+    {
+      "sheet": "ZZZZS.BMP",
+      "source": "/home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/remaster-handoff/edited/sprite_tilemaps/ZZZZS.png",
+      "sha256": "afd1d226326a51ab00cb81366fb4ae789066d1e6115606cfae3ae55f73226006",
+      "handoff_override": true
+    }
+  ],
+  "files": [
+    {
+      "file": "backgrounds/INTRO.SCR.png",
+      "source_sha256": "838b94c26923e3868edb5124f30274b972b03af244e469ec01e99904b01961a5"
+    },
+    {
+      "file": "widescreen/16_9/INTRO.SCR.png",
+      "source_sha256": "c29d1b7b22b11e2cede7814414c8ef035bf466513d9872c38cf268d330096fcc"
+    },
+    {
+      "file": "widescreen/21_9/INTRO.SCR.png",
+      "source_sha256": "c09d4f6f842e44a8419a9d9db42d3834758050c9f1e8e0064a77fa42c4ee53b4"
+    },
+    {
+      "file": "widescreen/43_18/INTRO.SCR.png",
+      "source_sha256": "7666adef8a8cffa7d8d443d6ee53dd7425875c4193851b10e8fc7c238c5488ea"
+    },
+    {
+      "file": "backgrounds/ISLAND2.SCR.png",
+      "source_sha256": "f61f514aa58b42ab85af5a79848347368a4653ce12ce76d7226207ce52c983b5"
+    },
+    {
+      "file": "widescreen/16_9/ISLAND2.SCR.png",
+      "source_sha256": "20243973e57793bcf542473484c5bd91f36cf5ed7149806a1e10df97207cd8f9"
+    },
+    {
+      "file": "widescreen/21_9/ISLAND2.SCR.png",
+      "source_sha256": "e0b912e14123869898484c26439e1e461612903b983e63643f3eeffef527b05e"
+    },
+    {
+      "file": "widescreen/43_18/ISLAND2.SCR.png",
+      "source_sha256": "ca8b13236dca1f8f87424ebeaa564f6c96a5ffd5c2ee848b2144067cc2039a78"
+    },
+    {
+      "file": "backgrounds/ISLETEMP.SCR.png",
+      "source_sha256": "48714cc66b9b9aa7afa6d888274b387fc0d317efd025b61cfde6a46e3dec2f16"
+    },
+    {
+      "file": "widescreen/16_9/ISLETEMP.SCR.png",
+      "source_sha256": "3c4e05ea26be8fb53bb721c4fe09e3c4fd575202c250400ffdb43f6dcb4ce3cf"
+    },
+    {
+      "file": "widescreen/21_9/ISLETEMP.SCR.png",
+      "source_sha256": "ab3e7ba81148aa5dea26e0ebd9a02ebcea8e1931d319216ebeef80afafc01270"
+    },
+    {
+      "file": "widescreen/43_18/ISLETEMP.SCR.png",
+      "source_sha256": "1723b86197b403ad2e0abc31fb8cb6bc5604ae0ca276272fed9ca598f57ed775"
+    },
+    {
+      "file": "backgrounds/JOFFICE.SCR.png",
+      "source_sha256": "d9d406a1f3624dee18722711e378f7fbea8642251d9ab00a6cdcda8a2db431df"
+    },
+    {
+      "file": "widescreen/16_9/JOFFICE.SCR.png",
+      "source_sha256": "ae09f708d560cda9cee54ca1250969ed93b85c5177a7e9eb485ff57c689d4170"
+    },
+    {
+      "file": "widescreen/21_9/JOFFICE.SCR.png",
+      "source_sha256": "dca07524a5d6db290638fdf7388d92a673dff7fd0fb072949da92407ba5268b0"
+    },
+    {
+      "file": "widescreen/43_18/JOFFICE.SCR.png",
+      "source_sha256": "e54fc7776048a8a60d83e5426e032ac622b01e26b7b1f5ad7b716f19fd893b6c"
+    },
+    {
+      "file": "backgrounds/NIGHT.SCR.png",
+      "source_sha256": "80fe66997e15005b1761d05fb08499b7ab0ad67f607483ea8dab38b0b63d2e3e"
+    },
+    {
+      "file": "widescreen/16_9/NIGHT.SCR.png",
+      "source_sha256": "2eb5916d29a1d710f9f9eef75269927cd827cece66a6f2ab22112ede80465c87"
+    },
+    {
+      "file": "widescreen/21_9/NIGHT.SCR.png",
+      "source_sha256": "6a41f3202a7dc236d8a183280448a2284d81272a9ab6b503ee8ba95237b94efc"
+    },
+    {
+      "file": "widescreen/43_18/NIGHT.SCR.png",
+      "source_sha256": "5e029a3963ab21d9df8c11ba63b5e14ecbe8297160ce861990fc06de2030e405"
+    },
+    {
+      "file": "backgrounds/OCEAN00.SCR.png",
+      "source_sha256": "8f5d44d6fd7c75d5dd564b089e6cf02c04475dfe260cded08f04ccca5f364462"
+    },
+    {
+      "file": "widescreen/16_9/OCEAN00.SCR.png",
+      "source_sha256": "7068c15dc5f86ad6542e35e5dd2a772d56d10bf60cc0a4a003c852c814911d93"
+    },
+    {
+      "file": "widescreen/21_9/OCEAN00.SCR.png",
+      "source_sha256": "e430c21726054abde7ad831edcf1bad075310921dfcac7e5fa1dcb285b7dcfad"
+    },
+    {
+      "file": "widescreen/43_18/OCEAN00.SCR.png",
+      "source_sha256": "f6d0fc599c9f8eed14d8484f5716c0dcdae4788f8c8cd55ce23889c2ca78a159"
+    },
+    {
+      "file": "backgrounds/OCEAN01.SCR.png",
+      "source_sha256": "b582e261cac69a1fc693d5f1360adea8eb29e7bf3a604de70c3b3bc36c79ff77"
+    },
+    {
+      "file": "widescreen/16_9/OCEAN01.SCR.png",
+      "source_sha256": "9dd41bc9b89faa8b38dde9bc6bf1a30757ecf3fefaa54592ab66a7eb7336aef9"
+    },
+    {
+      "file": "widescreen/21_9/OCEAN01.SCR.png",
+      "source_sha256": "30dfab59ee5003041ae0dc5035eb4f3d0b47643d90572d277dcba82fcb675656"
+    },
+    {
+      "file": "widescreen/43_18/OCEAN01.SCR.png",
+      "source_sha256": "c1ed6c48e657841e196014ccc32aa6ca398719e039662ccb446175da97590b34"
+    },
+    {
+      "file": "backgrounds/OCEAN02.SCR.png",
+      "source_sha256": "f50ab438d0a64bc21c9275b86b57fea05ace86f07b919655c9223fb2e767f548"
+    },
+    {
+      "file": "widescreen/16_9/OCEAN02.SCR.png",
+      "source_sha256": "ab9abbd72f7d63265788ae67cc577b9a12436879c92bd72d02e679655eb3e9f5"
+    },
+    {
+      "file": "widescreen/21_9/OCEAN02.SCR.png",
+      "source_sha256": "631e1156c11aebc48f23dfff8eded3fe8d6055748f8aa778d238028a65cc9822"
+    },
+    {
+      "file": "widescreen/43_18/OCEAN02.SCR.png",
+      "source_sha256": "d0301402274628f350e7453c693b520cc4f1a76f9e96f59a16ca30754f0eca0e"
+    },
+    {
+      "file": "backgrounds/SUZBEACH.SCR.png",
+      "source_sha256": "cba2c9e11dfb3e12da68f9892b64c8f1920b52fd07b3dfe9baa5fbeaff9a547d"
+    },
+    {
+      "file": "widescreen/16_9/SUZBEACH.SCR.png",
+      "source_sha256": "57f68233a2cc73a6ec939b21fe324025771b123ad8d218eb39c71566ac029b72"
+    },
+    {
+      "file": "widescreen/21_9/SUZBEACH.SCR.png",
+      "source_sha256": "114eb0c67b78baabd640c9b29349106ca9958ea616d227eae1aa71c0f475a247"
+    },
+    {
+      "file": "widescreen/43_18/SUZBEACH.SCR.png",
+      "source_sha256": "eb00c4ffc6ec8963e5e73b8f1bc04cc070be770bfe5c7c6cb7ab254beead6040"
+    },
+    {
+      "file": "backgrounds/THEEND.SCR.png",
+      "source_sha256": "f1ab72bb387cc104c9842aa9888a97ca4b4887c6191e39c7a9f37273a00d8a46"
+    },
+    {
+      "file": "widescreen/16_9/THEEND.SCR.png",
+      "source_sha256": "0089b68b32c5a5ee46eb1f4e39d1840965b21a3f0486a3441785aaee7f74b3e6"
+    },
+    {
+      "file": "widescreen/21_9/THEEND.SCR.png",
+      "source_sha256": "c350c95d451ea3a9e18596a677d9288c578168fdf3fcc437e8d3f7e86ae5be90"
+    },
+    {
+      "file": "widescreen/43_18/THEEND.SCR.png",
+      "source_sha256": "bf8d2e779ee21797eff6dd38c1ab190b46acdf5d25b8ce24bc74fd98089d0e94"
+    },
+    {
+      "file": "audio/WAVESFX01.wav",
+      "source_sha256": "0266967c674d12dad5beed5479cadecaa54f85405bae05cd87b14155a86483e4"
+    },
+    {
+      "file": "audio/WAVESFX10.wav",
+      "source_sha256": "b072e335395d4784f8420abfe28854a70f6c96bb375582952a5430ba3285c881"
+    },
+    {
+      "file": "audio/WAVESFX12.wav",
+      "source_sha256": "7c8fc8e8bd3f6add9b097f3f29437c759063ad9aa734501ef1f3fa0dfcb0acc3"
+    },
+    {
+      "file": "audio/WAVESFX14.wav",
+      "source_sha256": "63d285a8df2ef0a0ecc2ce170f67909f292b0f9fa1669aca6646753762134651"
+    },
+    {
+      "file": "audio/WAVESFX15.wav",
+      "source_sha256": "2c8b111376975c4d694477a631c3dd0c007feb8095fe9a3b543e57e35e41415b"
+    },
+    {
+      "file": "audio/WAVESFX16.wav",
+      "source_sha256": "0e2d4a1591510f87c28d0d66fcbb251bc0bcd5c572e90cd61800cb9e8d9e3bca"
+    },
+    {
+      "file": "audio/WAVESFX17.wav",
+      "source_sha256": "03ff1e144331bb2cae2cf5840dcbd6d096f5b086639c18d85500072c5b0abf1b"
+    },
+    {
+      "file": "audio/WAVESFX18.wav",
+      "source_sha256": "d6b5022d6f09ae94ad83596353c0b54af96b23e88a70ae45b1885ff7375304ea"
+    },
+    {
+      "file": "audio/WAVESFX19.wav",
+      "source_sha256": "26c3b36cdca5ca56d952d82afb1afeed2c62e3a490df9729982ae8f80403a7df"
+    },
+    {
+      "file": "audio/WAVESFX02.wav",
+      "source_sha256": "846e372f66427c9b21b3d2a53ad2c5feba884b694347875b4ad545bca266ca71"
+    },
+    {
+      "file": "audio/WAVESFX20.wav",
+      "source_sha256": "adbebde1c8dab98da05f316d48fcba3e0da5f59fdda97579833c7ac7cbdfafec"
+    },
+    {
+      "file": "audio/WAVESFX21.wav",
+      "source_sha256": "be1032229429cf71320c58308f84fb0596b6ea003fa3cfea7f83e148e06eb96a"
+    },
+    {
+      "file": "audio/WAVESFX22.wav",
+      "source_sha256": "a05fd668eddb883a3b954b73bb60a93e0d7c274b8eebeee6f0d8c39f13b9a808"
+    },
+    {
+      "file": "audio/WAVESFX23.wav",
+      "source_sha256": "dc4b90e4e706843c2e9c367fb6c7bbdacd22f55faee6d6a53652a72a5694abe2"
+    },
+    {
+      "file": "audio/WAVESFX24.wav",
+      "source_sha256": "5a7cd7db93a69d7cfbe5dd4b22232de9b41059257987003c65fe913059175c7b"
+    },
+    {
+      "file": "audio/WAVESFX25.wav",
+      "source_sha256": "bbc7f532a6d3ab4d0ddb83f7434a12417e6ec59a7bf5bf264a26098f0793df52"
+    },
+    {
+      "file": "audio/WAVESFX03.wav",
+      "source_sha256": "85e3c3a827d0e6dd9ba3a62097e49e45276ab20168bc828119f68b6cf07474da"
+    },
+    {
+      "file": "audio/WAVESFX04.wav",
+      "source_sha256": "8b556987988dc12c93f50761dd646e9794ca906fb30f898dbfae667de6f9589a"
+    },
+    {
+      "file": "audio/WAVESFX05.wav",
+      "source_sha256": "2feef3adf50c8dd8cc5f2249d7cc4d7854c0ba1baf36073a2a7a27af52ae1d2c"
+    },
+    {
+      "file": "audio/WAVESFX06.wav",
+      "source_sha256": "1883be60b304f2319241b3506513c6cbe60ae6ea4d5f0b29cb6029a1b67a088d"
+    },
+    {
+      "file": "audio/WAVESFX07.wav",
+      "source_sha256": "c67ca21f383cbada950f3b3baf858d10d45aa8cc1c80848f5c7987ef2e5c499c"
+    },
+    {
+      "file": "audio/WAVESFX08.wav",
+      "source_sha256": "fd93905f4b43410b487fbbf325da87069c42616ced1874da0aeab153a74f3521"
+    },
+    {
+      "file": "audio/WAVESFX09.wav",
+      "source_sha256": "d9dc4eaa8cc3d0ad16e074713ee20c4f93f11504ea9311940f98e1fb05dff581"
+    }
+  ],
+  "counts": {
+    "sprite_sheets": 116,
+    "sprite_frames": 2391,
+    "sprite_overrides": 116,
+    "backgrounds": 10,
+    "widescreen": 30,
+    "audio": 23
+  }
+}

@@ -1,0 +1,13 @@
+Production transparent RGBA game atlas, 1536x1024, exactly6 columns x4 rows.
+References: supplied Johnny sprite master and HD-2D island concept.
+Same scruffy brown-haired/bearded shirtless adult Johnny, frayed denim shorts,
+barefoot, no hat. Warm detailed HD-2D pixel art; consistent anatomy/head scale,
+upper-left lighting. Facing RIGHT. Complete isolated bodies/props with generous
+transparent gutters. No text, grid, labels, scenery, opaque backdrop or shadows.
+Row1: six idle/breathing/looking-to-sea standing poses.
+Row2: six seated-on-small-log reading poses, opening/turning/resting book.
+Row3 cells1..3: coconut arm-lowered, sipping, lowering. Cells4..6: fishing with
+long wooden rod, waiting/tugging/reeling.
+Row4: sleeping lying on side; stretching awake; two jumping/waving rescue poses
+without HELP text; surprised falling backward; recovering seated on ground.
+Mechanically sliced game animation asset. Built-in image_gen with transparency.

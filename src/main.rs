@@ -2,16 +2,32 @@ mod animation;
 mod audio;
 mod effects;
 mod hd;
+mod hd2d;
+#[allow(dead_code)]
+mod hd2d_art;
+#[allow(dead_code)]
+mod hd2d_canvas;
+mod hd2d_ending;
+#[allow(dead_code)]
+mod hd2d_layout;
+mod hd2d_motion;
+#[allow(dead_code)]
+mod hd2d_roles;
+#[allow(dead_code)]
+mod hd2d_scene;
+mod hd2d_story;
 mod presentation;
 mod remaster;
 mod resources;
 mod scheduler;
 mod sdl;
+mod style;
 mod timing;
 use animation::{Clip, Player};
+use audio::{AudioMode, SoundBank};
 use hd::HdPresentation;
 use presentation::ColorMode;
-use remaster::RemasterAssets;
+use remaster::{AspectMode, RemasterAssets};
 use resources::AssetStore;
 use std::{
     fs,
@@ -19,11 +35,14 @@ use std::{
     path::PathBuf,
     time::{Duration, Instant},
 };
+use style::ArtStyle;
 
 struct Options {
     data: PathBuf,
-    remastered: bool,
+    style: ArtStyle,
+    atmosphere: bool,
     painted_art: bool,
+    asset_pack: Option<PathBuf>,
     resolution: (usize, usize),
     fixed_resolution: bool,
     raw_scripts: bool,
@@ -38,12 +57,16 @@ struct Options {
     color: ColorMode,
     original_timing: bool,
     seconds: Option<f64>,
+    aspect: AspectMode,
+    audio: AudioMode,
 }
 fn options() -> Result<Options, String> {
     let mut o = Options {
         data: PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("original"),
-        remastered: true,
+        style: ArtStyle::Remaster,
+        atmosphere: true,
         painted_art: false,
+        asset_pack: None,
         resolution: (1920, 1080),
         fixed_resolution: false,
         raw_scripts: false,
@@ -58,6 +81,8 @@ fn options() -> Result<Options, String> {
         color: ColorMode::Classic,
         original_timing: false,
         seconds: None,
+        aspect: AspectMode::Auto,
+        audio: AudioMode::Remastered,
     };
     let mut args = std::env::args().skip(1);
     while let Some(a) = args.next() {
@@ -79,8 +104,29 @@ fn options() -> Result<Options, String> {
             "--headless" => o.headless = true,
             "--mute" => o.mute = true,
             "--vibrant" => o.color = ColorMode::Vibrant,
-            "--retro" => o.remastered = false,
+            "--retro" => o.style = ArtStyle::Original,
+            "--style" => {
+                o.style = ArtStyle::parse(
+                    &args
+                        .next()
+                        .ok_or("--style needs original, remaster or hd2d")?,
+                )?
+            }
+            "--no-effects" => o.atmosphere = false,
+            "--aspect" => {
+                o.aspect = AspectMode::parse(&args.next().ok_or("--aspect needs a mode")?)?
+            }
+            "--audio" => {
+                o.audio =
+                    AudioMode::parse(&args.next().ok_or("--audio needs remastered or original")?)?
+            }
             "--painted-art" => o.painted_art = true,
+            "--asset-pack" => {
+                o.asset_pack = Some(PathBuf::from(
+                    args.next()
+                        .ok_or("--asset-pack needs a directory containing sprites/")?,
+                ))
+            }
             "--raw-scripts" => o.raw_scripts = true,
             "--resolution" => {
                 o.fixed_resolution = true;
@@ -119,7 +165,7 @@ fn options() -> Result<Options, String> {
                 o.capture = Some(args.next().ok_or("--capture needs a PPM path")?.into())
             }
             "--help" | "-h" => {
-                println!("Screen Antics — native Rust player\n\n--data DIR       Original RESOURCE.001 and SCRANTIC.EXE directory\n--list           List recovered animation clips\n--scene NAME     Start a specific .TTM clip\n--fullscreen     Fullscreen display\n--screensaver    Fullscreen; exit on keyboard or mouse activity\n--mute           Disable sound\n--vibrant        Richer retro palette; C toggles live\n--retro          Original art instead of remastered art; H toggles\n--painted-art    Experimental generated pack (known pose mismatches)\n--resolution WxH Output resolution (default 1920x1080)\n--raw-scripts    Diagnostic linear script playback\n--original-timing Use legacy 50 ms script ticks\n--seconds N      Exit after N seconds and report measured FPS\n--headless       Decode/render without a display\n--frames N       Exit after N script frames\n--capture FILE   Save the final frame as PPM\n\nKeys: Esc quit · Right/Space next scene · Left previous · R restart\n      F fullscreen · P pause · M mute · C colors · H remaster");
+                println!("Screen Antics — native Rust player\n\n--data DIR       Original RESOURCE.001 and SCRANTIC.EXE directory\n--list           List recovered animation clips\n--scene NAME     Start a specific .TTM clip\n--fullscreen     Fullscreen display\n--screensaver    Fullscreen; exit on keyboard or mouse activity\n--mute           Disable sound\n--vibrant        Richer retro palette; C toggles live\n--retro          Original 256-color art (same as --style original)\n--style MODE     original, remaster, hd2d; H cycles, 1/2/3 select\n--no-effects     Disable HD-2D atmosphere; L toggles live\n--painted-art    Experimental generated pack (known pose mismatches)\n--asset-pack DIR Load an imported pack containing sprites/ and optional backgrounds/\n--aspect MODE    auto, original, 16:9, 21:9 or 43:18; A cycles\n--audio MODE     remastered or original; S toggles\n--resolution WxH Output resolution (default 1920x1080)\n--raw-scripts    Diagnostic linear script playback\n--original-timing Use legacy 50 ms script ticks\n--seconds N      Exit after N seconds and report measured FPS\n--headless       Decode/render without a display\n--frames N       Exit after N script frames\n--capture FILE   Save the final frame as PPM\n\nKeys: Esc quit · Right/Space next scene · Left previous · R restart\n      F fullscreen · P pause · M mute · C colors · H styles · 1/2/3 style · L atmosphere · A aspect · S audio");
                 std::process::exit(0)
             }
             _ => return Err(format!("Unknown option {a}")),
@@ -147,6 +193,100 @@ fn capture(path: &PathBuf, pixels: &[u32], width: usize, height: usize) -> Resul
         .collect();
     f.write_all(&rgb).map_err(|e| e.to_string())
 }
+fn pack_path(o: &Options, style: ArtStyle) -> PathBuf {
+    let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    if style == o.style.pack_style() {
+        if let Some(path) = &o.asset_pack {
+            return path.clone();
+        }
+    }
+    match style {
+        ArtStyle::Hd2d => root.join("assets/hd2d-v2"),
+        _ => {
+            let remaster = root.join("assets/gemini-remaster");
+            if remaster.is_dir() && !o.painted_art {
+                remaster
+            } else {
+                root.join("assets/remastered")
+            }
+        }
+    }
+}
+fn load_art(o: &Options, style: ArtStyle, assets: &AssetStore) -> Result<RemasterAssets, String> {
+    if style == ArtStyle::Hd2d {
+        return Ok(RemasterAssets {
+            sprites: Default::default(),
+            backgrounds: Default::default(),
+            widescreen: Default::default(),
+            remade_frames: 0,
+        });
+    }
+    let path = pack_path(o, style);
+    let imported =
+        path.join("sprites/import-manifest.json").is_file() || o.asset_pack.as_ref() == Some(&path);
+    let art = RemasterAssets::load_with_painted_art(&path, assets, imported || o.painted_art)?;
+    if imported && art.remade_frames != assets.sprites.values().map(Vec::len).sum::<usize>() {
+        return Err(format!(
+            "{}: incomplete sprite pack ({} frames)",
+            path.display(),
+            art.remade_frames
+        ));
+    }
+    println!(
+        "Art pack: {} · {} · {} replacement frames",
+        style.name(),
+        path.display(),
+        art.remade_frames
+    );
+    Ok(art)
+}
+fn replay_style(clip: &Clip, frame: usize, assets: &AssetStore, art: &RemasterAssets) -> Player {
+    // RGBA coverage affects saved layers. Replay without sound output rather than
+    // reusing provenance constructed for a different artwork pack.
+    let mut player = Player::new();
+    player.set_sprite_coverage(art.sprite_coverage());
+    for _ in 0..frame.min(clip.frames.len()) {
+        player.step(clip, assets);
+    }
+    player
+}
+fn update_picture(
+    presentation: &mut HdPresentation,
+    scene: &mut Option<hd2d_scene::Scene>,
+    style: ArtStyle,
+    player: &Player,
+    assets: &AssetStore,
+    art: &RemasterAssets,
+    scene_name: &str,
+    aspect: AspectMode,
+    color: ColorMode,
+    time: f64,
+) -> Result<(), String> {
+    if style == ArtStyle::Hd2d {
+        let scene = scene.as_mut().ok_or("HD-2D scene engine not loaded")?;
+        if scene.canvas.width != presentation.width || scene.canvas.height != presentation.height {
+            scene.resize(presentation.width, presentation.height);
+        }
+        scene.render(player, assets, scene_name, aspect, time)?;
+        presentation.pixels.copy_from_slice(&scene.canvas.pixels);
+        presentation.set_stage_transform(scene.canvas.stage);
+        Ok(())
+    } else {
+        presentation.update(player, assets, art, style != ArtStyle::Original, color)
+    }
+}
+fn displayed_frame<'a>(
+    style: ArtStyle,
+    atmosphere: bool,
+    presentation: &'a HdPresentation,
+    fx: &'a hd2d::Hd2dEffects,
+) -> &'a [u32] {
+    if style == ArtStyle::Hd2d && atmosphere && fx.pixels.len() == presentation.pixels.len() {
+        &fx.pixels
+    } else {
+        &presentation.pixels
+    }
+}
 fn run() -> Result<(), String> {
     let o = options()?;
     let assets = AssetStore::load(&o.data)?;
@@ -170,20 +310,17 @@ fn run() -> Result<(), String> {
         }
         return Ok(());
     }
+    let mut alternate_clips = Vec::new();
     if !o.raw_scripts {
+        alternate_clips = scheduler::build_hd2d_clips(&assets, &clips)?;
         clips = scheduler::build_scene_clips(&assets, &clips)?;
+        if o.style == ArtStyle::Hd2d {
+            std::mem::swap(&mut clips, &mut alternate_clips);
+        }
     }
-    let art = RemasterAssets::load_with_painted_art(
-        &PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("assets/remastered"),
-        &assets,
-        o.painted_art,
-    )?;
-    println!(
-        "HD art: {} backgrounds, {} source-faithful sprite frames; {} experimental replacements",
-        art.backgrounds.len(),
-        art.sprites.values().map(Vec::len).sum::<usize>() - art.remade_frames,
-        art.remade_frames
-    );
+    let mut style = o.style;
+    let mut loaded_style = style.pack_style();
+    let mut art = load_art(&o, loaded_style, &assets)?;
     let mut idx = if let Some(name) = &o.scene {
         let n = if name.ends_with(".TTM") {
             name.clone()
@@ -200,10 +337,10 @@ fn run() -> Result<(), String> {
             .position(|c| c.name == "MJJOG.TTM")
             .unwrap_or(0)
     };
-    let sounds = fs::read(o.data.join("SCRANTIC.EXE"))
-        .ok()
-        .and_then(|b| audio::waves(&b).ok())
-        .unwrap_or_default();
+    let mut sounds = SoundBank::load(
+        &fs::read(o.data.join("SCRANTIC.EXE")).map_err(|e| format!("Original audio: {e}"))?,
+        Some(&pack_path(&o, loaded_style)),
+    )?;
     let mut display = if o.headless {
         None
     } else {
@@ -214,6 +351,7 @@ fn run() -> Result<(), String> {
         )?)
     };
     let mut player = Player::new();
+    player.set_sprite_coverage(art.sprite_coverage());
     let (width, height) = if o.fixed_resolution {
         o.resolution
     } else {
@@ -228,7 +366,23 @@ fn run() -> Result<(), String> {
         d.resize_surface(width as u32, height as u32)?;
     }
     let mut presentation = HdPresentation::new(width, height, &assets.palette);
-    let mut hd = o.remastered;
+    presentation.set_aspect(o.aspect);
+    let mut scene_renderer = if style == ArtStyle::Hd2d {
+        Some(hd2d_scene::Scene::load(
+            &pack_path(&o, style),
+            width,
+            height,
+        )?)
+    } else {
+        None
+    };
+    let mut aspect = o.aspect;
+    let mut audio_mode = o.audio;
+    let mut queued_sounds = 0usize;
+    let mut atmosphere = o.atmosphere;
+    let mut hd2d_effects = hd2d::Hd2dEffects::new();
+    let mut visual_time = 0f64;
+    let mut visual_last = Instant::now();
     let mut transition: Option<effects::Effect> = None;
     let mut colors = o.color;
     let mut paused_at: Option<Instant> = None;
@@ -239,16 +393,24 @@ fn run() -> Result<(), String> {
     let mut script_due = start;
     let mut present_due = start;
     let mut title_due = start;
+    let mut fps_started = start;
+    let mut fps_presented = 0usize;
     let mut dirty = true;
     println!(
         "Loaded {} scenes, {} sprite sets, {} sounds; 60 Hz presentation; {}",
         clips.len(),
         assets.sprites.len(),
         sounds.len(),
-        if hd { "HD 24-bit" } else { colors.name() }
+        if style == ArtStyle::Original {
+            colors.name()
+        } else {
+            style.name()
+        }
     );
+    println!("Panoramas: {} registered variants; aspect {}; audio {} ({} replacement clips, 44100 Hz PCM16); device {}",scene_renderer.as_ref().map_or_else(||art.widescreen.values().map(Vec::len).sum::<usize>(),|s|s.art.backgrounds.values().map(|v|v.len().saturating_sub(1)).sum()),aspect.name(),audio_mode.name(),sounds.replacement_count(),if display.as_ref().is_some_and(|d|d.audio_available()) {"ready"} else if o.headless {"headless"} else {"unavailable"});
     'running: loop {
         let mut changed = false;
+        let previous_style = style;
         if let Some(d) = display.as_mut() {
             for event in d.events() {
                 match event {
@@ -282,14 +444,39 @@ fn run() -> Result<(), String> {
                             114 => changed = true,
                             102 => d.fullscreen(),
                             104 => {
-                                hd = !hd;
+                                style.cycle();
+                                transition = None;
                                 dirty = true;
                                 title_due = Instant::now()
+                            }
+                            49 | 50 | 51 => {
+                                style = match k {
+                                    49 => ArtStyle::Original,
+                                    50 => ArtStyle::Remaster,
+                                    _ => ArtStyle::Hd2d,
+                                };
+                            }
+                            108 => {
+                                atmosphere = !atmosphere;
+                                dirty = true;
+                                title_due = Instant::now();
                             }
                             99 => {
                                 colors.toggle();
                                 dirty = true;
                                 title_due = Instant::now()
+                            }
+                            97 => {
+                                aspect.cycle();
+                                presentation.set_aspect(aspect);
+                                dirty = true;
+                                transition = None;
+                                title_due = Instant::now();
+                            }
+                            115 => {
+                                audio_mode.toggle();
+                                d.silence();
+                                title_due = Instant::now();
                             }
                             112 => {
                                 if let Some(at) = paused_at.take() {
@@ -310,13 +497,83 @@ fn run() -> Result<(), String> {
                 }
             }
         }
+        if style != previous_style {
+            let switching = Instant::now();
+            let mut replay_frame = player.frame;
+            if !o.raw_scripts && (style == ArtStyle::Hd2d) != (previous_style == ArtStyle::Hd2d) {
+                let end_ticks: u32 = clips[idx]
+                    .frames
+                    .iter()
+                    .take(player.frame)
+                    .map(|f| f.delay_ticks.max(1))
+                    .sum();
+                let clock = paused_at.unwrap_or(switching);
+                let remaining = script_due.saturating_duration_since(clock).as_secs_f64()
+                    / timing::script_interval(1, o.original_timing).as_secs_f64();
+                let elapsed_ticks = (end_ticks as f64 - remaining).max(0.);
+                let tick = elapsed_ticks.floor() as u32;
+                std::mem::swap(&mut clips, &mut alternate_clips);
+                replay_frame = scheduler::frames_at_tick(&clips[idx], tick);
+                let new_end: u32 = clips[idx]
+                    .frames
+                    .iter()
+                    .take(replay_frame)
+                    .map(|f| f.delay_ticks.max(1))
+                    .sum();
+                script_due = clock
+                    + Duration::from_secs_f64(
+                        (new_end as f64 - elapsed_ticks).max(0.)
+                            * timing::script_interval(1, o.original_timing).as_secs_f64(),
+                    );
+            }
+            if style != ArtStyle::Original && style != loaded_style {
+                if style == ArtStyle::Hd2d && scene_renderer.is_none() {
+                    scene_renderer = Some(hd2d_scene::Scene::load(
+                        &pack_path(&o, style),
+                        presentation.width,
+                        presentation.height,
+                    )?);
+                }
+                art = load_art(&o, style, &assets)?;
+                sounds = SoundBank::load(
+                    &fs::read(o.data.join("SCRANTIC.EXE")).map_err(|e| e.to_string())?,
+                    Some(&pack_path(&o, style)),
+                )?;
+                loaded_style = style;
+                presentation.invalidate_art();
+                hd2d_effects = hd2d::Hd2dEffects::new();
+            }
+            player = replay_style(
+                &clips[idx],
+                replay_frame.min(clips[idx].frames.len()),
+                &assets,
+                &art,
+            );
+            // Pack I/O/replay must not advance the script, pause or effects clock.
+            let delay = switching.elapsed();
+            script_due += delay;
+            if let Some(paused) = &mut paused_at {
+                *paused += delay;
+            }
+            visual_last = Instant::now();
+            present_due = visual_last;
+            fps_started = visual_last;
+            fps_presented = 0;
+            transition = None;
+            dirty = true;
+            title_due = visual_last;
+            if let Some(d) = &display {
+                d.silence();
+            }
+            println!("Art style: {}", style.name());
+        }
         if changed {
             transition = Some(effects::Effect::new(
-                &presentation.pixels,
+                displayed_frame(style, atmosphere, &presentation, &hd2d_effects),
                 None,
-                (player.width as usize, player.height as usize),
             ));
             player.reset();
+            visual_time = 0.;
             script_due = Instant::now();
             paused_at = None;
             dirty = true;
@@ -339,9 +596,12 @@ fn run() -> Result<(), String> {
                     if !o.headless {
                         if let Some(event) = player.transition.clone() {
                             let effect = effects::Effect::new(
-                                &presentation.pixels,
-                                Some(event),
-                                (player.width as usize, player.height as usize),
+                                displayed_frame(style, atmosphere, &presentation, &hd2d_effects),
+                                if style == ArtStyle::Hd2d {
+                                    None
+                                } else {
+                                    Some(event)
+                                },
                             );
                             script_due += effect.duration();
                             transition = Some(effect);
@@ -349,13 +609,16 @@ fn run() -> Result<(), String> {
                     }
                     if !muted {
                         if let Some(d) = &display {
-                            for n in &player.sounds {
-                                if let Some(pcm) = u8::try_from(*n)
-                                    .ok()
-                                    .and_then(audio::index_for_sfx)
-                                    .and_then(|i| sounds.get(i))
-                                {
-                                    d.sound(pcm)
+                            let story_sounds = if style == ArtStyle::Hd2d {
+                                hd2d_story::sound_events(&clips[idx].name, player.frame)
+                            } else {
+                                None
+                            };
+                            for n in story_sounds.as_ref().unwrap_or(&player.sounds) {
+                                if let Some(pcm) = sounds.sound(*n, audio_mode) {
+                                    if d.sound(pcm)? {
+                                        queued_sounds += 1;
+                                    }
                                 }
                             }
                         }
@@ -364,13 +627,13 @@ fn run() -> Result<(), String> {
                 None => {
                     if !o.headless {
                         transition = Some(effects::Effect::new(
-                            &presentation.pixels,
+                            displayed_frame(style, atmosphere, &presentation, &hd2d_effects),
                             None,
-                            (player.width as usize, player.height as usize),
                         ));
                     }
                     idx = (idx + 1) % clips.len();
                     player.reset();
+                    visual_time = 0.;
                     title_due = now;
                 }
             }
@@ -379,34 +642,89 @@ fn run() -> Result<(), String> {
             }
         }
         if o.headless || now >= present_due {
-            if dirty {
-                presentation.update(&player, &assets, &art, hd, colors);
+            if dirty || style == ArtStyle::Hd2d {
+                update_picture(
+                    &mut presentation,
+                    &mut scene_renderer,
+                    style,
+                    &player,
+                    &assets,
+                    &art,
+                    &clips[idx].name,
+                    aspect,
+                    colors,
+                    if o.headless {
+                        player.frame as f64 / 60.
+                    } else {
+                        visual_time
+                    },
+                )?;
                 dirty = false;
             }
+            if paused_at.is_none() {
+                visual_time += now.saturating_duration_since(visual_last).as_secs_f64();
+            }
+            visual_last = now;
+            let render_time = if o.headless {
+                player.frame as f64 / 60.
+            } else {
+                visual_time
+            };
+            let frame = if style == ArtStyle::Hd2d && atmosphere {
+                let scene = scene_renderer.as_ref().unwrap();
+                hd2d_effects.set_world(hd2d::WorldLighting {
+                    horizon: scene.layout.horizon,
+                    reflection_x: if scene.layout.night { 320. } else { 200. },
+                    night: scene.layout.night,
+                    outdoors: matches!(
+                        scene.layout.kind,
+                        hd2d_layout::SceneKind::Island
+                            | hd2d_layout::SceneKind::Underwater
+                            | hd2d_layout::SceneKind::Beach
+                    ),
+                });
+                hd2d_effects.render(
+                    &presentation.pixels,
+                    presentation.width,
+                    presentation.height,
+                    presentation.stage_transform(),
+                    &scene.mask,
+                    &scene.fx_art,
+                    render_time,
+                )
+            } else {
+                &presentation.pixels
+            };
             if let Some(d) = &display {
                 if now >= title_due {
-                    let fps = presents as f64 / start.elapsed().as_secs_f64().max(0.001);
+                    let fps = fps_presented as f64 / fps_started.elapsed().as_secs_f64().max(0.001);
+                    fps_started = Instant::now();
+                    fps_presented = 0;
                     d.title(&format!(
-                        "Screen Antics · {} · {} · {:.1} FPS · H art · C colors · P pause · Esc exit",
+                        "Screen Antics · {} · {}{} · {} · {} audio{} · {:.1} FPS · H styles · 1/2/3 · L atmosphere · A aspect · S audio · F fullscreen · Esc exit",
                         clips[idx].name,
-                        if hd{"HD 24-bit"}else{colors.name()},
+                        if style == ArtStyle::Original { colors.name() } else { style.name() },
+                        if style==ArtStyle::Hd2d && !atmosphere {" (effects off)"}else{""},
+                        aspect.name(),audio_mode.name(),if muted {" (muted)"}else{""},
                         fps
                     ));
                     title_due = now + Duration::from_secs(1);
                 }
                 if let Some(effect) = transition.as_mut() {
                     d.show(effect.frame(
-                        &presentation.pixels,
+                        frame,
                         presentation.width,
                         presentation.height,
+                        presentation.stage_transform(),
                     ))?;
                     if effect.done() {
                         transition = None;
                     }
                 } else {
-                    d.show(&presentation.pixels)?;
+                    d.show(frame)?;
                 }
                 presents += 1;
+                fps_presented += 1;
             }
             present_due = timing::next_present(present_due, Instant::now());
         }
@@ -416,7 +734,22 @@ fn run() -> Result<(), String> {
         {
             // Capture the most recent script state even when the exit falls between presents.
             if dirty {
-                presentation.update(&player, &assets, &art, hd, colors)
+                update_picture(
+                    &mut presentation,
+                    &mut scene_renderer,
+                    style,
+                    &player,
+                    &assets,
+                    &art,
+                    &clips[idx].name,
+                    aspect,
+                    colors,
+                    if o.headless {
+                        player.frame as f64 / 60.
+                    } else {
+                        visual_time
+                    },
+                )?;
             }
             break;
         }
@@ -428,17 +761,35 @@ fn run() -> Result<(), String> {
             )
         }
     }
-    if let Some(path) = o.capture {
-        capture(
-            &path,
+    let final_frame = if style == ArtStyle::Hd2d && atmosphere {
+        let scene = scene_renderer.as_ref().unwrap();
+        hd2d_effects.render(
             &presentation.pixels,
             presentation.width,
             presentation.height,
-        )?;
+            presentation.stage_transform(),
+            &scene.mask,
+            &scene.fx_art,
+            if o.headless {
+                player.frame as f64 / 60.
+            } else {
+                visual_time
+            },
+        )
+    } else {
+        &presentation.pixels
+    };
+    if let Some(path) = o.capture {
+        capture(&path, final_frame, presentation.width, presentation.height)?;
         println!("Saved {}", path.display())
     }
     let elapsed = start.elapsed().as_secs_f64();
     if display.is_some() {
+        println!(
+            "Audio: {queued_sounds} clips queued; source {}{}",
+            audio_mode.name(),
+            if muted { "; muted" } else { "" }
+        );
         println!("Presented {presents} frames in {elapsed:.3}s ({:.2} FPS); executed {count} script frames",presents as f64/elapsed.max(0.001))
     } else {
         println!("Rendered {count} script frames in {elapsed:.3}s")
@@ -450,5 +801,100 @@ fn main() {
     if let Err(e) = run() {
         eprintln!("Screen Antics: {e}");
         std::process::exit(1)
+    }
+}
+
+#[cfg(test)]
+mod style_tests {
+    use super::*;
+    use crate::{
+        animation::{Command, Frame},
+        remaster::RgbaImage,
+        resources::Image,
+    };
+    use std::collections::BTreeMap;
+    #[test]
+    fn switching_packs_preserves_the_frame_and_rebuilds_saved_rgba_layers() {
+        let assets = AssetStore {
+            palette: [[0; 3]; 256],
+            raw: BTreeMap::new(),
+            backgrounds: BTreeMap::from([(
+                "TEST.SCR".into(),
+                Image {
+                    width: 640,
+                    height: 350,
+                    pixels: vec![1; 640 * 350],
+                },
+            )]),
+            sprites: BTreeMap::from([(
+                "ACTOR.BMP".into(),
+                vec![Image {
+                    width: 3,
+                    height: 1,
+                    pixels: vec![2, 0, 3],
+                }],
+            )]),
+        };
+        let art = |pixels: Vec<u32>| RemasterAssets {
+            remade_frames: 1,
+            widescreen: BTreeMap::new(),
+            backgrounds: BTreeMap::new(),
+            sprites: BTreeMap::from([(
+                "ACTOR.BMP".into(),
+                vec![RgbaImage {
+                    width: 12,
+                    height: 4,
+                    pixels: (0..48).map(|i| pixels[(i % 12) / 4]).collect(),
+                }],
+            )]),
+        };
+        let first = art(vec![0xffff0000, 0, 0xff00ff00]);
+        let third = art(vec![0x80ff8000, 0xff8000ff, 0]);
+        let cmd = |opcode, args: Vec<i16>, text: &str| Command {
+            opcode,
+            args,
+            text: text.into(),
+        };
+        let clip = Clip {
+            name: "styles".into(),
+            labels: BTreeMap::new(),
+            frames: vec![
+                Frame {
+                    delay_ticks: 1,
+                    commands: vec![
+                        cmd(0xf010, vec![], "TEST.SCR"),
+                        cmd(0xf020, vec![], "ACTOR.BMP"),
+                        cmd(0xa500, vec![10, 10, 0, 0], ""),
+                        cmd(0x0020, vec![], ""),
+                    ],
+                },
+                Frame {
+                    delay_ticks: 1,
+                    commands: vec![cmd(0xa050, vec![0, 0, 640, 350], "")],
+                },
+                Frame {
+                    delay_ticks: 1,
+                    commands: vec![cmd(0xa060, vec![], "")],
+                },
+            ],
+        };
+        let old = replay_style(&clip, 3, &assets, &first);
+        let switched = replay_style(&clip, old.frame, &assets, &third);
+        let mut direct = Player::new();
+        direct.set_sprite_coverage(third.sprite_coverage());
+        for _ in 0..3 {
+            direct.step(&clip, &assets);
+        }
+        assert_eq!(switched.frame, old.frame);
+        assert_eq!(
+            switched.pixels, old.pixels,
+            "style switching must not change indexed choreography"
+        );
+        assert_eq!(switched.origins, direct.origins);
+        assert_eq!(switched.sources, direct.sources);
+        assert_ne!(
+            switched.origins, old.origins,
+            "new alpha coverage must replace old saved layers"
+        );
     }
 }

@@ -1,0 +1,2365 @@
+{
+  "status": "verified",
+  "scope": "Complete independent HD-2D story presentation; Original and Storybook retained.",
+  "release_tests": {
+    "passed": 84,
+    "failed": 0,
+    "log": "captures/story-final-release-tests.log"
+  },
+  "assets": {
+    "sprite_clips": 253,
+    "sprite_frames": 614,
+    "sprite_masters": 54,
+    "backgrounds": 10,
+    "registered_panoramas": 30,
+    "audio": 23,
+    "errors": [],
+    "ok": true
+  },
+  "continuous_renderer": {
+    "scenes": 41,
+    "ticks": 65883,
+    "summary": "captures/story-final-telemetry/summary.tsv"
+  },
+  "browser_review": {
+    "action_checkpoints": 860,
+    "background_aspect_compositions": 40,
+    "summary": "captures/hd2d-story-final/scene-review.tsv",
+    "aspects": [
+      "core",
+      "16:9",
+      "21:9",
+      "43:18"
+    ]
+  },
+  "native_playback": {
+    "scene_count": 41,
+    "captures": 355,
+    "all_exit_zero": true,
+    "records": [
+      {
+        "scene": "SMDATE.TTM",
+        "exit": 0,
+        "duration_ticks": 2030,
+        "fps": 59.21,
+        "presented_frames": 2043,
+        "seconds": 34.505,
+        "log": "captures/story-native-sweep/SMDATE.log",
+        "captures": [
+          {
+            "time": 3.5,
+            "path": "captures/story-native-sweep/SMDATE-003.5.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 57.4 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.8,
+            "path": "captures/story-native-sweep/SMDATE-006.8.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.8,
+            "path": "captures/story-native-sweep/SMDATE-009.8.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.8 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 12.4,
+            "path": "captures/story-native-sweep/SMDATE-012.4.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.5,
+            "path": "captures/story-native-sweep/SMDATE-013.5.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.5 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.5,
+            "path": "captures/story-native-sweep/SMDATE-014.5.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17.5,
+            "path": "captures/story-native-sweep/SMDATE-017.5.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 20,
+            "path": "captures/story-native-sweep/SMDATE-020.0.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 21.8,
+            "path": "captures/story-native-sweep/SMDATE-021.8.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 24.5,
+            "path": "captures/story-native-sweep/SMDATE-024.5.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 26.9,
+            "path": "captures/story-native-sweep/SMDATE-026.9.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 27.8,
+            "path": "captures/story-native-sweep/SMDATE-027.8.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 28.8,
+            "path": "captures/story-native-sweep/SMDATE-028.8.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 31.5,
+            "path": "captures/story-native-sweep/SMDATE-031.5.jpg",
+            "title": "Screen Antics \u00b7 SMDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SUZYCITY.TTM",
+        "exit": 0,
+        "duration_ticks": 1569,
+        "fps": 59.4,
+        "presented_frames": 1634,
+        "seconds": 27.51,
+        "log": "captures/story-native-sweep/SUZYCITY.log",
+        "captures": [
+          {
+            "time": 1.5,
+            "path": "captures/story-native-sweep/SUZYCITY-001.5.jpg",
+            "title": "Screen Antics \u00b7 SUZYCITY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 56.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5,
+            "path": "captures/story-native-sweep/SUZYCITY-005.0.jpg",
+            "title": "Screen Antics \u00b7 SUZYCITY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.8,
+            "path": "captures/story-native-sweep/SUZYCITY-010.8.jpg",
+            "title": "Screen Antics \u00b7 SUZYCITY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13,
+            "path": "captures/story-native-sweep/SUZYCITY-013.0.jpg",
+            "title": "Screen Antics \u00b7 SUZYCITY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.8,
+            "path": "captures/story-native-sweep/SUZYCITY-014.8.jpg",
+            "title": "Screen Antics \u00b7 SUZYCITY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16,
+            "path": "captures/story-native-sweep/SUZYCITY-016.0.jpg",
+            "title": "Screen Antics \u00b7 SUZYCITY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 19,
+            "path": "captures/story-native-sweep/SUZYCITY-019.0.jpg",
+            "title": "Screen Antics \u00b7 SUZYCITY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 24,
+            "path": "captures/story-native-sweep/SUZYCITY-024.0.jpg",
+            "title": "Screen Antics \u00b7 SUZYCITY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SJLEAVES.TTM",
+        "exit": 0,
+        "duration_ticks": 1338,
+        "fps": 59.26,
+        "presented_frames": 1393,
+        "seconds": 23.507,
+        "log": "captures/story-native-sweep/SJLEAVES.log",
+        "captures": [
+          {
+            "time": 1,
+            "path": "captures/story-native-sweep/SJLEAVES-001.0.jpg",
+            "title": "Screen Antics \u00b7 SJLEAVES.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6,
+            "path": "captures/story-native-sweep/SJLEAVES-006.0.jpg",
+            "title": "Screen Antics \u00b7 SJLEAVES.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.5,
+            "path": "captures/story-native-sweep/SJLEAVES-009.5.jpg",
+            "title": "Screen Antics \u00b7 SJLEAVES.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16,
+            "path": "captures/story-native-sweep/SJLEAVES-016.0.jpg",
+            "title": "Screen Antics \u00b7 SJLEAVES.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17.8,
+            "path": "captures/story-native-sweep/SJLEAVES-017.8.jpg",
+            "title": "Screen Antics \u00b7 SJLEAVES.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.7,
+            "path": "captures/story-native-sweep/SJLEAVES-018.7.jpg",
+            "title": "Screen Antics \u00b7 SJLEAVES.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 20.5,
+            "path": "captures/story-native-sweep/SJLEAVES-020.5.jpg",
+            "title": "Screen Antics \u00b7 SJLEAVES.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.7 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 22,
+            "path": "captures/story-native-sweep/SJLEAVES-022.0.jpg",
+            "title": "Screen Antics \u00b7 SJLEAVES.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "WOULDBE.TTM",
+        "exit": 0,
+        "duration_ticks": 1568,
+        "fps": 59.47,
+        "presented_frames": 1636,
+        "seconds": 27.508,
+        "log": "captures/story-native-sweep/WOULDBE.log",
+        "captures": [
+          {
+            "time": 0.8,
+            "path": "captures/story-native-sweep/WOULDBE-000.8.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.5,
+            "path": "captures/story-native-sweep/WOULDBE-007.5.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.5,
+            "path": "captures/story-native-sweep/WOULDBE-009.5.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.8,
+            "path": "captures/story-native-sweep/WOULDBE-010.8.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.5 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 12.5,
+            "path": "captures/story-native-sweep/WOULDBE-012.5.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.5,
+            "path": "captures/story-native-sweep/WOULDBE-014.5.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 20.8,
+            "path": "captures/story-native-sweep/WOULDBE-020.8.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 22.7,
+            "path": "captures/story-native-sweep/WOULDBE-022.7.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 24,
+            "path": "captures/story-native-sweep/WOULDBE-024.0.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 25.5,
+            "path": "captures/story-native-sweep/WOULDBE-025.5.jpg",
+            "title": "Screen Antics \u00b7 WOULDBE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJSAND.TTM",
+        "exit": 0,
+        "duration_ticks": 2334,
+        "fps": 59.64,
+        "presented_frames": 2356,
+        "seconds": 39.506,
+        "log": "captures/story-native-sweep/MJSAND.log",
+        "captures": [
+          {
+            "time": 1,
+            "path": "captures/story-native-sweep/MJSAND-001.0.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4,
+            "path": "captures/story-native-sweep/MJSAND-004.0.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6,
+            "path": "captures/story-native-sweep/MJSAND-006.0.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.5,
+            "path": "captures/story-native-sweep/MJSAND-010.5.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.5,
+            "path": "captures/story-native-sweep/MJSAND-013.5.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18,
+            "path": "captures/story-native-sweep/MJSAND-018.0.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 25,
+            "path": "captures/story-native-sweep/MJSAND-025.0.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 29,
+            "path": "captures/story-native-sweep/MJSAND-029.0.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 33,
+            "path": "captures/story-native-sweep/MJSAND-033.0.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 37.8,
+            "path": "captures/story-native-sweep/MJSAND-037.8.jpg",
+            "title": "Screen Antics \u00b7 MJSAND.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SBREAKUP.TTM",
+        "exit": 0,
+        "duration_ticks": 1691,
+        "fps": 59.71,
+        "presented_frames": 1762,
+        "seconds": 29.509,
+        "log": "captures/story-native-sweep/SBREAKUP.log",
+        "captures": [
+          {
+            "time": 3,
+            "path": "captures/story-native-sweep/SBREAKUP-003.0.jpg",
+            "title": "Screen Antics \u00b7 SBREAKUP.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.5,
+            "path": "captures/story-native-sweep/SBREAKUP-006.5.jpg",
+            "title": "Screen Antics \u00b7 SBREAKUP.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.5,
+            "path": "captures/story-native-sweep/SBREAKUP-008.5.jpg",
+            "title": "Screen Antics \u00b7 SBREAKUP.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11,
+            "path": "captures/story-native-sweep/SBREAKUP-011.0.jpg",
+            "title": "Screen Antics \u00b7 SBREAKUP.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14,
+            "path": "captures/story-native-sweep/SBREAKUP-014.0.jpg",
+            "title": "Screen Antics \u00b7 SBREAKUP.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18,
+            "path": "captures/story-native-sweep/SBREAKUP-018.0.jpg",
+            "title": "Screen Antics \u00b7 SBREAKUP.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 23,
+            "path": "captures/story-native-sweep/SBREAKUP-023.0.jpg",
+            "title": "Screen Antics \u00b7 SBREAKUP.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 26.5,
+            "path": "captures/story-native-sweep/SBREAKUP-026.5.jpg",
+            "title": "Screen Antics \u00b7 SBREAKUP.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SJGLIMPS.TTM",
+        "exit": 0,
+        "duration_ticks": 2052,
+        "fps": 59.6,
+        "presented_frames": 2116,
+        "seconds": 35.506,
+        "log": "captures/story-native-sweep/SJGLIMPS.log",
+        "captures": [
+          {
+            "time": 2,
+            "path": "captures/story-native-sweep/SJGLIMPS-002.0.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.2 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4,
+            "path": "captures/story-native-sweep/SJGLIMPS-004.0.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.6 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10,
+            "path": "captures/story-native-sweep/SJGLIMPS-010.0.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 15,
+            "path": "captures/story-native-sweep/SJGLIMPS-015.0.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.5,
+            "path": "captures/story-native-sweep/SJGLIMPS-018.5.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 21,
+            "path": "captures/story-native-sweep/SJGLIMPS-021.0.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 26,
+            "path": "captures/story-native-sweep/SJGLIMPS-026.0.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 30,
+            "path": "captures/story-native-sweep/SJGLIMPS-030.0.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 33,
+            "path": "captures/story-native-sweep/SJGLIMPS-033.0.jpg",
+            "title": "Screen Antics \u00b7 SJGLIMPS.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SASKDATE.TTM",
+        "exit": 0,
+        "duration_ticks": 2670,
+        "fps": 59.75,
+        "presented_frames": 2719,
+        "seconds": 45.506,
+        "log": "captures/story-native-sweep/SASKDATE.log",
+        "captures": [
+          {
+            "time": 3,
+            "path": "captures/story-native-sweep/SASKDATE-003.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13,
+            "path": "captures/story-native-sweep/SASKDATE-013.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17,
+            "path": "captures/story-native-sweep/SASKDATE-017.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 20,
+            "path": "captures/story-native-sweep/SASKDATE-020.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 22,
+            "path": "captures/story-native-sweep/SASKDATE-022.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 24,
+            "path": "captures/story-native-sweep/SASKDATE-024.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 28,
+            "path": "captures/story-native-sweep/SASKDATE-028.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 33,
+            "path": "captures/story-native-sweep/SASKDATE-033.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 37,
+            "path": "captures/story-native-sweep/SASKDATE-037.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 42,
+            "path": "captures/story-native-sweep/SASKDATE-042.0.jpg",
+            "title": "Screen Antics \u00b7 SASKDATE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SJMSSGE.TTM",
+        "exit": 0,
+        "duration_ticks": 1604,
+        "fps": 59.7,
+        "presented_frames": 1642,
+        "seconds": 27.505,
+        "log": "captures/story-native-sweep/SJMSSGE.log",
+        "captures": [
+          {
+            "time": 1,
+            "path": "captures/story-native-sweep/SJMSSGE-001.0.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3,
+            "path": "captures/story-native-sweep/SJMSSGE-003.0.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.6,
+            "path": "captures/story-native-sweep/SJMSSGE-004.6.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.8,
+            "path": "captures/story-native-sweep/SJMSSGE-005.8.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11,
+            "path": "captures/story-native-sweep/SJMSSGE-011.0.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14,
+            "path": "captures/story-native-sweep/SJMSSGE-014.0.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17,
+            "path": "captures/story-native-sweep/SJMSSGE-017.0.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 19,
+            "path": "captures/story-native-sweep/SJMSSGE-019.0.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 21,
+            "path": "captures/story-native-sweep/SJMSSGE-021.0.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 23.4,
+            "path": "captures/story-native-sweep/SJMSSGE-023.4.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 25.5,
+            "path": "captures/story-native-sweep/SJMSSGE-025.5.jpg",
+            "title": "Screen Antics \u00b7 SJMSSGE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SJMSUZY.TTM",
+        "exit": 0,
+        "duration_ticks": 1228,
+        "fps": 59.38,
+        "presented_frames": 1277,
+        "seconds": 21.507,
+        "log": "captures/story-native-sweep/SJMSUZY.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/SJMSUZY-000.6.jpg",
+            "title": "Screen Antics \u00b7 SJMSUZY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2.4559999999999995,
+            "path": "captures/story-native-sweep/SJMSUZY-002.5.jpg",
+            "title": "Screen Antics \u00b7 SJMSUZY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.3213333333333335,
+            "path": "captures/story-native-sweep/SJMSUZY-005.3.jpg",
+            "title": "Screen Antics \u00b7 SJMSUZY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.186666666666666,
+            "path": "captures/story-native-sweep/SJMSUZY-008.2.jpg",
+            "title": "Screen Antics \u00b7 SJMSUZY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.256666666666666,
+            "path": "captures/story-native-sweep/SJMSUZY-011.3.jpg",
+            "title": "Screen Antics \u00b7 SJMSUZY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.326666666666664,
+            "path": "captures/story-native-sweep/SJMSUZY-014.3.jpg",
+            "title": "Screen Antics \u00b7 SJMSUZY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17.396666666666665,
+            "path": "captures/story-native-sweep/SJMSUZY-017.4.jpg",
+            "title": "Screen Antics \u00b7 SJMSUZY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 20.166666666666664,
+            "path": "captures/story-native-sweep/SJMSUZY-020.2.jpg",
+            "title": "Screen Antics \u00b7 SJMSUZY.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MEANWHIL.TTM",
+        "exit": 0,
+        "duration_ticks": 1138,
+        "fps": 59.37,
+        "presented_frames": 1158,
+        "seconds": 19.506,
+        "log": "captures/story-native-sweep/MEANWHIL.log",
+        "captures": [
+          {
+            "time": 0.3,
+            "path": "captures/story-native-sweep/MEANWHIL-000.3.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2,
+            "path": "captures/story-native-sweep/MEANWHIL-002.0.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 55.5 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7,
+            "path": "captures/story-native-sweep/MEANWHIL-007.0.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9,
+            "path": "captures/story-native-sweep/MEANWHIL-009.0.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.6,
+            "path": "captures/story-native-sweep/MEANWHIL-011.6.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.2,
+            "path": "captures/story-native-sweep/MEANWHIL-013.2.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.9,
+            "path": "captures/story-native-sweep/MEANWHIL-014.9.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16.7,
+            "path": "captures/story-native-sweep/MEANWHIL-016.7.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.5,
+            "path": "captures/story-native-sweep/MEANWHIL-018.5.jpg",
+            "title": "Screen Antics \u00b7 MEANWHIL.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SJWORK.TTM",
+        "exit": 0,
+        "duration_ticks": 1138,
+        "fps": 59.32,
+        "presented_frames": 1157,
+        "seconds": 19.505,
+        "log": "captures/story-native-sweep/SJWORK.log",
+        "captures": [
+          {
+            "time": 0.3,
+            "path": "captures/story-native-sweep/SJWORK-000.3.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2,
+            "path": "captures/story-native-sweep/SJWORK-002.0.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.2 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7,
+            "path": "captures/story-native-sweep/SJWORK-007.0.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9,
+            "path": "captures/story-native-sweep/SJWORK-009.0.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.6,
+            "path": "captures/story-native-sweep/SJWORK-011.6.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.2,
+            "path": "captures/story-native-sweep/SJWORK-013.2.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.9,
+            "path": "captures/story-native-sweep/SJWORK-014.9.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.5 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16.7,
+            "path": "captures/story-native-sweep/SJWORK-016.7.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.5,
+            "path": "captures/story-native-sweep/SJWORK-018.5.jpg",
+            "title": "Screen Antics \u00b7 SJWORK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "THEEND.TTM",
+        "exit": 0,
+        "duration_ticks": 954,
+        "fps": 57.55,
+        "presented_frames": 1094,
+        "seconds": 19.01,
+        "log": "captures/story-native-final/THEEND.log",
+        "captures": [
+          {
+            "time": 1,
+            "path": "captures/story-native-final/THEEND-001.0.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2.6,
+            "path": "captures/story-native-final/THEEND-002.6.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 58.2 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.5,
+            "path": "captures/story-native-final/THEEND-003.5.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 57.6 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.5,
+            "path": "captures/story-native-final/THEEND-005.5.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.5,
+            "path": "captures/story-native-final/THEEND-007.5.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9,
+            "path": "captures/story-native-final/THEEND-009.0.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 57.4 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11,
+            "path": "captures/story-native-final/THEEND-011.0.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 12.5,
+            "path": "captures/story-native-final/THEEND-012.5.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.8,
+            "path": "captures/story-native-final/THEEND-014.8.jpg",
+            "title": "Screen Antics \u00b7 THEEND.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 55.4 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "FIRE.TTM",
+        "exit": 0,
+        "duration_ticks": 2000,
+        "fps": 59.76,
+        "presented_frames": 2062,
+        "seconds": 34.507,
+        "log": "captures/story-native-sweep/FIRE.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/FIRE-000.6.jpg",
+            "title": "Screen Antics \u00b7 FIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.0,
+            "path": "captures/story-native-sweep/FIRE-004.0.jpg",
+            "title": "Screen Antics \u00b7 FIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.666666666666668,
+            "path": "captures/story-native-sweep/FIRE-008.7.jpg",
+            "title": "Screen Antics \u00b7 FIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.333333333333336,
+            "path": "captures/story-native-sweep/FIRE-013.3.jpg",
+            "title": "Screen Antics \u00b7 FIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.333333333333336,
+            "path": "captures/story-native-sweep/FIRE-018.3.jpg",
+            "title": "Screen Antics \u00b7 FIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 23.333333333333332,
+            "path": "captures/story-native-sweep/FIRE-023.3.jpg",
+            "title": "Screen Antics \u00b7 FIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 28.333333333333336,
+            "path": "captures/story-native-sweep/FIRE-028.3.jpg",
+            "title": "Screen Antics \u00b7 FIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 33.03333333333334,
+            "path": "captures/story-native-sweep/FIRE-033.0.jpg",
+            "title": "Screen Antics \u00b7 FIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "FISHWALK.TTM",
+        "exit": 0,
+        "duration_ticks": 732,
+        "fps": 59.6,
+        "presented_frames": 805,
+        "seconds": 13.507,
+        "log": "captures/story-native-sweep/FISHWALK.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/FISHWALK-000.6.jpg",
+            "title": "Screen Antics \u00b7 FISHWALK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.464,
+            "path": "captures/story-native-sweep/FISHWALK-001.5.jpg",
+            "title": "Screen Antics \u00b7 FISHWALK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.2 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.1719999999999997,
+            "path": "captures/story-native-sweep/FISHWALK-003.2.jpg",
+            "title": "Screen Antics \u00b7 FISHWALK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.88,
+            "path": "captures/story-native-sweep/FISHWALK-004.9.jpg",
+            "title": "Screen Antics \u00b7 FISHWALK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.71,
+            "path": "captures/story-native-sweep/FISHWALK-006.7.jpg",
+            "title": "Screen Antics \u00b7 FISHWALK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.54,
+            "path": "captures/story-native-sweep/FISHWALK-008.5.jpg",
+            "title": "Screen Antics \u00b7 FISHWALK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.37,
+            "path": "captures/story-native-sweep/FISHWALK-010.4.jpg",
+            "title": "Screen Antics \u00b7 FISHWALK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.899999999999999,
+            "path": "captures/story-native-sweep/FISHWALK-011.9.jpg",
+            "title": "Screen Antics \u00b7 FISHWALK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GFFFOOD.TTM",
+        "exit": 0,
+        "duration_ticks": 732,
+        "fps": 59.89,
+        "presented_frames": 809,
+        "seconds": 13.507,
+        "log": "captures/story-native-sweep/GFFFOOD.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GFFFOOD-000.6.jpg",
+            "title": "Screen Antics \u00b7 GFFFOOD.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.464,
+            "path": "captures/story-native-sweep/GFFFOOD-001.5.jpg",
+            "title": "Screen Antics \u00b7 GFFFOOD.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.4 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.1719999999999997,
+            "path": "captures/story-native-sweep/GFFFOOD-003.2.jpg",
+            "title": "Screen Antics \u00b7 GFFFOOD.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.88,
+            "path": "captures/story-native-sweep/GFFFOOD-004.9.jpg",
+            "title": "Screen Antics \u00b7 GFFFOOD.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.71,
+            "path": "captures/story-native-sweep/GFFFOOD-006.7.jpg",
+            "title": "Screen Antics \u00b7 GFFFOOD.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.54,
+            "path": "captures/story-native-sweep/GFFFOOD-008.5.jpg",
+            "title": "Screen Antics \u00b7 GFFFOOD.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.37,
+            "path": "captures/story-native-sweep/GFFFOOD-010.4.jpg",
+            "title": "Screen Antics \u00b7 GFFFOOD.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.899999999999999,
+            "path": "captures/story-native-sweep/GFFFOOD-011.9.jpg",
+            "title": "Screen Antics \u00b7 GFFFOOD.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJCATCH2.TTM",
+        "exit": 0,
+        "duration_ticks": 1754,
+        "fps": 59.22,
+        "presented_frames": 1955,
+        "seconds": 33.013,
+        "log": "captures/story-native-final/GJCATCH2.log",
+        "captures": [
+          {
+            "time": 2,
+            "path": "captures/story-native-final/GJCATCH2-002.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 57.8 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5,
+            "path": "captures/story-native-final/GJCATCH2-005.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9,
+            "path": "captures/story-native-final/GJCATCH2-009.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13,
+            "path": "captures/story-native-final/GJCATCH2-013.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17,
+            "path": "captures/story-native-final/GJCATCH2-017.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 21,
+            "path": "captures/story-native-final/GJCATCH2-021.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 24,
+            "path": "captures/story-native-final/GJCATCH2-024.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 26,
+            "path": "captures/story-native-final/GJCATCH2-026.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 28,
+            "path": "captures/story-native-final/GJCATCH2-028.0.jpg",
+            "title": "Screen Antics \u00b7 GJCATCH2.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJDIVE.TTM",
+        "exit": 0,
+        "duration_ticks": 3172,
+        "fps": 59.82,
+        "presented_frames": 3201,
+        "seconds": 53.509,
+        "log": "captures/story-native-sweep/GJDIVE.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJDIVE-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.343999999999999,
+            "path": "captures/story-native-sweep/GJDIVE-006.3.jpg",
+            "title": "Screen Antics \u00b7 GJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.745333333333335,
+            "path": "captures/story-native-sweep/GJDIVE-013.7.jpg",
+            "title": "Screen Antics \u00b7 GJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 21.14666666666667,
+            "path": "captures/story-native-sweep/GJDIVE-021.1.jpg",
+            "title": "Screen Antics \u00b7 GJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 29.076666666666668,
+            "path": "captures/story-native-sweep/GJDIVE-029.1.jpg",
+            "title": "Screen Antics \u00b7 GJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 37.00666666666667,
+            "path": "captures/story-native-sweep/GJDIVE-037.0.jpg",
+            "title": "Screen Antics \u00b7 GJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 44.93666666666667,
+            "path": "captures/story-native-sweep/GJDIVE-044.9.jpg",
+            "title": "Screen Antics \u00b7 GJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 52.56666666666667,
+            "path": "captures/story-native-sweep/GJDIVE-052.6.jpg",
+            "title": "Screen Antics \u00b7 GJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJGULIVR.TTM",
+        "exit": 0,
+        "duration_ticks": 2421,
+        "fps": 59.75,
+        "presented_frames": 2480,
+        "seconds": 41.503,
+        "log": "captures/story-native-sweep/GJGULIVR.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJGULIVR-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJGULIVR.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.842,
+            "path": "captures/story-native-sweep/GJGULIVR-004.8.jpg",
+            "title": "Screen Antics \u00b7 GJGULIVR.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.491000000000001,
+            "path": "captures/story-native-sweep/GJGULIVR-010.5.jpg",
+            "title": "Screen Antics \u00b7 GJGULIVR.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.2 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16.14,
+            "path": "captures/story-native-sweep/GJGULIVR-016.1.jpg",
+            "title": "Screen Antics \u00b7 GJGULIVR.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 22.192500000000003,
+            "path": "captures/story-native-sweep/GJGULIVR-022.2.jpg",
+            "title": "Screen Antics \u00b7 GJGULIVR.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 28.244999999999997,
+            "path": "captures/story-native-sweep/GJGULIVR-028.2.jpg",
+            "title": "Screen Antics \u00b7 GJGULIVR.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 34.2975,
+            "path": "captures/story-native-sweep/GJGULIVR-034.3.jpg",
+            "title": "Screen Antics \u00b7 GJGULIVR.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 40.050000000000004,
+            "path": "captures/story-native-sweep/GJGULIVR-040.1.jpg",
+            "title": "Screen Antics \u00b7 GJGULIVR.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJGULL1.TTM",
+        "exit": 0,
+        "duration_ticks": 2796,
+        "fps": 59.82,
+        "presented_frames": 2842,
+        "seconds": 47.507,
+        "log": "captures/story-native-sweep/GJGULL1.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJGULL1-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJGULL1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.592,
+            "path": "captures/story-native-sweep/GJGULL1-005.6.jpg",
+            "title": "Screen Antics \u00b7 GJGULL1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 12.116000000000001,
+            "path": "captures/story-native-sweep/GJGULL1-012.1.jpg",
+            "title": "Screen Antics \u00b7 GJGULL1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.64,
+            "path": "captures/story-native-sweep/GJGULL1-018.6.jpg",
+            "title": "Screen Antics \u00b7 GJGULL1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 25.630000000000003,
+            "path": "captures/story-native-sweep/GJGULL1-025.6.jpg",
+            "title": "Screen Antics \u00b7 GJGULL1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 32.62,
+            "path": "captures/story-native-sweep/GJGULL1-032.6.jpg",
+            "title": "Screen Antics \u00b7 GJGULL1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 39.61,
+            "path": "captures/story-native-sweep/GJGULL1-039.6.jpg",
+            "title": "Screen Antics \u00b7 GJGULL1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 46.300000000000004,
+            "path": "captures/story-native-sweep/GJGULL1-046.3.jpg",
+            "title": "Screen Antics \u00b7 GJGULL1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJHOT.TTM",
+        "exit": 0,
+        "duration_ticks": 976,
+        "fps": 59.74,
+        "presented_frames": 1046,
+        "seconds": 17.508,
+        "log": "captures/story-native-sweep/GJHOT.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJHOT-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJHOT.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.9519999999999997,
+            "path": "captures/story-native-sweep/GJHOT-002.0.jpg",
+            "title": "Screen Antics \u00b7 GJHOT.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.4 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.229333333333333,
+            "path": "captures/story-native-sweep/GJHOT-004.2.jpg",
+            "title": "Screen Antics \u00b7 GJHOT.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.506666666666667,
+            "path": "captures/story-native-sweep/GJHOT-006.5.jpg",
+            "title": "Screen Antics \u00b7 GJHOT.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.946666666666667,
+            "path": "captures/story-native-sweep/GJHOT-008.9.jpg",
+            "title": "Screen Antics \u00b7 GJHOT.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.386666666666665,
+            "path": "captures/story-native-sweep/GJHOT-011.4.jpg",
+            "title": "Screen Antics \u00b7 GJHOT.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.826666666666666,
+            "path": "captures/story-native-sweep/GJHOT-013.8.jpg",
+            "title": "Screen Antics \u00b7 GJHOT.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 15.966666666666665,
+            "path": "captures/story-native-sweep/GJHOT-016.0.jpg",
+            "title": "Screen Antics \u00b7 GJHOT.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJLILIPU.TTM",
+        "exit": 0,
+        "duration_ticks": 1158,
+        "fps": 59.68,
+        "presented_frames": 1224,
+        "seconds": 20.509,
+        "log": "captures/story-native-sweep/GJLILIPU.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJLILIPU-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJLILIPU.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2.316,
+            "path": "captures/story-native-sweep/GJLILIPU-002.3.jpg",
+            "title": "Screen Antics \u00b7 GJLILIPU.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.018000000000001,
+            "path": "captures/story-native-sweep/GJLILIPU-005.0.jpg",
+            "title": "Screen Antics \u00b7 GJLILIPU.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.720000000000001,
+            "path": "captures/story-native-sweep/GJLILIPU-007.7.jpg",
+            "title": "Screen Antics \u00b7 GJLILIPU.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.615000000000002,
+            "path": "captures/story-native-sweep/GJLILIPU-010.6.jpg",
+            "title": "Screen Antics \u00b7 GJLILIPU.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.51,
+            "path": "captures/story-native-sweep/GJLILIPU-013.5.jpg",
+            "title": "Screen Antics \u00b7 GJLILIPU.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16.405,
+            "path": "captures/story-native-sweep/GJLILIPU-016.4.jpg",
+            "title": "Screen Antics \u00b7 GJLILIPU.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.8 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 19.0,
+            "path": "captures/story-native-sweep/GJLILIPU-019.0.jpg",
+            "title": "Screen Antics \u00b7 GJLILIPU.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJNAT1.TTM",
+        "exit": 0,
+        "duration_ticks": 1977,
+        "fps": 59.92,
+        "presented_frames": 2008,
+        "seconds": 33.51,
+        "log": "captures/story-native-sweep/GJNAT1.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJNAT1-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJNAT1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.954,
+            "path": "captures/story-native-sweep/GJNAT1-004.0.jpg",
+            "title": "Screen Antics \u00b7 GJNAT1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.567,
+            "path": "captures/story-native-sweep/GJNAT1-008.6.jpg",
+            "title": "Screen Antics \u00b7 GJNAT1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.180000000000001,
+            "path": "captures/story-native-sweep/GJNAT1-013.2.jpg",
+            "title": "Screen Antics \u00b7 GJNAT1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.122500000000002,
+            "path": "captures/story-native-sweep/GJNAT1-018.1.jpg",
+            "title": "Screen Antics \u00b7 GJNAT1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 23.065,
+            "path": "captures/story-native-sweep/GJNAT1-023.1.jpg",
+            "title": "Screen Antics \u00b7 GJNAT1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 28.0075,
+            "path": "captures/story-native-sweep/GJNAT1-028.0.jpg",
+            "title": "Screen Antics \u00b7 GJNAT1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 32.650000000000006,
+            "path": "captures/story-native-sweep/GJNAT1-032.7.jpg",
+            "title": "Screen Antics \u00b7 GJNAT1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJNAT3.TTM",
+        "exit": 0,
+        "duration_ticks": 1768,
+        "fps": 59.76,
+        "presented_frames": 1823,
+        "seconds": 30.506,
+        "log": "captures/story-native-sweep/GJNAT3.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJNAT3-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJNAT3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.5359999999999996,
+            "path": "captures/story-native-sweep/GJNAT3-003.5.jpg",
+            "title": "Screen Antics \u00b7 GJNAT3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.661333333333333,
+            "path": "captures/story-native-sweep/GJNAT3-007.7.jpg",
+            "title": "Screen Antics \u00b7 GJNAT3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.786666666666667,
+            "path": "captures/story-native-sweep/GJNAT3-011.8.jpg",
+            "title": "Screen Antics \u00b7 GJNAT3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16.206666666666667,
+            "path": "captures/story-native-sweep/GJNAT3-016.2.jpg",
+            "title": "Screen Antics \u00b7 GJNAT3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 20.626666666666665,
+            "path": "captures/story-native-sweep/GJNAT3-020.6.jpg",
+            "title": "Screen Antics \u00b7 GJNAT3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 25.046666666666663,
+            "path": "captures/story-native-sweep/GJNAT3-025.0.jpg",
+            "title": "Screen Antics \u00b7 GJNAT3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 29.166666666666664,
+            "path": "captures/story-native-sweep/GJNAT3-029.2.jpg",
+            "title": "Screen Antics \u00b7 GJNAT3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJVIS3.TTM",
+        "exit": 0,
+        "duration_ticks": 596,
+        "fps": 59.2,
+        "presented_frames": 622,
+        "seconds": 10.507,
+        "log": "captures/story-native-sweep/GJVIS3.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJVIS3-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJVIS3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.192,
+            "path": "captures/story-native-sweep/GJVIS3-001.2.jpg",
+            "title": "Screen Antics \u00b7 GJVIS3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.4 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2.582666666666667,
+            "path": "captures/story-native-sweep/GJVIS3-002.6.jpg",
+            "title": "Screen Antics \u00b7 GJVIS3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.9733333333333336,
+            "path": "captures/story-native-sweep/GJVIS3-004.0.jpg",
+            "title": "Screen Antics \u00b7 GJVIS3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.463333333333334,
+            "path": "captures/story-native-sweep/GJVIS3-005.5.jpg",
+            "title": "Screen Antics \u00b7 GJVIS3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.953333333333333,
+            "path": "captures/story-native-sweep/GJVIS3-007.0.jpg",
+            "title": "Screen Antics \u00b7 GJVIS3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.443333333333333,
+            "path": "captures/story-native-sweep/GJVIS3-008.4.jpg",
+            "title": "Screen Antics \u00b7 GJVIS3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.633333333333333,
+            "path": "captures/story-native-sweep/GJVIS3-009.6.jpg",
+            "title": "Screen Antics \u00b7 GJVIS3.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJVIS5.TTM",
+        "exit": 0,
+        "duration_ticks": 789,
+        "fps": 59.7,
+        "presented_frames": 866,
+        "seconds": 14.507,
+        "log": "captures/story-native-sweep/GJVIS5.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJVIS5-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.578,
+            "path": "captures/story-native-sweep/GJVIS5-001.6.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.2 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.419,
+            "path": "captures/story-native-sweep/GJVIS5-003.4.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.260000000000001,
+            "path": "captures/story-native-sweep/GJVIS5-005.3.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.232500000000001,
+            "path": "captures/story-native-sweep/GJVIS5-007.2.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.205,
+            "path": "captures/story-native-sweep/GJVIS5-009.2.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.1775,
+            "path": "captures/story-native-sweep/GJVIS5-011.2.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 12.85,
+            "path": "captures/story-native-sweep/GJVIS5-012.8.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJVIS5W.TTM",
+        "exit": 0,
+        "duration_ticks": 982,
+        "fps": 59.52,
+        "presented_frames": 1042,
+        "seconds": 17.506,
+        "log": "captures/story-native-sweep/GJVIS5W.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/GJVIS5W-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5W.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.964,
+            "path": "captures/story-native-sweep/GJVIS5W-002.0.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5W.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.2 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.255333333333334,
+            "path": "captures/story-native-sweep/GJVIS5W-004.3.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5W.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.546666666666667,
+            "path": "captures/story-native-sweep/GJVIS5W-006.5.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5W.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.001666666666667,
+            "path": "captures/story-native-sweep/GJVIS5W-009.0.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5W.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.456666666666667,
+            "path": "captures/story-native-sweep/GJVIS5W-011.5.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5W.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.911666666666667,
+            "path": "captures/story-native-sweep/GJVIS5W-013.9.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5W.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16.066666666666666,
+            "path": "captures/story-native-sweep/GJVIS5W-016.1.jpg",
+            "title": "Screen Antics \u00b7 GJVIS5W.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "GJVIS6.TTM",
+        "exit": 0,
+        "duration_ticks": 793,
+        "fps": 55.39,
+        "presented_frames": 942,
+        "seconds": 17.008,
+        "log": "captures/story-native-final/GJVIS6.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-final/GJVIS6-000.6.jpg",
+            "title": "Screen Antics \u00b7 GJVIS6.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.5859999999999999,
+            "path": "captures/story-native-final/GJVIS6-001.6.jpg",
+            "title": "Screen Antics \u00b7 GJVIS6.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 56.4 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.4363333333333337,
+            "path": "captures/story-native-final/GJVIS6-003.4.jpg",
+            "title": "Screen Antics \u00b7 GJVIS6.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.286666666666667,
+            "path": "captures/story-native-final/GJVIS6-005.3.jpg",
+            "title": "Screen Antics \u00b7 GJVIS6.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.269166666666667,
+            "path": "captures/story-native-final/GJVIS6-007.3.jpg",
+            "title": "Screen Antics \u00b7 GJVIS6.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.251666666666667,
+            "path": "captures/story-native-final/GJVIS6-009.3.jpg",
+            "title": "Screen Antics \u00b7 GJVIS6.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.234166666666667,
+            "path": "captures/story-native-final/GJVIS6-011.2.jpg",
+            "title": "Screen Antics \u00b7 GJVIS6.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 12.916666666666666,
+            "path": "captures/story-native-final/GJVIS6-012.9.jpg",
+            "title": "Screen Antics \u00b7 GJVIS6.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 42.8 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJAMBWLK.TTM",
+        "exit": 0,
+        "duration_ticks": 2241,
+        "fps": 59.86,
+        "presented_frames": 2305,
+        "seconds": 38.505,
+        "log": "captures/story-native-sweep/MJAMBWLK.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/MJAMBWLK-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJAMBWLK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.482,
+            "path": "captures/story-native-sweep/MJAMBWLK-004.5.jpg",
+            "title": "Screen Antics \u00b7 MJAMBWLK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.711,
+            "path": "captures/story-native-sweep/MJAMBWLK-009.7.jpg",
+            "title": "Screen Antics \u00b7 MJAMBWLK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.940000000000001,
+            "path": "captures/story-native-sweep/MJAMBWLK-014.9.jpg",
+            "title": "Screen Antics \u00b7 MJAMBWLK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 20.542500000000004,
+            "path": "captures/story-native-sweep/MJAMBWLK-020.5.jpg",
+            "title": "Screen Antics \u00b7 MJAMBWLK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 26.145,
+            "path": "captures/story-native-sweep/MJAMBWLK-026.1.jpg",
+            "title": "Screen Antics \u00b7 MJAMBWLK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.8 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 31.7475,
+            "path": "captures/story-native-sweep/MJAMBWLK-031.7.jpg",
+            "title": "Screen Antics \u00b7 MJAMBWLK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 37.050000000000004,
+            "path": "captures/story-native-sweep/MJAMBWLK-037.1.jpg",
+            "title": "Screen Antics \u00b7 MJAMBWLK.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJBATH.TTM",
+        "exit": 0,
+        "duration_ticks": 1622,
+        "fps": 59.77,
+        "presented_frames": 1704,
+        "seconds": 28.507,
+        "log": "captures/story-native-sweep/MJBATH.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/MJBATH-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJBATH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.244,
+            "path": "captures/story-native-sweep/MJBATH-003.2.jpg",
+            "title": "Screen Antics \u00b7 MJBATH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.028666666666667,
+            "path": "captures/story-native-sweep/MJBATH-007.0.jpg",
+            "title": "Screen Antics \u00b7 MJBATH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.813333333333334,
+            "path": "captures/story-native-sweep/MJBATH-010.8.jpg",
+            "title": "Screen Antics \u00b7 MJBATH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.868333333333336,
+            "path": "captures/story-native-sweep/MJBATH-014.9.jpg",
+            "title": "Screen Antics \u00b7 MJBATH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.923333333333332,
+            "path": "captures/story-native-sweep/MJBATH-018.9.jpg",
+            "title": "Screen Antics \u00b7 MJBATH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 22.978333333333335,
+            "path": "captures/story-native-sweep/MJBATH-023.0.jpg",
+            "title": "Screen Antics \u00b7 MJBATH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 26.733333333333334,
+            "path": "captures/story-native-sweep/MJBATH-026.7.jpg",
+            "title": "Screen Antics \u00b7 MJBATH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJCOCO.TTM",
+        "exit": 0,
+        "duration_ticks": 1719,
+        "fps": 59.75,
+        "presented_frames": 1763,
+        "seconds": 29.506,
+        "log": "captures/story-native-sweep/MJCOCO.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/MJCOCO-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.4379999999999997,
+            "path": "captures/story-native-sweep/MJCOCO-003.4.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.449,
+            "path": "captures/story-native-sweep/MJCOCO-007.4.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.46,
+            "path": "captures/story-native-sweep/MJCOCO-011.5.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 15.7575,
+            "path": "captures/story-native-sweep/MJCOCO-015.8.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 20.054999999999996,
+            "path": "captures/story-native-sweep/MJCOCO-020.1.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 24.3525,
+            "path": "captures/story-native-sweep/MJCOCO-024.4.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 28.349999999999998,
+            "path": "captures/story-native-sweep/MJCOCO-028.3.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJCOCO1.TTM",
+        "exit": 0,
+        "duration_ticks": 2641,
+        "fps": 59.81,
+        "presented_frames": 2722,
+        "seconds": 45.507,
+        "log": "captures/story-native-sweep/MJCOCO1.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/MJCOCO1-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.282,
+            "path": "captures/story-native-sweep/MJCOCO1-005.3.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.444333333333333,
+            "path": "captures/story-native-sweep/MJCOCO1-011.4.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17.606666666666666,
+            "path": "captures/story-native-sweep/MJCOCO1-017.6.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 24.20916666666667,
+            "path": "captures/story-native-sweep/MJCOCO1-024.2.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 30.811666666666664,
+            "path": "captures/story-native-sweep/MJCOCO1-030.8.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 37.41416666666667,
+            "path": "captures/story-native-sweep/MJCOCO1-037.4.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 43.71666666666667,
+            "path": "captures/story-native-sweep/MJCOCO1-043.7.jpg",
+            "title": "Screen Antics \u00b7 MJCOCO1.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJDIVE.TTM",
+        "exit": 0,
+        "duration_ticks": 901,
+        "fps": 59.13,
+        "presented_frames": 1124,
+        "seconds": 19.01,
+        "log": "captures/story-native-final/MJDIVE.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-final/MJDIVE-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.802,
+            "path": "captures/story-native-final/MJDIVE-001.8.jpg",
+            "title": "Screen Antics \u00b7 MJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.9043333333333337,
+            "path": "captures/story-native-final/MJDIVE-003.9.jpg",
+            "title": "Screen Antics \u00b7 MJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.006666666666668,
+            "path": "captures/story-native-final/MJDIVE-006.0.jpg",
+            "title": "Screen Antics \u00b7 MJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 8.259166666666667,
+            "path": "captures/story-native-final/MJDIVE-008.3.jpg",
+            "title": "Screen Antics \u00b7 MJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.511666666666667,
+            "path": "captures/story-native-final/MJDIVE-010.5.jpg",
+            "title": "Screen Antics \u00b7 MJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 12.764166666666666,
+            "path": "captures/story-native-final/MJDIVE-012.8.jpg",
+            "title": "Screen Antics \u00b7 MJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.716666666666667,
+            "path": "captures/story-native-final/MJDIVE-014.7.jpg",
+            "title": "Screen Antics \u00b7 MJDIVE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJFIRE.TTM",
+        "exit": 0,
+        "duration_ticks": 3297,
+        "fps": 59.92,
+        "presented_frames": 3326,
+        "seconds": 55.506,
+        "log": "captures/story-native-sweep/MJFIRE.log",
+        "captures": [
+          {
+            "time": 2,
+            "path": "captures/story-native-sweep/MJFIRE-002.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.2 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5,
+            "path": "captures/story-native-sweep/MJFIRE-005.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9,
+            "path": "captures/story-native-sweep/MJFIRE-009.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13,
+            "path": "captures/story-native-sweep/MJFIRE-013.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17,
+            "path": "captures/story-native-sweep/MJFIRE-017.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 21,
+            "path": "captures/story-native-sweep/MJFIRE-021.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 27,
+            "path": "captures/story-native-sweep/MJFIRE-027.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 33,
+            "path": "captures/story-native-sweep/MJFIRE-033.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 37.5,
+            "path": "captures/story-native-sweep/MJFIRE-037.5.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 40.5,
+            "path": "captures/story-native-sweep/MJFIRE-040.5.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 44,
+            "path": "captures/story-native-sweep/MJFIRE-044.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 49,
+            "path": "captures/story-native-sweep/MJFIRE-049.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 53,
+            "path": "captures/story-native-sweep/MJFIRE-053.0.jpg",
+            "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJFISH.TTM",
+        "exit": 0,
+        "duration_ticks": 1950,
+        "fps": 59.63,
+        "presented_frames": 1998,
+        "seconds": 33.506,
+        "log": "captures/story-native-sweep/MJFISH.log",
+        "captures": [
+          {
+            "time": 2,
+            "path": "captures/story-native-sweep/MJFISH-002.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.5 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4,
+            "path": "captures/story-native-sweep/MJFISH-004.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 58.7 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7,
+            "path": "captures/story-native-sweep/MJFISH-007.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10,
+            "path": "captures/story-native-sweep/MJFISH-010.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13,
+            "path": "captures/story-native-sweep/MJFISH-013.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 17,
+            "path": "captures/story-native-sweep/MJFISH-017.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 21,
+            "path": "captures/story-native-sweep/MJFISH-021.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 25,
+            "path": "captures/story-native-sweep/MJFISH-025.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 29,
+            "path": "captures/story-native-sweep/MJFISH-029.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 32,
+            "path": "captures/story-native-sweep/MJFISH-032.0.jpg",
+            "title": "Screen Antics \u00b7 MJFISH.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJFISHC.TTM",
+        "exit": 0,
+        "duration_ticks": 1690,
+        "fps": 59.79,
+        "presented_frames": 1764,
+        "seconds": 29.505,
+        "log": "captures/story-native-sweep/MJFISHC.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/MJFISHC-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJFISHC.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.38,
+            "path": "captures/story-native-sweep/MJFISHC-003.4.jpg",
+            "title": "Screen Antics \u00b7 MJFISHC.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.323333333333334,
+            "path": "captures/story-native-sweep/MJFISHC-007.3.jpg",
+            "title": "Screen Antics \u00b7 MJFISHC.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.266666666666667,
+            "path": "captures/story-native-sweep/MJFISHC-011.3.jpg",
+            "title": "Screen Antics \u00b7 MJFISHC.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 15.491666666666669,
+            "path": "captures/story-native-sweep/MJFISHC-015.5.jpg",
+            "title": "Screen Antics \u00b7 MJFISHC.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 19.716666666666665,
+            "path": "captures/story-native-sweep/MJFISHC-019.7.jpg",
+            "title": "Screen Antics \u00b7 MJFISHC.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 23.941666666666666,
+            "path": "captures/story-native-sweep/MJFISHC-023.9.jpg",
+            "title": "Screen Antics \u00b7 MJFISHC.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 27.866666666666667,
+            "path": "captures/story-native-sweep/MJFISHC-027.9.jpg",
+            "title": "Screen Antics \u00b7 MJFISHC.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJJOG.TTM",
+        "exit": 0,
+        "duration_ticks": 2170,
+        "fps": 59.97,
+        "presented_frames": 2249,
+        "seconds": 37.504,
+        "log": "captures/story-native-sweep/MJJOG.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-sweep/MJJOG-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJJOG.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 4.34,
+            "path": "captures/story-native-sweep/MJJOG-004.3.jpg",
+            "title": "Screen Antics \u00b7 MJJOG.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 9.403333333333332,
+            "path": "captures/story-native-sweep/MJJOG-009.4.jpg",
+            "title": "Screen Antics \u00b7 MJJOG.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 14.466666666666667,
+            "path": "captures/story-native-sweep/MJJOG-014.5.jpg",
+            "title": "Screen Antics \u00b7 MJJOG.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 19.891666666666666,
+            "path": "captures/story-native-sweep/MJJOG-019.9.jpg",
+            "title": "Screen Antics \u00b7 MJJOG.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 25.316666666666663,
+            "path": "captures/story-native-sweep/MJJOG-025.3.jpg",
+            "title": "Screen Antics \u00b7 MJJOG.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 30.741666666666664,
+            "path": "captures/story-native-sweep/MJJOG-030.7.jpg",
+            "title": "Screen Antics \u00b7 MJJOG.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.3 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 35.86666666666667,
+            "path": "captures/story-native-sweep/MJJOG-035.9.jpg",
+            "title": "Screen Antics \u00b7 MJJOG.TTM \u00b7 HD-2D Neo-Retro \u00b7 16:9 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJRAFT.TTM",
+        "exit": 0,
+        "duration_ticks": 432,
+        "fps": 58.0,
+        "presented_frames": 639,
+        "seconds": 11.017,
+        "log": "captures/story-native-final/MJRAFT.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-final/MJRAFT-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJRAFT.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 0.864,
+            "path": "captures/story-native-final/MJRAFT-000.9.jpg",
+            "title": "Screen Antics \u00b7 MJRAFT.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.872,
+            "path": "captures/story-native-final/MJRAFT-001.9.jpg",
+            "title": "Screen Antics \u00b7 MJRAFT.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 53.8 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2.8800000000000003,
+            "path": "captures/story-native-final/MJRAFT-002.9.jpg",
+            "title": "Screen Antics \u00b7 MJRAFT.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.9600000000000004,
+            "path": "captures/story-native-final/MJRAFT-004.0.jpg",
+            "title": "Screen Antics \u00b7 MJRAFT.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.04,
+            "path": "captures/story-native-final/MJRAFT-005.0.jpg",
+            "title": "Screen Antics \u00b7 MJRAFT.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.12,
+            "path": "captures/story-native-final/MJRAFT-006.1.jpg",
+            "title": "Screen Antics \u00b7 MJRAFT.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.9,
+            "path": "captures/story-native-final/MJRAFT-006.9.jpg",
+            "title": "Screen Antics \u00b7 MJRAFT.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJREAD.TTM",
+        "exit": 0,
+        "duration_ticks": 1675,
+        "fps": 59.24,
+        "presented_frames": 1837,
+        "seconds": 31.009,
+        "log": "captures/story-native-final/MJREAD.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-final/MJREAD-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJREAD.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.35,
+            "path": "captures/story-native-final/MJREAD-003.4.jpg",
+            "title": "Screen Antics \u00b7 MJREAD.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.258333333333334,
+            "path": "captures/story-native-final/MJREAD-007.3.jpg",
+            "title": "Screen Antics \u00b7 MJREAD.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 11.166666666666668,
+            "path": "captures/story-native-final/MJREAD-011.2.jpg",
+            "title": "Screen Antics \u00b7 MJREAD.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 15.354166666666668,
+            "path": "captures/story-native-final/MJREAD-015.4.jpg",
+            "title": "Screen Antics \u00b7 MJREAD.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.7 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 19.541666666666668,
+            "path": "captures/story-native-final/MJREAD-019.5.jpg",
+            "title": "Screen Antics \u00b7 MJREAD.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 23.729166666666668,
+            "path": "captures/story-native-final/MJREAD-023.7.jpg",
+            "title": "Screen Antics \u00b7 MJREAD.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 27.616666666666667,
+            "path": "captures/story-native-final/MJREAD-027.6.jpg",
+            "title": "Screen Antics \u00b7 MJREAD.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "MJTELE.TTM",
+        "exit": 0,
+        "duration_ticks": 430,
+        "fps": 57.78,
+        "presented_frames": 636,
+        "seconds": 11.008,
+        "log": "captures/story-native-final/MJTELE.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-final/MJTELE-000.6.jpg",
+            "title": "Screen Antics \u00b7 MJTELE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 0.86,
+            "path": "captures/story-native-final/MJTELE-000.9.jpg",
+            "title": "Screen Antics \u00b7 MJTELE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 1.8633333333333335,
+            "path": "captures/story-native-final/MJTELE-001.9.jpg",
+            "title": "Screen Antics \u00b7 MJTELE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 55.6 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2.866666666666667,
+            "path": "captures/story-native-final/MJTELE-002.9.jpg",
+            "title": "Screen Antics \u00b7 MJTELE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 58.5 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 3.9416666666666673,
+            "path": "captures/story-native-final/MJTELE-003.9.jpg",
+            "title": "Screen Antics \u00b7 MJTELE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 58.4 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.016666666666667,
+            "path": "captures/story-native-final/MJTELE-005.0.jpg",
+            "title": "Screen Antics \u00b7 MJTELE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.091666666666667,
+            "path": "captures/story-native-final/MJTELE-006.1.jpg",
+            "title": "Screen Antics \u00b7 MJTELE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 6.866666666666667,
+            "path": "captures/story-native-final/MJTELE-006.9.jpg",
+            "title": "Screen Antics \u00b7 MJTELE.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      },
+      {
+        "scene": "SHARK1.TTM",
+        "exit": 0,
+        "duration_ticks": 1155,
+        "fps": 58.83,
+        "presented_frames": 1354,
+        "seconds": 23.017,
+        "log": "captures/story-native-final/SHARK1.log",
+        "captures": [
+          {
+            "time": 0.6,
+            "path": "captures/story-native-final/SHARK1-000.6.jpg",
+            "title": "Screen Antics \u00b7 SHARK1.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 0.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 2.31,
+            "path": "captures/story-native-final/SHARK1-002.3.jpg",
+            "title": "Screen Antics \u00b7 SHARK1.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 5.005,
+            "path": "captures/story-native-final/SHARK1-005.0.jpg",
+            "title": "Screen Antics \u00b7 SHARK1.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 7.7,
+            "path": "captures/story-native-final/SHARK1-007.7.jpg",
+            "title": "Screen Antics \u00b7 SHARK1.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 10.5875,
+            "path": "captures/story-native-final/SHARK1-010.6.jpg",
+            "title": "Screen Antics \u00b7 SHARK1.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 13.475,
+            "path": "captures/story-native-final/SHARK1-013.5.jpg",
+            "title": "Screen Antics \u00b7 SHARK1.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.1 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 16.3625,
+            "path": "captures/story-native-final/SHARK1-016.4.jpg",
+            "title": "Screen Antics \u00b7 SHARK1.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          },
+          {
+            "time": 18.95,
+            "path": "captures/story-native-final/SHARK1-018.9.jpg",
+            "title": "Screen Antics \u00b7 SHARK1.TTM \u00b7 HD-2D Neo-Retro \u00b7 43:18 \u00b7 remastered audio \u00b7 59.9 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit"
+          }
+        ]
+      }
+    ],
+    "note": "First sweep at 1920x1080; eight targeted rechecks at 3440x1440. Capture timings include screenshot overhead. Final performance results are separate below."
+  },
+  "final_ultrawide_performance": {
+    "resolution": [
+      3440,
+      1440
+    ],
+    "aspect": "43:18",
+    "atmosphere": true,
+    "screenshots_during_benchmark": false,
+    "scenes": {
+      "THEEND.TTM": {
+        "before": {
+          "frames": 922,
+          "seconds": 16.02,
+          "fps": 57.55,
+          "log": "captures/story-perf-before-THEEND.log"
+        },
+        "final": {
+          "frames": 953,
+          "seconds": 16.023,
+          "fps": 59.48,
+          "log": "captures/story-perf-final-THEEND.log"
+        }
+      },
+      "GJVIS6.TTM": {
+        "before": {
+          "frames": 800,
+          "seconds": 16.011,
+          "fps": 49.97,
+          "log": "captures/story-perf-before-GJVIS6.log"
+        },
+        "final": {
+          "frames": 942,
+          "seconds": 16.009,
+          "fps": 58.84,
+          "log": "captures/story-perf-final-GJVIS6.log"
+        }
+      }
+    }
+  },
+  "live_controls": {
+    "scene": "MJFIRE.TTM",
+    "exit": 0,
+    "paused_frame_stable": true,
+    "paused_style_roundtrip_identical": true,
+    "atmosphere_changes_image": true,
+    "atmosphere_roundtrip_identical": true,
+    "aspect_roundtrip_identical": true,
+    "resumed_frame_changes": true,
+    "style_selection": true,
+    "aspect_selection": true,
+    "audio_selection": true,
+    "scene_navigation": true,
+    "ok": true
+  },
+  "live_controls_evidence": "captures/story-native-controls-final/results.json",
+  "preserved_styles": {
+    "original": {
+      "sha256": "2a67613bf3b5ecc7e43554a7b505214c60ad4edca28f584ffc27cfe367cf25d4",
+      "reference_match": true,
+      "capture": "captures/story-final-original.ppm",
+      "scene": "GJGULIVR.TTM",
+      "frame": 2040
+    },
+    "remaster": {
+      "sha256": "f3fcf2bb5a33d4d5df6bf2969ca68929bf5e5c0c47e0d65371f44059f12fbe27",
+      "reference_match": true,
+      "capture": "captures/story-final-remaster.ppm",
+      "scene": "GJGULIVR.TTM",
+      "frame": 2040
+    }
+  },
+  "scenario_acceptance": "evidence/hd2d-story-audit.json",
+  "art_and_prompts": "assets/hd2d-v2/README.md",
+  "limitations": [
+    "Uses expressive new key poses and gait cycles; not a one-to-one redraw of all 2391 original frames.",
+    "Native Rust/SDL2 software composition; no 3D geometry or GPU shader scene.",
+    "Visual review samples and full-timeline rendering do not prove correctness at every possible display size."
+  ],
+  "optimization_pixel_regression": {
+    "THEEND": {
+      "frame": 824,
+      "matches_before_optimization": true,
+      "sha256": "3710581be5403effc23e5bf246c9790f0bf78d790ab725b6e80dc3a676c64c59"
+    },
+    "GJVIS6": {
+      "frame": 711,
+      "matches_before_optimization": true,
+      "sha256": "8b6a626ed171726fe5abcd5eb6a4a939e39c1227262172c130b992e0ca17dbec"
+    }
+  },
+  "left_running": {
+    "pid": 4014779,
+    "title": "Screen Antics \u00b7 MJFIRE.TTM \u00b7 HD-2D Neo-Retro \u00b7 auto \u00b7 remastered audio \u00b7 60.0 FPS \u00b7 H styles \u00b7 1/2/3 \u00b7 L atmosphere \u00b7 A aspect \u00b7 S audio \u00b7 F fullscreen \u00b7 Esc exit",
+    "command": "./PlayHD2D.sh --scene MJFIRE --aspect auto --resolution 1920x1080 --fullscreen",
+    "capture": "captures/story-final-running.png"
+  }
+}

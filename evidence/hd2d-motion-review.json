@@ -1,0 +1,90 @@
+{
+  "status": "superseded-by-story-audit",
+  "scope": "Independent HD-2D motion/scene rewrite; Original and Storybook preserved",
+  "art": {
+    "sprite_masters": 15,
+    "ending_backdrop_masters": 1,
+    "clips": 152,
+    "frames": 232,
+    "source_families_bound": 116,
+    "source_frames_classified": 2391,
+    "legacy_sprite_texture_fallback": false
+  },
+  "fixes": [
+    "Action-local phase and continuous roots from sparse source keys; distance-based eight-pose gaits.",
+    "Facing hysteresis and stationary contact anchors prevent bbox-driven mirroring/jitter.",
+    "Explicit mixed-sheet roles; body/head/arm and boat/hull parts coalesce into complete replacement actors.",
+    "Crew share interpolated vessel roots; perspective scaling is smoothed; sharks and composite props are resolved once.",
+    "New-world palm, fire, shore and airborne dive contacts; scorecards and dream-bubble placement.",
+    "Authored plane/freefall/parachute/landing/wave/walk/sit/title ending and whole-canvas transitions.",
+    "Warmup, coconut, bird and octopus poses; flat lying and seated reactions no longer retain a standing pose."
+  ],
+  "simulation": {
+    "timelines": 41,
+    "ticks_per_complete_pass": 55014,
+    "rate_hz": 60,
+    "all_scene_video_pass": "captures/motion-review-all",
+    "final_per_frame_audit": "captures/motion-final-audit",
+    "final_minor_pose_rechecks": "captures/motion-final-seated",
+    "scene_index": "evidence/hd2d-motion-scenes.tsv",
+    "visual_method": "Sequential comparison contact sheets for scenes, targeted action sequences and dense gait samples; native captures. Videos and per-frame telemetry retained. This is not a claim of a frame-by-frame human viewing of every video."
+  },
+  "reading_regression": {
+    "baseline_unwanted_facing_changes_entire_scene": 76,
+    "final_reading_pose_facing_changes": 0
+  },
+  "release_tests": {
+    "passed": 74,
+    "failed": 0,
+    "log": "captures/motion-release-tests.log",
+    "format_and_diff_checks": "passed"
+  },
+  "preserved_modes": {
+    "original": {
+      "reference_identical": true,
+      "sha256": "2a67613bf3b5ecc7e43554a7b505214c60ad4edca28f584ffc27cfe367cf25d4"
+    },
+    "remaster": {
+      "reference_identical": true,
+      "sha256": "f3fcf2bb5a33d4d5df6bf2969ca68929bf5e5c0c47e0d65371f44059f12fbe27"
+    }
+  },
+  "native": {
+    "ultrawide": {
+      "resolution": [
+        3440,
+        1440
+      ],
+      "effects": true,
+      "frames": 896,
+      "seconds": 15.019,
+      "fps": 59.66,
+      "script_ticks": 901,
+      "log": "captures/motion-native-ultrawide.log",
+      "exit_code": 0
+    },
+    "ending_through_next_scene": {
+      "resolution": [
+        1720,
+        720
+      ],
+      "effects": true,
+      "frames": 1195,
+      "seconds": 20.007,
+      "fps": 59.73,
+      "script_ticks": 1201,
+      "log": "captures/motion-native-ending-transition.log",
+      "exit_code": 0
+    },
+    "ending_final_card": "captures/motion-native-ending.png",
+    "ending_transition_capture": "captures/motion-native-ending-transition.ppm",
+    "browser_scenes_opened": 41,
+    "controls": "captures/motion-live-controls.json"
+  },
+  "limitations": [
+    "The 232 complete poses/cycle frames reinterpret 2391 source frame/layer variations; this is not a one-for-one redraw of all original gestures.",
+    "The supplied ultrawide island paintings have visible joins/edge streaks in their outer extensions. These remain artwork cleanup, independent of sprite motion and clipping.",
+    "CPU/SDL2 composition and postprocessing, not a 3D or GPU shader renderer."
+  ],
+  "superseded_reason": "User rejected scenario semantics. Motion stability did not prove coherent action, prop interactions or complete stories. Follow evidence/hd2d-story-audit.json."
+}

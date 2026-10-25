@@ -321,6 +321,7 @@ fn finish_due(actor: &mut Actor, tick: u32) {
 
 fn actor_context(actor: &Actor, env: i16) -> Vec<Command> {
     vec![
+        command(0xffe0, &[env]),
         command(0x4000, &actor.clip),
         command(0x2000, &actor.colors),
         command(0x1050, &[actor.bmp + env * 64]),
@@ -329,9 +330,8 @@ fn actor_context(actor: &Actor, env: i16) -> Vec<Command> {
     ]
 }
 fn drawing(op: u16) -> bool {
-    // Original wipe loops simply copied an already-composed image. The native
-    // frontend turns them into timed presentation events; repainting a held
-    // actor must not start another timed wipe when another actor changes pixels.
+    // Native A050/A060 capture/restore and the presentation commands are one-shot.
+    // Held actors repaint their drawing only, without recapturing scene buffers.
     ((0xa000..=0xa530).contains(&op) && !(0xa010..=0xa090).contains(&op))
         || matches!(op, 0x2000 | 0x4000 | 0x1030 | 0x1050)
 }
@@ -386,6 +386,53 @@ fn selected_segment(script: &Script, name: &str) -> Option<i16> {
 /// Replace raw storage-order clips with ADS-directed timelines. Each generated
 /// frame is one original scheduler tick; the frontend chooses wall-clock speed.
 pub fn build_scene_clips(assets: &AssetStore, raw: &[Clip]) -> Result<Vec<Clip>, String> {
+    build_scene_clips_with_limit(assets, raw, 2400)
+}
+
+/// HD-2D story choreography uses a uniform 60 Hz clock, including standalone
+/// helper scripts whose local frames hold for multiple ticks. Expand holds
+/// without repeating draw, sound, buffer or transition commands.
+pub fn build_hd2d_clips(assets: &AssetStore, raw: &[Clip]) -> Result<Vec<Clip>, String> {
+    let mut clips = build_scene_clips_with_limit(assets, raw, 14400)?;
+    for clip in &mut clips {
+        let mut expanded = Vec::new();
+        for mut frame in std::mem::take(&mut clip.frames) {
+            let delay = frame.delay_ticks.max(1);
+            frame.delay_ticks = 1;
+            expanded.push(frame);
+            for _ in 1..delay {
+                expanded.push(Frame {
+                    commands: vec![command(crate::animation::PRESENTATION_HOLD, &[])],
+                    delay_ticks: 1,
+                });
+            }
+        }
+        clip.frames = expanded;
+        clip.labels.clear();
+    }
+    Ok(clips)
+}
+
+/// Number of source frames to replay to display a scheduler tick. A long local
+/// hold and its expanded HD-2D presentation refer to the same point in time.
+pub fn frames_at_tick(clip: &Clip, tick: u32) -> usize {
+    let mut end = 0u32;
+    for (i, frame) in clip.frames.iter().enumerate() {
+        end = end.saturating_add(frame.delay_ticks.max(1));
+        if tick < end {
+            return i + 1;
+        }
+    }
+    clip.frames.len()
+}
+
+/// Review complete stories beyond the legacy browser's forty-second cap.
+/// A finite ceiling remains necessary for intentional ambient loops.
+pub fn build_scene_clips_with_limit(
+    assets: &AssetStore,
+    raw: &[Clip],
+    max_ticks: u32,
+) -> Result<Vec<Clip>, String> {
     let clips: BTreeMap<_, _> = raw.iter().map(|c| (c.name.clone(), c.clone())).collect();
     let mut scripts = Vec::new();
     for (name, bytes) in &assets.raw {
@@ -399,14 +446,26 @@ pub fn build_scene_clips(assets: &AssetStore, raw: &[Clip]) -> Result<Vec<Clip>,
             .iter()
             .find_map(|s| selected_segment(s, &raw.name).map(|segment| (s, segment)));
         if let Some((script, segment)) = found {
-            result.push(compile(script, segment, &raw.name, &clips));
+            result.push(compile_with_limit(
+                script, segment, &raw.name, &clips, max_ticks,
+            ));
         } else {
             result.push(compile_local(raw));
         }
     }
     Ok(result)
 }
+#[cfg(test)]
 fn compile(script: &Script, segment: i16, name: &str, clips: &BTreeMap<String, Clip>) -> Clip {
+    compile_with_limit(script, segment, name, clips, 2400)
+}
+fn compile_with_limit(
+    script: &Script,
+    segment: i16,
+    name: &str,
+    clips: &BTreeMap<String, Clip>,
+    max_ticks: u32,
+) -> Clip {
     let mut order = Vec::new();
     for (&env, name) in &script.envs {
         if let Some(clip) = clips.get(name) {
@@ -459,7 +518,7 @@ fn compile(script: &Script, segment: i16, name: &str, clips: &BTreeMap<String, C
             }
         }
     }
-    for tick in 0..2400u32 {
+    for tick in 0..max_ticks {
         machine.tick = tick;
         // FINISHED is visible to this tick's ADS tests. A normal PURGE
         // completion rewinds; a timed cut preserves the sequence position.
@@ -591,6 +650,84 @@ fn compile_local(raw: &Clip) -> Clip {
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn hd2d_local_holds_preserve_pixels_and_do_not_repeat_audio() {
+        let assets =
+            AssetStore::load(std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("original"))
+                .unwrap();
+        let raw: Vec<_> = assets
+            .raw
+            .iter()
+            .filter(|(n, _)| n.ends_with(".TTM"))
+            .map(|(n, b)| Clip::parse(n, b).unwrap())
+            .collect();
+        let local = build_scene_clips_with_limit(&assets, &raw, 14400).unwrap();
+        let hd = build_hd2d_clips(&assets, &raw).unwrap();
+        for name in ["FIRE.TTM", "MJCOCO1.TTM"] {
+            let a = local.iter().find(|c| c.name == name).unwrap();
+            let b = hd.iter().find(|c| c.name == name).unwrap();
+            let mut original = crate::animation::Player::new();
+            let mut expanded = crate::animation::Player::new();
+            while let Some(delay) = original.step(a, &assets) {
+                for held in 0..delay.max(1) {
+                    assert_eq!(expanded.step(b, &assets), Some(1));
+                    assert!(
+                        original.pixels == expanded.pixels,
+                        "{name}: frame {} hold {held}",
+                        original.frame
+                    );
+                    assert_eq!(original.current_background, expanded.current_background);
+                    if held == 0 {
+                        assert_eq!(original.sounds, expanded.sounds);
+                    } else {
+                        assert!(expanded.sounds.is_empty());
+                    }
+                }
+            }
+            assert!(expanded.step(b, &assets).is_none());
+        }
+    }
+    #[test]
+    fn extended_story_timelines_reach_endings_and_preserve_legacy_prefixes() {
+        let assets =
+            AssetStore::load(std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("original"))
+                .unwrap();
+        let raw: Vec<_> = assets
+            .raw
+            .iter()
+            .filter(|(name, _)| name.ends_with(".TTM"))
+            .map(|(name, bytes)| Clip::parse(name, bytes).unwrap())
+            .collect();
+        let legacy = build_scene_clips(&assets, &raw).unwrap();
+        let stories = build_scene_clips_with_limit(&assets, &raw, 14400).unwrap();
+        for (old, full) in legacy.iter().zip(&stories) {
+            assert_eq!(old.name, full.name);
+            assert!(full.frames.len() < 14400, "Unfinished story {}", full.name);
+            for (a, b) in old.frames.iter().zip(&full.frames) {
+                assert_eq!(a.delay_ticks, b.delay_ticks);
+                assert_eq!(a.commands.len(), b.commands.len());
+                for (x, y) in a.commands.iter().zip(&b.commands) {
+                    assert_eq!((x.opcode, &x.args, &x.text), (y.opcode, &y.args, &y.text));
+                }
+            }
+        }
+        for (name, ticks) in [
+            ("MJFIRE.TTM", 3297),
+            ("GJDIVE.TTM", 3172),
+            ("SASKDATE.TTM", 2670),
+            ("GJGULIVR.TTM", 2421),
+        ] {
+            assert_eq!(
+                stories
+                    .iter()
+                    .find(|c| c.name == name)
+                    .unwrap()
+                    .frames
+                    .len(),
+                ticks
+            );
+        }
+    }
     fn fixture(looping: bool) -> (Script, BTreeMap<String, Clip>) {
         let first = Frame {
             commands: vec![

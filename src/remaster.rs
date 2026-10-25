@@ -1,7 +1,59 @@
 //! Optional true-color replacement art, with contour-preserving classic fallbacks.
 //! SAHD files: magic, little-endian u32 width/height, then straight RGBA pixels.
 use crate::resources::{AssetStore, Image};
-use std::{collections::BTreeMap, fs, path::Path};
+use std::{
+    collections::BTreeMap,
+    fs,
+    path::{Component, Path, PathBuf},
+};
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum AspectMode {
+    Auto,
+    Original,
+    Ratio16_9,
+    Ratio21_9,
+    Ratio43_18,
+}
+impl AspectMode {
+    pub fn parse(s: &str) -> Result<Self, String> {
+        match s {
+            "auto" => Ok(Self::Auto),
+            "original" | "core" | "4:3" | "4_3" => Ok(Self::Original),
+            "16:9" | "16_9" => Ok(Self::Ratio16_9),
+            "21:9" | "21_9" => Ok(Self::Ratio21_9),
+            "43:18" | "43_18" => Ok(Self::Ratio43_18),
+            _ => Err(format!(
+                "Invalid aspect {s}; use auto, original, 16:9, 21:9 or 43:18"
+            )),
+        }
+    }
+    pub fn name(self) -> &'static str {
+        match self {
+            Self::Auto => "auto",
+            Self::Original => "original",
+            Self::Ratio16_9 => "16:9",
+            Self::Ratio21_9 => "21:9",
+            Self::Ratio43_18 => "43:18",
+        }
+    }
+    pub fn cycle(&mut self) {
+        *self = match self {
+            Self::Auto => Self::Original,
+            Self::Original => Self::Ratio16_9,
+            Self::Ratio16_9 => Self::Ratio21_9,
+            Self::Ratio21_9 => Self::Ratio43_18,
+            Self::Ratio43_18 => Self::Auto,
+        };
+    }
+}
+#[derive(Clone, Debug)]
+pub struct WideBackground {
+    pub aspect: AspectMode,
+    pub width: usize,
+    pub height: usize,
+    pub stage: [usize; 4],
+    pub path: PathBuf,
+}
 #[derive(Clone, Debug)]
 pub struct RgbaImage {
     pub width: usize,
@@ -11,7 +63,9 @@ pub struct RgbaImage {
 pub struct RemasterAssets {
     pub sprites: BTreeMap<String, Vec<RgbaImage>>,
     pub backgrounds: BTreeMap<String, RgbaImage>,
-    /// Number of frames that use newly drawn artwork, rather than enhanced originals.
+    /// Registered panoramas stay on disk; presentation retains only the active one.
+    pub widescreen: BTreeMap<String, Vec<WideBackground>>,
+    /// Number of frames loaded from replacement files.
     pub remade_frames: usize,
 }
 pub fn load_image(path: impl AsRef<Path>) -> Result<RgbaImage, String> {
@@ -154,6 +208,69 @@ pub fn enhance_original(image: &Image, palette: &[[u8; 3]; 256], transparent: bo
     enlarged
 }
 impl RemasterAssets {
+    pub fn select_widescreen(
+        &self,
+        name: &str,
+        width: usize,
+        height: usize,
+        aspect: AspectMode,
+    ) -> Option<&WideBackground> {
+        let options = self.widescreen.get(name)?;
+        if aspect == AspectMode::Original
+            || (aspect == AspectMode::Auto && (width as f64 / height.max(1) as f64) < 1.5)
+        {
+            return None;
+        }
+        if aspect != AspectMode::Auto {
+            return options.iter().find(|w| w.aspect == aspect);
+        }
+        let ratio = width as f64 / height.max(1) as f64;
+        options.iter().min_by(|a, b| {
+            let distance =
+                |w: &WideBackground| ((w.width as f64 / w.height as f64) / ratio).ln().abs();
+            distance(a).total_cmp(&distance(b))
+        })
+    }
+    /// Build conservative native-cell coverage without changing the supplied
+    /// RGBA pixels. Mixed cells retain their actual underlying draw layers.
+    pub fn sprite_coverage(&self) -> BTreeMap<String, Vec<Vec<u8>>> {
+        self.sprites
+            .iter()
+            .map(|(name, frames)| {
+                let masks = frames
+                    .iter()
+                    .map(|image| {
+                        let (w, h) = (image.width / 4, image.height / 4);
+                        let mut cells = vec![0; w * h];
+                        for y in 0..h {
+                            for x in 0..w {
+                                let mut any = false;
+                                let mut opaque = true;
+                                for dy in 0..4 {
+                                    for dx in 0..4 {
+                                        let a = image.pixels
+                                            [(y * 4 + dy) * image.width + x * 4 + dx]
+                                            >> 24;
+                                        any |= a > 0;
+                                        opaque &= a == 255;
+                                    }
+                                }
+                                cells[y * w + x] = if opaque {
+                                    2
+                                } else if any {
+                                    1
+                                } else {
+                                    0
+                                };
+                            }
+                        }
+                        cells
+                    })
+                    .collect();
+                (name.clone(), masks)
+            })
+            .collect()
+    }
     /// The generated pack is preserved for comparison. Its poses and scenery
     /// geometry failed the complete sprite review, so it is explicitly opt-in.
     pub fn load_with_painted_art(
@@ -209,9 +326,70 @@ impl RemasterAssets {
                 backgrounds.insert(format!("{name}.wide"), load_image(path)?);
             }
         }
+        let mut widescreen: BTreeMap<String, Vec<WideBackground>> = BTreeMap::new();
+        let layouts = asset_dir.join("widescreen/layouts.tsv");
+        if painted && layouts.exists() {
+            let text =
+                fs::read_to_string(&layouts).map_err(|e| format!("{}: {e}", layouts.display()))?;
+            for (line_no, line) in text.lines().enumerate().skip(1) {
+                let invalid = || {
+                    format!(
+                        "{}:{}: invalid registered widescreen layout",
+                        layouts.display(),
+                        line_no + 1
+                    )
+                };
+                let f: Vec<_> = line.split('\t').collect();
+                if f.len() != 9 {
+                    return Err(invalid());
+                }
+                let base = original.backgrounds.get(f[0]).ok_or_else(invalid)?;
+                let aspect = AspectMode::parse(f[1])?;
+                if matches!(aspect, AspectMode::Auto | AspectMode::Original) {
+                    return Err(invalid());
+                }
+                let n: Vec<usize> = f[2..8]
+                    .iter()
+                    .map(|s| s.parse::<usize>().map_err(|_| invalid()))
+                    .collect::<Result<_, _>>()?;
+                if n[0] == 0
+                    || n[1] == 0
+                    || n.iter().any(|&v| v > 16384)
+                    || n[2] + n[4] > n[0]
+                    || n[3] + n[5] > n[1]
+                    || n[4] != base.width as usize * 4
+                    || n[5] != base.height as usize * 4
+                {
+                    return Err(invalid());
+                }
+                let relative = Path::new(f[8]);
+                if relative
+                    .components()
+                    .any(|c| !matches!(c, Component::Normal(_)))
+                {
+                    return Err(invalid());
+                }
+                let path = asset_dir.join("widescreen").join(relative);
+                if !path.is_file() {
+                    return Err(format!("Missing widescreen image: {}", path.display()));
+                }
+                let variants = widescreen.entry(f[0].into()).or_default();
+                if variants.iter().any(|w| w.aspect == aspect) {
+                    return Err(invalid());
+                }
+                variants.push(WideBackground {
+                    aspect,
+                    width: n[0],
+                    height: n[1],
+                    stage: [n[2], n[3], n[4], n[5]],
+                    path,
+                });
+            }
+        }
         Ok(Self {
             sprites,
             backgrounds,
+            widescreen,
             remade_frames,
         })
     }
@@ -219,6 +397,65 @@ impl RemasterAssets {
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn auto_aspect_selects_nearest_canvas_and_can_return_to_original() {
+        let mut art = RemasterAssets {
+            sprites: BTreeMap::new(),
+            backgrounds: BTreeMap::new(),
+            widescreen: BTreeMap::new(),
+            remade_frames: 0,
+        };
+        art.widescreen.insert(
+            "TEST.SCR".into(),
+            vec![
+                WideBackground {
+                    aspect: AspectMode::Ratio16_9,
+                    width: 2560,
+                    height: 1440,
+                    stage: [0, 20, 2560, 1400],
+                    path: "16.rgba".into(),
+                },
+                WideBackground {
+                    aspect: AspectMode::Ratio21_9,
+                    width: 3360,
+                    height: 1440,
+                    stage: [400, 20, 2560, 1400],
+                    path: "21.rgba".into(),
+                },
+                WideBackground {
+                    aspect: AspectMode::Ratio43_18,
+                    width: 3440,
+                    height: 1440,
+                    stage: [440, 20, 2560, 1400],
+                    path: "43.rgba".into(),
+                },
+            ],
+        );
+        for (width, height, expected) in [
+            (1920, 1080, AspectMode::Ratio16_9),
+            (3360, 1440, AspectMode::Ratio21_9),
+            (3440, 1440, AspectMode::Ratio43_18),
+        ] {
+            assert_eq!(
+                art.select_widescreen("TEST.SCR", width, height, AspectMode::Auto)
+                    .unwrap()
+                    .aspect,
+                expected
+            );
+        }
+        assert!(art
+            .select_widescreen("TEST.SCR", 3440, 1440, AspectMode::Original)
+            .is_none());
+        assert!(art
+            .select_widescreen("TEST.SCR", 640, 480, AspectMode::Auto)
+            .is_none());
+        assert_eq!(
+            art.select_widescreen("TEST.SCR", 1920, 1080, AspectMode::Ratio21_9)
+                .unwrap()
+                .aspect,
+            AspectMode::Ratio21_9
+        );
+    }
     #[test]
     fn changing_frame_bounds_does_not_change_material_colors() {
         let mut palette = [[0; 3]; 256];

@@ -1,0 +1,13 @@
+Production transparent RGBA game atlas, 1536x1024, exactly6 columns x4 rows.
+Reference images: supplied hd2d_johnny_spritesheet and modern_ai_style4_hd2d.
+Same adult brown-haired fully bearded castaway in every cell: bare chest,
+frayed blue denim shorts, barefoot, no hat. Modern high-density HD-2D pixel art,
+selective warm outlines, consistent upper-left lighting, head size and anatomy.
+Side view facing RIGHT. Isolated full bodies, transparent gutters, no labels,
+text, grid, scenery, baked shadows or water. Consistent foot baseline.
+Row1: six consecutive walking contact/down/passing/opposite-contact poses.
+Row2: six consecutive running footfall/airborne poses.
+Row3: six consecutive tree-climbing reach/pull poses, no tree included.
+Row4: six consecutive horizontal crawl-swimming poses, no water/splashes.
+Mechanically sliced into24 production frames; do not duplicate poses.
+Built-in image_gen, transparent_background=true, reference paths recorded above.

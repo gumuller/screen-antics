@@ -7,10 +7,9 @@ pub struct Effect {
     event: Option<Transition>,
     old: Vec<u32>,
     mixed: Vec<u32>,
-    source_size: (usize, usize),
 }
 impl Effect {
-    pub fn new(old: &[u32], event: Option<Transition>, source_size: (usize, usize)) -> Self {
+    pub fn new(old: &[u32], event: Option<Transition>) -> Self {
         let duration = Duration::from_millis(event.as_ref().map_or(350, |e| e.duration_ms) as u64);
         Self {
             start: Instant::now(),
@@ -18,7 +17,6 @@ impl Effect {
             event,
             old: old.to_vec(),
             mixed: vec![0; old.len()],
-            source_size,
         }
     }
     pub fn duration(&self) -> Duration {
@@ -27,16 +25,19 @@ impl Effect {
     pub fn done(&self) -> bool {
         self.start.elapsed() >= self.duration
     }
-    pub fn frame<'a>(&'a mut self, target: &'a [u32], width: usize, height: usize) -> &'a [u32] {
+    pub fn frame<'a>(
+        &'a mut self,
+        target: &'a [u32],
+        width: usize,
+        height: usize,
+        stage: [f64; 3],
+    ) -> &'a [u32] {
         if self.old.len() != target.len() {
             return target;
         }
         let p =
             (self.start.elapsed().as_secs_f64() / self.duration.as_secs_f64().max(0.001)).min(1.);
-        let scale = (width as f64 / self.source_size.0.max(1) as f64)
-            .min(height as f64 / self.source_size.1.max(1) as f64);
-        let ox = (width as f64 - self.source_size.0 as f64 * scale) / 2.;
-        let oy = (height as f64 - self.source_size.1 as f64 * scale) / 2.;
+        let [scale, ox, oy] = stage;
         for y in 0..height {
             for x in 0..width {
                 let at = y * width + x;
@@ -118,5 +119,23 @@ mod tests {
     fn fade_endpoints_are_exact() {
         assert_eq!(mix(0xff123456, 0xffabcdef, 0.), 0xff123456);
         assert_eq!(mix(0xff123456, 0xffabcdef, 1.), 0xffabcdef);
+    }
+    #[test]
+    fn wipe_region_uses_registered_panorama_stage() {
+        let old = vec![0xffff0000; 100 * 50];
+        let target = vec![0xff00ff00; 100 * 50];
+        let mut effect = Effect::new(
+            &old,
+            Some(Transition {
+                kind: TransitionKind::LeftToRight,
+                rect: [0, 0, 2, 1],
+                duration_ms: 1000,
+            }),
+        );
+        effect.start = Instant::now() - Duration::from_millis(500);
+        let frame = effect.frame(&target, 100, 50, [10., 30., 20.]);
+        assert_eq!(frame[25 * 100 + 31], 0xff00ff00);
+        assert_eq!(frame[25 * 100 + 46], 0xffff0000);
+        assert_eq!(frame[25 * 100 + 20], 0xff00ff00);
     }
 }

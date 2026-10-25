@@ -1,0 +1,53 @@
+{
+  "fix": "Preserve and render sprite provenance beyond original horizontal stage limits",
+  "behavior": [
+    "Both panorama margins support sprite alpha, flips and layering",
+    "Stored backing and native scene captures preserve side layers",
+    "Full-stage edge clips extend into margins; interior authored clips remain",
+    "Original aspect, retro mode and intentionally framed backgrounds retain framing"
+  ],
+  "release_tests": {
+    "passed": 56,
+    "failed": 0,
+    "log": "captures/widescreen-tests.log"
+  },
+  "scene_review": {
+    "scenes": 41,
+    "ticks": 55014,
+    "captures": 328,
+    "panorama_layout_checks": 30,
+    "inventory": "evidence/widescreen-scene-review.tsv"
+  },
+  "actual_ship_check": {
+    "scene": "GJGULIVR.TTM",
+    "tick": 2040,
+    "resolution": [
+      1290,
+      540
+    ],
+    "aspect": "43:18",
+    "old_stage_right_edge": 1125,
+    "changed_bounds": [
+      1125,
+      238,
+      1157,
+      279
+    ],
+    "original_stage_pixels_identical": true,
+    "before": "captures/widescreen-before.png",
+    "after": "captures/widescreen-after.png"
+  },
+  "bounds": "Retains up to 640 logical pixels on each side, covering the supported modern panorama ratios; animation paths themselves remain authored.",
+  "native_runtime": {
+    "scene": "MJJOG.TTM",
+    "resolution": [
+      3440,
+      1440
+    ],
+    "presented_frames": 713,
+    "seconds": 12.001,
+    "fps": 59.41,
+    "script_ticks": 720,
+    "log": "captures/widescreen-fps.log"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "fix": "Match shipped Win16 buffer and scene capture semantics",
+  "native_evidence": "evidence/native-buffer-analysis.md",
+  "changes": [
+    "4210/A600 are legacy no-ops",
+    "B600 buffer1=composition,buffer2=stored",
+    "SCR initializes opaque stored backing, including palette zero",
+    "A050 captures composition per TTM environment; A060 restores saved bounds, without a visual wipe"
+  ],
+  "tests": {
+    "release": {
+      "passed": 53,
+      "failed": 0,
+      "log": "captures/native-buffer-tests.log"
+    },
+    "gulliver_departure": {
+      "ticks_checked": [
+        1900,
+        2040
+      ],
+      "stale_ship8_or9_pixels": 0,
+      "note": "Regression checks every indexed composition tick in this interval; moving ship7 remains drawn."
+    }
+  },
+  "scene_review": {
+    "scenes": 41,
+    "ticks": 55014,
+    "captures": 328,
+    "panorama_checks": 30,
+    "inventory": "captures/native-buffer-review/scene-review.tsv"
+  },
+  "temporal_scan": {
+    "scenes": 41,
+    "ticks": 55014,
+    "identical_pose_hd_changes": 0,
+    "log": "captures/native-buffer-flicker-audit.log",
+    "scope": "Detects HD changes when indexed picture and active poses are unchanged. Does not prove every artwork frame is visually consistent."
+  },
+  "comparison": {
+    "before": "captures/ship-before.png",
+    "after": "captures/ship-after.png",
+    "retro_after": "captures/ship-after-retro.png",
+    "scene": "GJGULIVR.TTM",
+    "tick": 2040
+  },
+  "limitations": [
+    "Native frame-start dirty rectangle scheduling remains incompletely traced; Rust restores full backing each tick.",
+    "No original Win16 runtime execution was observed.",
+    "Full scene review captures eight frames per scene; temporal scan measures a defined stability invariant."
+  ],
+  "native_runtime": {
+    "resolution": [
+      3440,
+      1440
+    ],
+    "presented_frames": 717,
+    "seconds": 12.004,
+    "fps": 59.73,
+    "script_ticks": 721,
+    "audio_device": "ready",
+    "log": "captures/native-buffer-fps.log"
+  }
+}

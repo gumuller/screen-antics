@@ -1,0 +1,1340 @@
+{
+  "objective": "Every scenario must communicate its original actions, interactions and resolution using new artwork, with coherent contacts and timing. Stability and FPS alone do not establish completion.",
+  "status": "reviewed",
+  "acceptance": [
+    "Identify original setup, action, reaction and ending for every scene and relevant branch.",
+    "Show the same causal action with appropriate new drawings and visible props; no generic unrelated pose substitutions.",
+    "Maintain object continuity and physical contacts; no disappearing required objects or duplicate composites.",
+    "Review dense action samples and full sequence telemetry, then native playback for the repaired scenarios.",
+    "Do not call any scenario passed merely because rendering completes or files validate."
+  ],
+  "scenes": [
+    {
+      "scene": "FIRE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 56,
+      "reference_video": "captures/motion-review-all/FIRE.TTM.mp4",
+      "beats": [
+        "Tinder ignites, flames loop, fire dies to smoking wood."
+      ],
+      "repairs": [
+        "Authored supporting animation retains complete 2000-tick duration and registered fire position."
+      ],
+      "extended_ticks": 2000,
+      "native_review_sheet": "captures/story-native-sweep/FIRE-review.jpg",
+      "resolved_failures": [
+        "Standalone local clip lacks story setup; review under its parent campfire scene and correct the browser duration."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification.",
+        "Native supporting fire clip reviewed through ignition, active flame variations and burnt wood. Its full held duration is retained."
+      ],
+      "verification": [
+        "Native supporting fire clip reviewed through ignition, active flame variations and burnt wood. Its full held duration is retained.",
+        "Complete 2000-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/FIRE.log",
+      "native_fps_with_capture": 59.76,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/FIRE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/FIRE.TTM.tsv"
+    },
+    {
+      "scene": "FISHWALK.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 732,
+      "reference_video": "captures/motion-review-all/FISHWALK.TTM.mp4",
+      "beats": [
+        "Walk with fishing pole, shark leaps and swallows Johnny, coughs and spits him back, leaves him seated on sand."
+      ],
+      "repairs": [
+        "Authored complete shark gag; pole persists and hero is hidden only while swallowed."
+      ],
+      "extended_ticks": 732,
+      "native_review_sheet": "captures/story-native-sweep/FISHWALK-review.jpg",
+      "resolved_failures": [
+        "Pole disappears during movement; generic seated fishing replaces handling the rod."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification.",
+        "Native shark swallow and spit-out gag reviewed. Pole is dropped on sand and persists; hero is hidden only during swallowing and is expelled back onto sand."
+      ],
+      "verification": [
+        "Native shark swallow and spit-out gag reviewed. Pole is dropped on sand and persists; hero is hidden only during swallowing and is expelled back onto sand.",
+        "Complete 732-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/FISHWALK.log",
+      "native_fps_with_capture": 59.6,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/FISHWALK.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/FISHWALK.TTM.tsv"
+    },
+    {
+      "scene": "GFFFOOD.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 732,
+      "reference_video": "captures/motion-review-all/GFFFOOD.TTM.mp4",
+      "beats": [
+        "Same source-compiled shark-swallowing gag as FISHWALK."
+      ],
+      "repairs": [
+        "Alias shares complete shark action director rather than unrelated fishing idle."
+      ],
+      "extended_ticks": 732,
+      "native_review_sheet": "captures/story-native-sweep/GFFFOOD-review.jpg",
+      "resolved_failures": [
+        "Rendered same generic seated fish loop as FISHWALK; original food interaction requires dense inspection."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification.",
+        "Alias of the shark-swallowing source sequence; native full playback captured separately."
+      ],
+      "verification": [
+        "Native shark-swallowing alias reviewed separately: dropped pole persists, one shark swallows and spits Johnny out onto sand, followed by recovery.",
+        "Complete 732-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/GFFFOOD.log",
+      "native_fps_with_capture": 59.89,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GFFFOOD.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GFFFOOD.TTM.tsv"
+    },
+    {
+      "scene": "GJCATCH2.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1754,
+      "reference_video": "captures/story-catch-jog-final/GJCATCH2.TTM.mp4",
+      "beats": [
+        "Fish, hook an octopus, struggle, escape up palm."
+      ],
+      "repairs": [
+        "Five distinct caught fish remain on the sand; the sixth catch is an octopus. Connected grab, dropped pole, run, climb, octopus departure, descent and fist reaction.",
+        "Climbers remain in front of the palm crown while the trunk wraps their arms and legs; avoids near-total disappearance behind leaves."
+      ],
+      "extended_ticks": 1754,
+      "native_review_sheet": "captures/story-native-final/GJCATCH2-review.jpg",
+      "resolved_failures": [
+        "Octopus/fishing contact not visible; catch disappears before climbing."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence and contact sheets rendered. Native acceptance and remaining scene review tracked separately.",
+        "Native sequence preserves five catches, octopus grab, dropped pole, climb, escape and descent. Fish remain on sand instead of disappearing between casts. Palm foliage hid too much of the waiting climber; foreground-crown handling adjusted and queued for recheck."
+      ],
+      "verification": [
+        "Native sequence preserves five catches, octopus grab, dropped pole, climb, escape and descent. Fish remain on sand. Ultrawide recheck confirms that the waiting climber remains visible near the crown.",
+        "Complete 1754-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-final/GJCATCH2.log",
+      "native_fps_with_capture": 59.22,
+      "native_resolution": "3440x1440",
+      "action_capture_prefix": "captures/hd2d-story-final/GJCATCH2.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJCATCH2.TTM.tsv"
+    },
+    {
+      "scene": "GJDIVE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2400,
+      "reference_video": "captures/story-diving-fixed/GJDIVE.TTM.mp4",
+      "beats": [
+        "Climb palm and perform a dive.",
+        "Starfish, crab, octopus and gull act as judges, holding scorecards.",
+        "Johnny returns and attempts another dive."
+      ],
+      "repairs": [
+        "Three complete authored attempts: headfirst, somersault and cannonball; four correct species lift painted scorecards; water entry and return climb.",
+        "Natural 3172-tick completion, pose sizing, depth order, water attenuation and score glyph coverage corrected."
+      ],
+      "extended_ticks": 3172,
+      "resolved_failures": [
+        "Browser truncates original story at 2400 ticks; natural completion is 3172 ticks.",
+        "Dolphin substituted for starfish; judges and scorecards float separately; diving variants and water entry incomplete."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJDIVE-review.jpg",
+      "failures": [],
+      "review_history": [
+        "Full sequence comparison rendered; setup, action and outcome reviewed in dense contact sheets. Final native and continuity acceptance remains pending.",
+        "Dense action review and native complete playback reviewed. Global panoramic seams remain a separate presentation defect.",
+        "Native full three-attempt dive sequence reviewed with four species of judges, scorecards, water entry, shore return and climbing. Dense comparison from prior targeted review covers all dive variants."
+      ],
+      "verification": [
+        "Native full three-attempt dive sequence reviewed with four species of judges, scorecards, water entry, shore return and climbing. Dense comparison from prior targeted review covers all dive variants.",
+        "Complete 3172-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/GJDIVE.log",
+      "native_fps_with_capture": 59.82,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJDIVE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJDIVE.TTM.tsv"
+    },
+    {
+      "scene": "GJGULIVR.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2400,
+      "reference_video": "captures/story-gulliver/GJGULIVR.TTM.mp4",
+      "beats": [
+        "Johnny falls asleep.",
+        "Miniature sailing ship arrives and launches a small crew.",
+        "Sailors land and bind sleeping Johnny with ropes.",
+        "Crew returns to ship and leaves; Johnny wakes restrained."
+      ],
+      "repairs": [
+        "Authored ship arrival, launch around shore, two miniature sailors disembark, bind Johnny, return to launch and depart. Gull lands on restrained Johnny.",
+        "Empty boat while sailors are ashore; crew and ropes visible at fixed contacts; 2421-tick full scene."
+      ],
+      "extended_ticks": 2421,
+      "resolved_failures": [
+        "Browser truncates original story at 2400 ticks; natural completion is 2421 ticks.",
+        "Miniature crew, ropes and restrained waking are absent; sleep plus giant ship does not show the story."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence comparison rendered; setup, action and outcome reviewed in dense contact sheets. Final native and continuity acceptance remains pending.",
+        "Dense action review and native complete playback reviewed. Global panoramic seams remain a separate presentation defect."
+      ],
+      "verification": [
+        "Native sleep, miniature ship and landing party, rope binding, departure and restrained waking reviewed. Ropes and crew are visible in the full-size action captures.",
+        "Complete 2421-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJGULIVR-review.jpg",
+      "native_log": "captures/story-native-sweep/GJGULIVR.log",
+      "native_fps_with_capture": 59.75,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJGULIVR.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJGULIVR.TTM.tsv"
+    },
+    {
+      "scene": "GJGULL1.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 155,
+      "reference_video": "captures/story-bath-gull/GJGULL1.TTM.mp4",
+      "beats": [
+        "Gull watches reading Johnny, dives to steal his book, carries it to the crown and reads it while Johnny protests."
+      ],
+      "repairs": [
+        "New reading-gull poses; parent reading actor supplied for standalone helper; book transfers at one contact."
+      ],
+      "extended_ticks": 2796,
+      "resolved_failures": [
+        "Bird landing/dropping and reaction need full timing review; raw helper playback is too short in old evidence."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification.",
+        "Dense setup/action/outcome samples and full native playback reviewed. No duplicate actors or missing transferred props. Global panorama repair remains separate."
+      ],
+      "verification": [
+        "Native gull arrival, book theft, reading in the crown and Johnny protest reviewed; the book leaves Johnny and remains with the gull.",
+        "Complete 2796-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJGULL1-review.jpg",
+      "native_log": "captures/story-native-sweep/GJGULL1.log",
+      "native_fps_with_capture": 59.82,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJGULL1.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJGULL1.TTM.tsv"
+    },
+    {
+      "scene": "GJHOT.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 976,
+      "reference_video": "captures/story-weather/GJHOT.TTM.mp4",
+      "beats": [
+        "Walk into heat, shade/fan face, tire and collapse."
+      ],
+      "repairs": [
+        "New sweating/fan strokes, exhausted slump, sit, lie back and recovery poses. Manual body registration prevents fan width from moving actor."
+      ],
+      "extended_ticks": 976,
+      "resolved_failures": [
+        "Single static hot pose loses fanning, head covering, and collapse."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence comparison rendered; setup, action and outcome reviewed in dense contact sheets. Final native and continuity acceptance remains pending."
+      ],
+      "verification": [
+        "Native leaf fanning, exhaustion, collapse and recovery reviewed. Fan stays attached to complete poses rather than floating separately.",
+        "Complete 976-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJHOT-review.jpg",
+      "native_log": "captures/story-native-sweep/GJHOT.log",
+      "native_fps_with_capture": 59.74,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJHOT.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJHOT.TTM.tsv"
+    },
+    {
+      "scene": "GJLILIPU.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 155,
+      "reference_video": "captures/motion-review-all/GJLILIPU.TTM.mp4",
+      "beats": [
+        "Galleon visits the open water behind island, pauses and sails away."
+      ],
+      "repairs": [
+        "Standalone contextual observer retained; single vessel on fixed open-water plane."
+      ],
+      "extended_ticks": 1158,
+      "resolved_failures": [
+        "Ship-only substitution omits miniature crew and interaction; helper timing requires verification."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification."
+      ],
+      "verification": [
+        "Native supporting galleon visit reviewed with observer, approach, pause and departure on the open-water plane.",
+        "Complete 1158-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJLILIPU-review.jpg",
+      "native_log": "captures/story-native-sweep/GJLILIPU.log",
+      "native_fps_with_capture": 59.68,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJLILIPU.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJLILIPU.TTM.tsv"
+    },
+    {
+      "scene": "GJNAT1.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1977,
+      "reference_video": "captures/story-weather/GJNAT1.TTM.mp4",
+      "beats": [
+        "Johnny feels hot and has an idea.",
+        "Puts on a homemade mask and leaf costume and dances for rain.",
+        "Small storm cloud appears; lightning interrupts the dance.",
+        "Johnny is left singed and disappointed."
+      ],
+      "repairs": [
+        "Fan, idea, put-on costume, actual masked dance, growing storm cloud, lightning, singed reaction, smoke and disappointed ending."
+      ],
+      "extended_ticks": 1977,
+      "resolved_failures": [
+        "Mask, leaf costume, rain-dance poses, cloud and lightning reaction are missing. Earlier exercise interpretation corrected by direct source-atlas inspection."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence comparison rendered; setup, action and outcome reviewed in dense contact sheets. Final native and continuity acceptance remains pending.",
+        "Dense action review and native complete playback reviewed. Global panoramic seams remain a separate presentation defect."
+      ],
+      "verification": [
+        "Native dressing, mask dance, growing storm cloud, lightning reaction, singed disappointment and discarded costume reviewed.",
+        "Complete 1977-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJNAT1-review.jpg",
+      "native_log": "captures/story-native-sweep/GJNAT1.log",
+      "native_fps_with_capture": 59.92,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJNAT1.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJNAT1.TTM.tsv"
+    },
+    {
+      "scene": "GJNAT3.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1768,
+      "reference_video": "captures/story-weather/GJNAT3.TTM.mp4",
+      "beats": [
+        "Johnny performs his homemade mask dance.",
+        "A passing boat attracts his attention.",
+        "He removes and waves costume pieces to signal the boat.",
+        "Boat leaves and he reacts in disappointment."
+      ],
+      "repairs": [
+        "Masked dance, motorboat approach, remove/wave mask and leaves, departure and disappointment. Further wave frames and passenger contacts still under review."
+      ],
+      "extended_ticks": 1768,
+      "resolved_failures": [
+        "Mask/costume and signaling with costume props are absent; generic arm waving does not explain the action."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence comparison rendered; setup, action and outcome reviewed in dense contact sheets. Final native and continuity acceptance remains pending."
+      ],
+      "verification": [
+        "Native mask dance, passing boat, removal/waving of mask and leaves, and disappointed aftermath reviewed. Vessel stays behind palm.",
+        "Complete 1768-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJNAT3-review.jpg",
+      "native_log": "captures/story-native-sweep/GJNAT3.log",
+      "native_fps_with_capture": 59.76,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJNAT3.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJNAT3.TTM.tsv"
+    },
+    {
+      "scene": "GJVIS3.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 596,
+      "reference_video": "captures/motion-review-all/GJVIS3.TTM.mp4",
+      "beats": [
+        "Johnny scans one side while a clown boat approaches from the other; boat lookout faces away, both miss the rescue opportunity."
+      ],
+      "repairs": [
+        "New integrated clown boat and handheld spyglass sequence; waterline registered behind island."
+      ],
+      "extended_ticks": 596,
+      "resolved_failures": [
+        "Telescope orientation does not track passing vehicles; review dense action samples."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification."
+      ],
+      "verification": [
+        "Native spyglass tracking, passing clown boat, lowering and rubbing eyes reviewed; the telescope remains attached through the action.",
+        "Complete 596-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJVIS3-review.jpg",
+      "native_log": "captures/story-native-sweep/GJVIS3.log",
+      "native_fps_with_capture": 59.2,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJVIS3.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJVIS3.TTM.tsv"
+    },
+    {
+      "scene": "GJVIS5.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 789,
+      "reference_video": "captures/motion-review-all/GJVIS5.TTM.mp4",
+      "beats": [
+        "Wave at distant airplane, shake loose a coconut, throw it to attract attention, strike plane, pilot parachutes."
+      ],
+      "repairs": [
+        "New plane damage and bailout drawings; authored two passes, coconut contact, wreck dive and pilot descent."
+      ],
+      "extended_ticks": 789,
+      "resolved_failures": [
+        "Plane and parachutist too disconnected; generic raised arms erase turns and visitor landing."
+      ],
+      "failures": [],
+      "review_history": [
+        "Original sequence inspected; authored replacement pending final native acceptance."
+      ],
+      "verification": [
+        "Native biplane pass, coconut throw, struck aircraft and descending pilot reviewed; the pilot separates from the aircraft only after impact.",
+        "Complete 789-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJVIS5-review.jpg",
+      "native_log": "captures/story-native-sweep/GJVIS5.log",
+      "native_fps_with_capture": 59.7,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJVIS5.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJVIS5.TTM.tsv"
+    },
+    {
+      "scene": "GJVIS5W.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 135,
+      "reference_video": "captures/motion-review-all/GJVIS5W.TTM.mp4",
+      "beats": [
+        "Same airplane rescue gag, preserving helper duration."
+      ],
+      "repairs": [
+        "Shares timed plane-rescue story with duration scaling."
+      ],
+      "extended_ticks": 982,
+      "resolved_failures": [
+        "Detached canopy and unrelated waving actor; original helper timing not honored in old video."
+      ],
+      "failures": [],
+      "review_history": [
+        "Original sequence inspected; authored replacement pending final native acceptance."
+      ],
+      "verification": [
+        "The longer biplane variant retains the same impact and parachute sequence at its own runtime duration; native playback captured separately.",
+        "Complete 982-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/GJVIS5W-review.jpg",
+      "native_log": "captures/story-native-sweep/GJVIS5W.log",
+      "native_fps_with_capture": 59.52,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/GJVIS5W.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJVIS5W.TTM.tsv"
+    },
+    {
+      "scene": "GJVIS6.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 793,
+      "reference_video": "captures/motion-review-all/GJVIS6.TTM.mp4",
+      "beats": [
+        "Distant ship approaches, Johnny waves, giant bow threatens island, Johnny runs and jumps clear."
+      ],
+      "repairs": [
+        "Single vessel grows toward foreground, with connected actor escape.",
+        "Bound lighting provenance to the visible camera extent instead of inserting thousands of invisible margin pixels.",
+        "Generated a detailed 1712px-wide ship master for the extreme foreground pass."
+      ],
+      "extended_ticks": 793,
+      "resolved_failures": [
+        "Tanker/liner exchange is not coherent; no appropriate near-miss/dodge reaction."
+      ],
+      "failures": [],
+      "review_history": [
+        "Original sequence inspected; authored replacement pending final native acceptance."
+      ],
+      "verification": [
+        "Native perspective approach, frantic signaling, escape and close foreground ship pass communicate the gag. Higher-resolution ship texture retains detail; the moving ship spans the full panorama without a frozen duplicate.",
+        "Complete 793-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-final/GJVIS6-review.jpg",
+      "native_log": "captures/story-native-final/GJVIS6.log",
+      "native_fps_with_capture": 55.39,
+      "native_resolution": "3440x1440",
+      "action_capture_prefix": "captures/hd2d-story-final/GJVIS6.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/GJVIS6.TTM.tsv"
+    },
+    {
+      "scene": "MEANWHIL.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1138,
+      "reference_video": "captures/motion-review-all/MEANWHIL.TTM.mp4",
+      "beats": [
+        "Meanwhile clock, office typing, recline, island daydream, mermaid dinner memory, return to work."
+      ],
+      "repairs": [
+        "New seated office actor and four explicit thought stages; placement follows actual chair and keyboard."
+      ],
+      "extended_ticks": 1138,
+      "native_review_sheet": "captures/story-native-sweep/MEANWHIL-review.jpg",
+      "resolved_failures": [
+        "Generic office poses and small static thought icon lose animated daydream and body action."
+      ],
+      "failures": [],
+      "review_history": [
+        "Original sequence inspected; authored replacement pending final native acceptance.",
+        "Native clock interlude, office typing, reclining/daydreaming and return to work reviewed. Complete chair and actor register with the desk and keyboard; thoughts remain within the frame."
+      ],
+      "verification": [
+        "Native clock interlude, office typing, reclining/daydreaming and return to work reviewed. Complete chair and actor register with the desk and keyboard; thoughts remain within the frame.",
+        "Complete 1138-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/MEANWHIL.log",
+      "native_fps_with_capture": 59.37,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MEANWHIL.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MEANWHIL.TTM.tsv"
+    },
+    {
+      "scene": "MJAMBWLK.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2241,
+      "reference_video": "captures/motion-review-all/MJAMBWLK.TTM.mp4",
+      "beats": [
+        "Idle, scan the horizon, think, return to idle."
+      ],
+      "repairs": [
+        "Source ambient idle preserved instead of unrelated walking."
+      ],
+      "extended_ticks": 2241,
+      "resolved_failures": [],
+      "failures": [],
+      "review_history": [
+        "Original sequence inspected; authored replacement pending final native acceptance."
+      ],
+      "verification": [
+        "Native contextual idle/look gestures reviewed; no unrelated locomotion or duplicate actor layers appear.",
+        "Complete 2241-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/MJAMBWLK-review.jpg",
+      "native_log": "captures/story-native-sweep/MJAMBWLK.log",
+      "native_fps_with_capture": 59.86,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJAMBWLK.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJAMBWLK.TTM.tsv"
+    },
+    {
+      "scene": "MJBATH.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1622,
+      "reference_video": "captures/story-bath-gull/MJBATH.TTM.mp4",
+      "beats": [
+        "Johnny washes hair, gull steals shorts from forked stick and takes them to palm, Johnny protests and stays in sea."
+      ],
+      "repairs": [
+        "Seven waist-up bathing/reaction poses, paired dressed/empty sticks, gull carrying and perching with the same shorts."
+      ],
+      "extended_ticks": 1622,
+      "resolved_failures": [
+        "Bathing hand action, clothes/pole and bird reaction missing; torso too close to lower screen edge."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification.",
+        "Dense setup/action/outcome samples and full native playback reviewed. No duplicate actors or missing transferred props. Global panorama repair remains separate."
+      ],
+      "verification": [
+        "Native bathing, clothes on stick, gull theft and embarrassed reaction reviewed. Clothes disappear from the stick only when carried away by the gull.",
+        "Complete 1622-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/MJBATH-review.jpg",
+      "native_log": "captures/story-native-sweep/MJBATH.log",
+      "native_fps_with_capture": 59.77,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJBATH.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJBATH.TTM.tsv"
+    },
+    {
+      "scene": "MJCOCO.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1719,
+      "reference_video": "captures/story-coconut-fixed/MJCOCO.TTM.mp4",
+      "beats": [
+        "Reach/shake palm for coconut, coconut falls, drink or get hit."
+      ],
+      "repairs": [
+        "Palm hand contacts, falling and bouncing whole coconut, pickup, fixed cracking rock, held coconut, cracks, persistent halves, drinking and standing recovery. No sliding static carrying pose."
+      ],
+      "extended_ticks": 1719,
+      "resolved_failures": [
+        "Coconut and hands do not communicate the full fall/pickup/drink/hit chain."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence and contact sheets rendered. Native acceptance and remaining scene review tracked separately.",
+        "Dense setup/action/outcome samples and full native playback reviewed. No duplicate actors or missing transferred props. Global panorama repair remains separate."
+      ],
+      "verification": [
+        "Native shake, falling/bouncing coconut, pickup, rock cracking, drinking and remaining halves reviewed; hand and rock contacts remain aligned.",
+        "Complete 1719-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/MJCOCO-review.jpg",
+      "native_log": "captures/story-native-sweep/MJCOCO.log",
+      "native_fps_with_capture": 59.75,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJCOCO.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJCOCO.TTM.tsv"
+    },
+    {
+      "scene": "MJCOCO1.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 167,
+      "reference_video": "captures/story-bath-gull/MJCOCO1.TTM.mp4",
+      "beats": [
+        "Shake coconut loose, watch bounces, pick it up, wind up and crack it against palm, kneel to drink and leave shells."
+      ],
+      "repairs": [
+        "New closed-coconut windup/throw poses; continuous coconut path, persistent cracking station and drinking outcome."
+      ],
+      "extended_ticks": 2641,
+      "resolved_failures": [
+        "Generic seated poses replace reaching/picking up; helper timing requires new reference."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification.",
+        "Dense setup/action/outcome samples and full native playback reviewed. No duplicate actors or missing transferred props. Global panorama repair remains separate."
+      ],
+      "verification": [
+        "Native coconut wind-up, release, retrieval, repeated attempts and aftermath reviewed, supplementing the earlier dense action comparison. Object placement and complete poses remain consistent.",
+        "Complete 2641-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/MJCOCO1-review.jpg",
+      "native_log": "captures/story-native-sweep/MJCOCO1.log",
+      "native_fps_with_capture": 59.81,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJCOCO1.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJCOCO1.TTM.tsv"
+    },
+    {
+      "scene": "MJDIVE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 901,
+      "reference_video": "captures/story-catch-read/MJDIVE.TTM.mp4",
+      "beats": [
+        "Climb palm, push off, dive, enter water, return to shore."
+      ],
+      "repairs": [
+        "Single complete climb, launch, head-first entry, submerged transition, tread-water and return sequence. Uses the same registered diving art as the scored dives.",
+        "Climbers remain in front of the palm crown while the trunk wraps their arms and legs; avoids near-total disappearance behind leaves."
+      ],
+      "extended_ticks": 901,
+      "resolved_failures": [
+        "Climb/dive silhouette present; water entry and return must be reviewed at full density before approval."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence and contact sheets rendered. Native acceptance and remaining scene review tracked separately."
+      ],
+      "verification": [
+        "Native palm climb, dive, water entry, shore return and repeat reviewed. Ultrawide recheck confirms that the ascending and waiting actor remains visible in front of the crown.",
+        "Complete 901-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-final/MJDIVE-review.jpg",
+      "native_log": "captures/story-native-final/MJDIVE.log",
+      "native_fps_with_capture": 59.13,
+      "native_resolution": "3440x1440",
+      "action_capture_prefix": "captures/hd2d-story-final/MJDIVE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJDIVE.TTM.tsv"
+    },
+    {
+      "scene": "MJFIRE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2400,
+      "reference_video": "captures/motion-review-all/MJFIRE.TTM.mp4",
+      "beats": [
+        "Arrange tinder and rub sticks.",
+        "Blow on the ember until the fire catches.",
+        "Sit down and roast a fish on a skewer.",
+        "Bite the hot fish, react and breathe flame in a slapstick gag.",
+        "Recover and leave the fire."
+      ],
+      "repairs": [
+        "New authored action timeline, complete generated poses, shared prop contacts and full duration."
+      ],
+      "extended_ticks": 3297,
+      "resolved_failures": [
+        "Browser truncates original story at 2400 ticks; natural completion is 3297 ticks.",
+        "Static kneeling replaces hand motion and blowing.",
+        "Fish layers classified as parrot/smoke.",
+        "Cooking/eating and hot-mouth reaction disappear."
+      ],
+      "failures": [],
+      "review_history": [
+        "Rendered full timeline in captures/story-directed; close-up inspection found fish color/held-object issues, fixes pending second visual review."
+      ],
+      "verification": [
+        "Native full campfire story reviewed: friction ignition, tending, collecting fish, roasting, hot bite, flame breath, recovery and return to shade. Cooking props remain connected to the complete poses.",
+        "Complete 3297-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/MJFIRE-review.jpg",
+      "native_log": "captures/story-native-sweep/MJFIRE.log",
+      "native_fps_with_capture": 59.92,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJFIRE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJFIRE.TTM.tsv"
+    },
+    {
+      "scene": "MJFISH.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1950,
+      "reference_video": "captures/motion-review-all/MJFISH.TTM.mp4",
+      "beats": [
+        "Walk to the shore carrying fishing pole.",
+        "Cast the line with an overhead swing.",
+        "Wait, then pull/tug the rod when line moves.",
+        "Inspect the catch and discard it; repeat before walking away."
+      ],
+      "repairs": [
+        "New authored action timeline, complete generated poses, shared prop contacts and full duration."
+      ],
+      "extended_ticks": 1950,
+      "resolved_failures": [
+        "Seated idle replaces standing casts and pulls.",
+        "No continuous line from rod tip to the water/catch.",
+        "Mixed catch sprites are replaced by unrelated props or a generic tropical fish."
+      ],
+      "failures": [],
+      "review_history": [
+        "Rendered full timeline in captures/story-directed; close-up inspection found fish color/held-object issues, fixes pending second visual review."
+      ],
+      "verification": [
+        "Native two complete cast, wait, reel, inspect and release cycles reviewed, followed by carrying the pole back to shade. Line endpoints follow registered pole tips.",
+        "Complete 1950-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/MJFISH-review.jpg",
+      "native_log": "captures/story-native-sweep/MJFISH.log",
+      "native_fps_with_capture": 59.63,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJFISH.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJFISH.TTM.tsv"
+    },
+    {
+      "scene": "MJFISHC.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1690,
+      "reference_video": "captures/motion-review-all/MJFISHC.TTM.mp4",
+      "beats": [
+        "Walk to the shore carrying fishing pole.",
+        "Cast the line with an overhead swing.",
+        "Wait, then pull/tug the rod when line moves.",
+        "Inspect the catch and discard it; repeat before walking away."
+      ],
+      "repairs": [
+        "New authored action timeline, complete generated poses, shared prop contacts and full duration."
+      ],
+      "extended_ticks": 1690,
+      "resolved_failures": [
+        "Seated idle replaces standing casts and pulls.",
+        "No continuous line from rod tip to the water/catch.",
+        "Mixed catch sprites are replaced by unrelated props or a generic tropical fish."
+      ],
+      "failures": [],
+      "review_history": [
+        "Rendered full timeline in captures/story-directed; close-up inspection found fish color/held-object issues, fixes pending second visual review."
+      ],
+      "verification": [
+        "Native mirrored/retimed fishing variant reviewed separately; both catches and the return retain the pole and consistent facing.",
+        "Complete 1690-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/MJFISHC-review.jpg",
+      "native_log": "captures/story-native-sweep/MJFISHC.log",
+      "native_fps_with_capture": 59.79,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJFISHC.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJFISHC.TTM.tsv"
+    },
+    {
+      "scene": "MJJOG.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2170,
+      "reference_video": "captures/story-catch-jog-final/MJJOG.TTM.mp4",
+      "beats": [
+        "Warm up, run across island, stop and recover."
+      ],
+      "repairs": [
+        "Complete stretching, toe-touch, three grounded laps, tired recovery and departure. New shorts costume retained; old white exercise outfit not reproduced."
+      ],
+      "extended_ticks": 2170,
+      "resolved_failures": [
+        "Run exists; original warm-up and recovery need complete-pose actions and foot-contact review."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence and contact sheets rendered. Native acceptance and remaining scene review tracked separately."
+      ],
+      "verification": [
+        "Native stretching, three laps around the sand, tired recovery and walking back to shade reviewed. Distance-driven gait and back-palm occlusion remain stable.",
+        "Complete 2170-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-sweep/MJJOG-review.jpg",
+      "native_log": "captures/story-native-sweep/MJJOG.log",
+      "native_fps_with_capture": 59.97,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJJOG.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJJOG.TTM.tsv"
+    },
+    {
+      "scene": "MJRAFT.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 432,
+      "reference_video": "captures/motion-final-corrections/MJRAFT.TTM.mp4",
+      "beats": [
+        "Kneel to assemble logs.",
+        "Manipulate the rope/logs in a tangled building gag.",
+        "Rise and inspect the work."
+      ],
+      "repairs": [
+        "New authored action timeline, complete generated poses, shared prop contacts and full duration."
+      ],
+      "extended_ticks": 432,
+      "resolved_failures": [
+        "Generic completed raft and repeated hammering lose rope/tangle action and build progress."
+      ],
+      "failures": [],
+      "review_history": [
+        "Rendered full timeline in captures/story-directed; close-up inspection found fish color/held-object issues, fixes pending second visual review."
+      ],
+      "verification": [
+        "Native assembly, rope handling, tangled-work reaction and inspection reviewed. Complete poses include the work in progress and the final logs remain on the sand.",
+        "Complete 432-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-final/MJRAFT-review.jpg",
+      "native_log": "captures/story-native-final/MJRAFT.log",
+      "native_fps_with_capture": 58.0,
+      "native_resolution": "3440x1440",
+      "action_capture_prefix": "captures/hd2d-story-final/MJRAFT.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJRAFT.TTM.tsv"
+    },
+    {
+      "scene": "MJREAD.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1675,
+      "reference_video": "captures/story-catch-read/MJREAD.TTM.mp4",
+      "beats": [
+        "Read by palm while gull visits, react to bird nuisance."
+      ],
+      "repairs": [
+        "New complete book-theft poses. Gull flies to the held book, carries the book back to the crown; empty hands and persistent empty log connect the startled stand and scolding reaction."
+      ],
+      "extended_ticks": 1675,
+      "resolved_failures": [
+        "Reading exists; bird interaction and reaction lost to generic standing pose."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence and contact sheets rendered. Native acceptance and remaining scene review tracked separately."
+      ],
+      "verification": [
+        "Native reading, gull approach and book theft, startled stand and scolding reviewed. The empty seat persists; Johnny loses the book only when the gull takes it.",
+        "Complete 1675-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-final/MJREAD-review.jpg",
+      "native_log": "captures/story-native-final/MJREAD.log",
+      "native_fps_with_capture": 59.24,
+      "native_resolution": "3440x1440",
+      "action_capture_prefix": "captures/hd2d-story-final/MJREAD.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJREAD.TTM.tsv"
+    },
+    {
+      "scene": "MJSAND.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2334,
+      "reference_video": "captures/motion-final-corrections/MJSAND.TTM.mp4",
+      "beats": [
+        "Build sandcastle, miniature ship fires, flee up palm, swat circling planes, fall into sea."
+      ],
+      "repairs": [
+        "New castle construction and Kong poses, completed castle persists, authored cannon and aircraft trajectories."
+      ],
+      "extended_ticks": 2334,
+      "native_review_sheet": "captures/story-native-sweep/MJSAND-review.jpg",
+      "resolved_failures": [
+        "Incorrect giant ship scale, static castle, missing aircraft-swat and stagger/fall poses."
+      ],
+      "failures": [],
+      "review_history": [
+        "Original sequence inspected; authored replacement pending final native acceptance.",
+        "Native castle building, miniature ship and cannon attack, palm climb, circling planes, swatting and fall reviewed. Castle persists; palm pose remains on-screen."
+      ],
+      "verification": [
+        "Native castle building, miniature ship and cannon attack, palm climb, circling planes, swatting and fall reviewed. Castle persists; palm pose remains on-screen.",
+        "Complete 2334-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/MJSAND.log",
+      "native_fps_with_capture": 59.64,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/MJSAND.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJSAND.TTM.tsv"
+    },
+    {
+      "scene": "MJTELE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 430,
+      "reference_video": "captures/motion-review-all/MJTELE.TTM.mp4",
+      "beats": [
+        "Raise spyglass, scan left at three elevations, turn, scan right, lower it."
+      ],
+      "repairs": [
+        "Measured foot anchors and eight complete telescope poses."
+      ],
+      "extended_ticks": 430,
+      "resolved_failures": [
+        "A single fixed telescope pose replaces scope/body movement."
+      ],
+      "failures": [],
+      "review_history": [
+        "Source full sequence and original atlas reviewed. Authored replacement awaiting final dense/native verification."
+      ],
+      "verification": [
+        "Native spyglass lift, three leftward elevations, turn, rightward scan and lowering reviewed. The scope remains attached through complete poses and the feet stay registered.",
+        "Complete 430-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-final/MJTELE-review.jpg",
+      "native_log": "captures/story-native-final/MJTELE.log",
+      "native_fps_with_capture": 57.78,
+      "native_resolution": "3440x1440",
+      "action_capture_prefix": "captures/hd2d-story-final/MJTELE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/MJTELE.TTM.tsv"
+    },
+    {
+      "scene": "SASKDATE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2400,
+      "reference_video": "captures/motion-review-all/SASKDATE.TTM.mp4",
+      "beats": [],
+      "repairs": [
+        "New invitation, lei-transfer, hat removal/throw and mermaid response drawings; linked greeting, thought and farewell beats."
+      ],
+      "extended_ticks": 2670,
+      "native_review_sheet": "captures/story-native-sweep/SASKDATE-review.jpg",
+      "resolved_failures": [
+        "Browser truncates original story at 2400 ticks; natural completion is 2670 ticks.",
+        "Mermaid and Johnny do not visibly exchange an invitation or reaction; request and reply missing."
+      ],
+      "failures": [],
+      "review_history": [
+        "Native hat, mermaid approach, lei transfer, dinner invitation, acceptance and farewell reviewed. Hat follows a visible throw and drifts away."
+      ],
+      "verification": [
+        "Native hat, mermaid approach, lei transfer, dinner invitation, acceptance and farewell reviewed. Hat follows a visible throw and drifts away.",
+        "Complete 2670-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SASKDATE.log",
+      "native_fps_with_capture": 59.75,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SASKDATE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SASKDATE.TTM.tsv"
+    },
+    {
+      "scene": "SBREAKUP.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1691,
+      "reference_video": "captures/motion-review-all/SBREAKUP.TTM.mp4",
+      "beats": [],
+      "repairs": [
+        "New conversation poses and city thought; raft persists, mermaid travels around shore and faces Johnny during rejection."
+      ],
+      "extended_ticks": 1691,
+      "native_review_sheet": "captures/story-native-sweep/SBREAKUP-review.jpg",
+      "resolved_failures": [
+        "Confrontation and sad departure lost; actor placement drifts to water or frame edge."
+      ],
+      "failures": [],
+      "review_history": [
+        "Native raft work, mermaid arrival around shore, city explanation, rejection and departure reviewed. Both characters face one another and stay within the 16:9 composition."
+      ],
+      "verification": [
+        "Native raft work, mermaid arrival around shore, city explanation, rejection and departure reviewed. Both characters face one another and stay within the 16:9 composition.",
+        "Complete 1691-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SBREAKUP.log",
+      "native_fps_with_capture": 59.71,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SBREAKUP.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SBREAKUP.TTM.tsv"
+    },
+    {
+      "scene": "SHARK1.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1155,
+      "reference_video": "captures/story-diving-fixed/SHARK1.TTM.mp4",
+      "beats": [
+        "Sit at shore, shark approaches and snaps, Johnny retreats."
+      ],
+      "repairs": [
+        "One approaching/snap/diving shark; complete reading, recoil, fall, scold, toe-check and recovery poses; separate book retained where needed."
+      ],
+      "extended_ticks": 1155,
+      "resolved_failures": [
+        "Sharks duplicated; standing scared pose replaces sit/bite/retreat contact."
+      ],
+      "failures": [],
+      "review_history": [
+        "Full sequence comparison rendered; setup, action and outcome reviewed in dense contact sheets. Final native and continuity acceptance remains pending."
+      ],
+      "verification": [
+        "Native shore reading, single shark approach, snap, recoil/fall, toe check and recovery reviewed. No duplicate shark or actor is visible; the reading prop follows the reaction.",
+        "Complete 1155-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-final/SHARK1-review.jpg",
+      "native_log": "captures/story-native-final/SHARK1.log",
+      "native_fps_with_capture": 58.83,
+      "native_resolution": "3440x1440",
+      "action_capture_prefix": "captures/hd2d-story-final/SHARK1.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SHARK1.TTM.tsv"
+    },
+    {
+      "scene": "SJGLIMPS.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2052,
+      "reference_video": "captures/motion-review-all/SJGLIMPS.TTM.mp4",
+      "beats": [],
+      "repairs": [
+        "Complete casting/retrieval and registered pole-carry poses; look-back gesture, thought and opposite-shore cast."
+      ],
+      "extended_ticks": 2052,
+      "native_review_sheet": "captures/story-native-sweep/SJGLIMPS-review.jpg",
+      "resolved_failures": [
+        "Mermaid passes without readable glance/reaction; hero remains fishing generically."
+      ],
+      "failures": [],
+      "review_history": [
+        "Native right cast, retrieval, mermaid glimpse, look back, pole-carry walk and left cast reviewed. Pole and line remain attached to the hero action."
+      ],
+      "verification": [
+        "Native right cast, retrieval, mermaid glimpse, look back, pole-carry walk and left cast reviewed. Pole and line remain attached to the hero action.",
+        "Complete 2052-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SJGLIMPS.log",
+      "native_fps_with_capture": 59.6,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SJGLIMPS.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SJGLIMPS.TTM.tsv"
+    },
+    {
+      "scene": "SJLEAVES.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1338,
+      "reference_video": "captures/motion-review-all/SJLEAVES.TTM.mp4",
+      "beats": [
+        "Pack and load the raft.",
+        "Say farewell to the mermaid and shark.",
+        "Push the raft off the sand, board and paddle away."
+      ],
+      "repairs": [
+        "New empty/loaded raft, bundle, loading, pushing, boarding and paddling artwork; waterborne mermaid/shark farewell."
+      ],
+      "extended_ticks": 1338,
+      "native_review_sheet": "captures/story-native-sweep/SJLEAVES-review.jpg",
+      "resolved_failures": [
+        "Boarding and raft departure absent; raft remains a building prop and shark interaction disappears."
+      ],
+      "failures": [],
+      "review_history": [
+        "Native empty raft, packing, loading, farewell, boarding and departure reviewed. Bundle appears once and travels with raft; mermaid and shark stay in water."
+      ],
+      "verification": [
+        "Native empty raft, packing, loading, farewell, boarding and departure reviewed. Bundle appears once and travels with raft; mermaid and shark stay in water.",
+        "Complete 1338-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SJLEAVES.log",
+      "native_fps_with_capture": 59.26,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SJLEAVES.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SJLEAVES.TTM.tsv"
+    },
+    {
+      "scene": "SJMSSGE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1604,
+      "reference_video": "captures/motion-review-all/SJMSSGE.TTM.mp4",
+      "beats": [],
+      "repairs": [
+        "Twelve bottle/letter interaction poses and four thought images; visible paper extraction, recognition, reinsertion and throw."
+      ],
+      "extended_ticks": 1604,
+      "native_review_sheet": "captures/story-native-sweep/SJMSSGE-review.jpg",
+      "resolved_failures": [
+        "Message retrieval and reading replaced with unrelated kneeling poses."
+      ],
+      "failures": [],
+      "review_history": [
+        "Native bottle pickup, uncorking, letter extraction, reading, recognition, reinsertion and throw reviewed. Illustrated thoughts communicate the returned SOS joke."
+      ],
+      "verification": [
+        "Native bottle pickup, uncorking, letter extraction, reading, recognition, reinsertion and throw reviewed. Illustrated thoughts communicate the returned SOS joke.",
+        "Complete 1604-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SJMSSGE.log",
+      "native_fps_with_capture": 59.7,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SJMSSGE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SJMSSGE.TTM.tsv"
+    },
+    {
+      "scene": "SJMSUZY.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1228,
+      "reference_video": "captures/motion-review-all/SJMSUZY.TTM.mp4",
+      "beats": [
+        "Johnny paddles to Suzy's beach.",
+        "Suzy runs to greet him and lifts him in an enthusiastic hug.",
+        "They lose their balance and she helps him up."
+      ],
+      "repairs": [
+        "New reading/running/reunion poses; raft lands, Suzy runs, lifts Johnny, loses balance and helps him up."
+      ],
+      "extended_ticks": 1228,
+      "native_review_sheet": "captures/story-native-sweep/SJMSUZY-review.jpg",
+      "resolved_failures": [
+        "Raft arrival and disembarking onto Suzy beach do not connect."
+      ],
+      "failures": [],
+      "review_history": [
+        "Native raft landing, run to meet, hug, lift, tumble and helping Johnny up reviewed. Raft and beach towel persist after the actors leave them."
+      ],
+      "verification": [
+        "Native raft landing, run to meet, hug, lift, tumble and helping Johnny up reviewed. Raft and beach towel persist after the actors leave them.",
+        "Complete 1228-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SJMSUZY.log",
+      "native_fps_with_capture": 59.38,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SJMSUZY.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SJMSUZY.TTM.tsv"
+    },
+    {
+      "scene": "SJWORK.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1138,
+      "reference_video": "captures/motion-review-all/SJWORK.TTM.mp4",
+      "beats": [
+        "Same office work and daydream sequence."
+      ],
+      "repairs": [
+        "Shares authored office director with new seated actor."
+      ],
+      "extended_ticks": 1138,
+      "native_review_sheet": "captures/story-native-sweep/SJWORK-review.jpg",
+      "resolved_failures": [
+        "Same office action/daydream gap as MEANWHIL."
+      ],
+      "failures": [],
+      "review_history": [
+        "Original sequence inspected; authored replacement pending final native acceptance.",
+        "Office alias uses the same clock, registered seated actor, thought sequence and recovery as MEANWHIL; native alias playback captured separately."
+      ],
+      "verification": [
+        "Native office alias reviewed separately: clock interlude, typing, recline, island and date thoughts, then return to desk. Actor and chair register with keyboard and desk.",
+        "Complete 1138-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SJWORK.log",
+      "native_fps_with_capture": 59.32,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SJWORK.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SJWORK.TTM.tsv"
+    },
+    {
+      "scene": "SMDATE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 2030,
+      "reference_video": "captures/motion-review-all/SMDATE.TTM.mp4",
+      "beats": [
+        "Johnny freshens up and returns in a tuxedo.",
+        "He sets a dinner table, chairs and gramophone and welcomes the mermaid.",
+        "They dine and dance; an overambitious lift launches her back into the sea.",
+        "Johnny follows to the shore and reacts as she swims away."
+      ],
+      "repairs": [
+        "New tuxedo/table/gramophone/dinner/dance/mishap artwork; connected mermaid arrival, meal, accidental launch and reaction."
+      ],
+      "extended_ticks": 2030,
+      "native_review_sheet": "captures/story-native-sweep/SMDATE-review.jpg",
+      "resolved_failures": [
+        "Date costume, paired actors and dinner contacts do not form a coherent sequence."
+      ],
+      "failures": [],
+      "review_history": [
+        "Native dinner setup, invitation, toast, dance lift, accidental launch into sea and reaction reviewed. Approach and return paths are connected; table and gramophone persist."
+      ],
+      "verification": [
+        "Native dinner setup, invitation, toast, dance lift, accidental launch into sea and reaction reviewed. Approach and return paths are connected; table and gramophone persist.",
+        "Complete 2030-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SMDATE.log",
+      "native_fps_with_capture": 59.21,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SMDATE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SMDATE.TTM.tsv"
+    },
+    {
+      "scene": "SUZYCITY.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1569,
+      "reference_video": "captures/motion-final-contact/SUZYCITY.TTM.mp4",
+      "beats": [
+        "Suzy reads on a city beach.",
+        "She finds a drifting bottle, picks it up and reads the letter.",
+        "She imagines Johnny on his island and meeting him."
+      ],
+      "repairs": [
+        "New reading, stand, pickup, complete letter-reading and thought drawings; bottle drift and persistent towel."
+      ],
+      "extended_ticks": 1569,
+      "native_review_sheet": "captures/story-native-sweep/SUZYCITY-review.jpg",
+      "resolved_failures": [
+        "Thought bubble contains generic island rather than the actual Johnny fantasy; detailed sitting/standing review pending."
+      ],
+      "failures": [],
+      "review_history": [
+        "Initial six-sample comparison reviewed; this is triage, not final acceptance.",
+        "Native reading, bottle arrival, pickup and thought sequence reviewed. Towel remains after Suzy stands; bubble tails point toward her."
+      ],
+      "verification": [
+        "Native reading, bottle arrival, pickup and thought sequence reviewed. Towel remains after Suzy stands; bubble tails point toward her.",
+        "Complete 1569-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/SUZYCITY.log",
+      "native_fps_with_capture": 59.4,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/SUZYCITY.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/SUZYCITY.TTM.tsv"
+    },
+    {
+      "scene": "THEEND.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 954,
+      "reference_video": "captures/motion-final-targets/THEEND.TTM.mp4",
+      "beats": [
+        "Plane passes, parachute opens, Johnny lands, ending title appears."
+      ],
+      "repairs": [
+        "Ending actor perspective now grows toward the foreground to match the final painted figure; backdrop projection cached. Final recheck pending."
+      ],
+      "extended_ticks": 954,
+      "resolved_failures": [
+        "Native review found a mismatch between the small animated actor and final painted silhouette; perspective scaling is repaired and awaits recheck.",
+        "Backdrop projection made this scene average 56.7 FPS; caching added for recheck."
+      ],
+      "failures": [],
+      "review_history": [
+        "Initial six-sample comparison reviewed; this is triage, not final acceptance."
+      ],
+      "verification": [
+        "Native biplane, jump, canopy opening, perspective approach, landing, waving, walk to palm and final title dissolve reviewed. Actor scale now connects to the painted final silhouette.",
+        "Complete 954-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_review_sheet": "captures/story-native-final/THEEND-review.jpg",
+      "native_log": "captures/story-native-final/THEEND.log",
+      "native_fps_with_capture": 57.55,
+      "native_resolution": "3440x1440",
+      "action_capture_prefix": "captures/hd2d-story-final/THEEND.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/THEEND.TTM.tsv"
+    },
+    {
+      "scene": "WOULDBE.TTM",
+      "status": "story-reviewed",
+      "native_ticks": 1568,
+      "reference_video": "captures/motion-final-corrections/WOULDBE.TTM.mp4",
+      "beats": [
+        "Johnny signals a yacht towing a waterskier.",
+        "The boat stops and Johnny swims aboard.",
+        "After a short trip the party boat returns him tipsy; he staggers and collapses on the island."
+      ],
+      "repairs": [
+        "New passenger yacht variants, waterskier, swimmer and tipsy-return poses; boarding, departure, return and collapse."
+      ],
+      "extended_ticks": 1568,
+      "native_review_sheet": "captures/story-native-sweep/WOULDBE-review.jpg",
+      "resolved_failures": [
+        "Jump/swim/boarding continuity needs dense verification; boat passengers and hero not visibly interacting."
+      ],
+      "failures": [],
+      "review_history": [
+        "Initial six-sample comparison reviewed; this is triage, not final acceptance.",
+        "Native yacht approach, dive, swim, onboard party, return, disembarkation and tipsy collapse reviewed. Only one yacht and one Johnny are present through boarding transitions."
+      ],
+      "verification": [
+        "Native yacht approach, dive, swim, onboard party, return, disembarkation and tipsy collapse reviewed. Only one yacht and one Johnny are present through boarding transitions.",
+        "Complete 1568-tick renderer trace and action checkpoints completed; native process exited 0 with remastered audio device ready."
+      ],
+      "native_log": "captures/story-native-sweep/WOULDBE.log",
+      "native_fps_with_capture": 59.47,
+      "native_resolution": "1920x1080",
+      "action_capture_prefix": "captures/hd2d-story-final/WOULDBE.TTM-",
+      "continuous_trace": "captures/story-final-telemetry/WOULDBE.TTM.tsv"
+    }
+  ],
+  "current_validation": {
+    "release_tests": {
+      "passed": 84,
+      "failed": 0
+    },
+    "catalog": {
+      "clips": 253,
+      "frames": 614,
+      "sprite_masters": 54
+    },
+    "note": "Tests are regression evidence, not scenario acceptance.",
+    "continuous_ticks": 65883,
+    "action_checkpoints": 860,
+    "background_aspect_compositions": 40,
+    "live_controls_ok": true,
+    "final_report": "evidence/hd2d-story-final.json"
+  },
+  "presentation_repairs": [
+    "Continuous day, night and underwater panorama masters installed and reviewed in all four explicit aspect modes. Core/stage pixels match byte-for-byte across 30 variants.",
+    "Native ultrawide rechecks confirm the palm climber remains visible and the ending lands at the final illustration scale.",
+    "Larger close-up ship master, parallel translucent drawing, cached framing, parallel ending dissolves and corrected late-frame pacing.",
+    "Final capture-free 3440x1440 benchmarks with effects: THEEND 59.48 FPS; GJVIS6 58.84 FPS."
+  ],
+  "resolved_presentation_failures": [
+    "Native 43:18 playback reveals hard vertical seams in supplied panoramic art at both core-stage edges; preserve gameplay core while repairing outer joins."
+  ],
+  "presentation_failures": [],
+  "historical_native_checks": [
+    {
+      "scene": "MJFIRE.TTM",
+      "capture": "captures/story-native-fire-live.png",
+      "observed": "Fire and seated hot-food reaction registered correctly on sand. Widescreen background seams remain.",
+      "tests": "78 release tests passed before native run"
+    }
+  ],
+  "native_checks": {
+    "scene_count": 41,
+    "final_report": "evidence/hd2d-story-final.json"
+  }
+}

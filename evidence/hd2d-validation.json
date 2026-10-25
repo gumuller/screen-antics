@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "checked": {
+    "backgrounds": 10,
+    "widescreen": 30,
+    "sprite_tilemaps": 116,
+    "audio": 23
+  },
+  "warnings": [],
+  "errors": []
+}

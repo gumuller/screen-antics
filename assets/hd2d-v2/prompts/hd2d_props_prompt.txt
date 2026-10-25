@@ -1,0 +1,14 @@
+Production transparent RGBA prop atlas, 1536x1024, exactly6 columns x4 rows.
+References: supplied HD-2D props master and island concept. Warm detailed selective
+pixel outlines, textured materials, consistent upper-left lighting. Isolated
+complete objects, generous gutters. No text, grid, labels, scenery, characters,
+water, ground shadows or opaque backdrop. Real alpha.
+Row1: whole coconut, cracked coconut, corked green message bottle, open brown
+hardcover book, striped tropical fish, little silver fish.
+Row2: wooden fishing rod/curved line/hook, wooden shovel, bucket of sand, small
+sandcastle, purple tropical flower bunch, wrapped red gift.
+Row3: palm-frond log raft, wooden rowboat, life ring, driftwood planks, rolled
+parchment letter, brass telescope on low tripod.
+Row4: six distinct consecutive flame poses in the SAME gray stone campfire ring,
+low -> tall -> low, identical ring and perspective, no smoke baked in.
+Mechanical source atlas. Built-in image_gen with transparent_background=true.

@@ -1,0 +1,3 @@
+# Derived runtime cache; PlayGemini.sh regenerates it from PNGs.
+**/*.rgba
+**/*.tmp

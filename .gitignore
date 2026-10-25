@@ -1,6 +1,7 @@
 /target/
 /original/
 /captures/
+/exports/
 
 # Reproducible exports of the supplied game's original artwork and scripts.
 /evidence/sprite-review/original/

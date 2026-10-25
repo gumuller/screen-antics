@@ -1,0 +1,19 @@
+Screen Antics: Johnny Castaway - Modern HD-2D Neo-Retro Remaster Return Notes
+=============================================================================
+
+Overview
+--------
+The user has approved and locked in Style 4: Modern HD-2D Neo-Retro Edition
+(inspired by Sea of Stars and Octopath Traveler).
+
+Visual Target Reference:
+- Concept Art: /home/gmuller/.gemini/antigravity/brain/8aee4f8c-cdb9-4096-aef7-ec5d4fc3c922/modern_ai_style4_hd2d.jpg
+- Showcase Board: /home/gmuller/.gemini/antigravity/brain/8aee4f8c-cdb9-4096-aef7-ec5d4fc3c922/modern_ai_concepts_showcase.jpg
+- Technical & Shader Spec: /home/gmuller/.gemini/antigravity/scratch/screen-antics-remaster/HD2D_REMASTER_SPEC.md
+
+Asset Return Pack Status:
+- 10 Core 4x .SCR Backgrounds (edited/backgrounds/*.SCR.png)
+- 30 Widescreen Variants (edited/widescreen/{16_9,21_9,43_18}/*.SCR.png)
+- 116 Sprite Atlases / 2,391 Frames (edited/sprite_tilemaps/*.png)
+- 23 Audio SFX WAVs (edited/audio/*.wav)
+- All 179 files pass validate_remaster_edits.py with {"ok": true, "warnings": [], "errors": []}

@@ -1,0 +1,24 @@
+{
+  "source_atlases_verified": 116,
+  "runtime_frames_byte_exact_to_imported_png": 2391,
+  "frames_with_partial_alpha": 2249,
+  "runtime_frames_byte_exact_to_source_atlas_crops": 2391,
+  "release_tests_passed": 37,
+  "scene_timelines_completed": 41,
+  "scene_ticks_compared_against_original_indexed_output": 55014,
+  "review_captures": 328,
+  "native_fps": {
+    "1920x1080": {
+      "frames": 479,
+      "seconds": 8.002,
+      "fps": 59.86
+    },
+    "3440x1440": {
+      "frames": 477,
+      "seconds": 8.005,
+      "fps": 59.58
+    }
+  },
+  "full_backgrounds_supplied": 0,
+  "background_fallback": "existing enhanced originals"
+}

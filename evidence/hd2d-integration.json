@@ -1,0 +1,98 @@
+{
+  "status": "superseded-flat-import",
+  "third_style": "Modern HD-2D Neo-Retro",
+  "pack": "assets/hd2d",
+  "validator": {
+    "ok": true,
+    "checked": {
+      "backgrounds": 10,
+      "widescreen": 30,
+      "sprite_tilemaps": 116,
+      "audio": 23
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "lossless_import": {
+    "ok": true,
+    "sprite_frames_exact_manifest_crops": 2391,
+    "backgrounds": 10,
+    "widescreen": 30,
+    "audio": 23
+  },
+  "preserved_assets": {
+    "original": {
+      "files": 6,
+      "sha256": "35f650f984eeca9bfe3343c0adad08dac3ee297f2cbd48e23e31eab2c00eb960"
+    },
+    "assets/gemini-remaster": {
+      "files": 2461,
+      "sha256": "d511bbf6198689fe487b2c92160df2066e695225a9f3fdca109ff698acd78294"
+    }
+  },
+  "preserved_output": {
+    "original_matches_pre_hd2d_capture": true,
+    "remaster_matches_pre_hd2d_capture": true,
+    "scene": "GJGULIVR.TTM",
+    "frame": 2040
+  },
+  "sprite_source_note": {
+    "changed_atlases": [
+      "DRUNKJON.BMP",
+      "FIRE1.BMP",
+      "FISHMAN.BMP",
+      "GJGULL1.BMP",
+      "JOHNWALK.BMP",
+      "MJREAD.BMP",
+      "SHARK.BMP",
+      "SRAFT.BMP",
+      "SSUZY1.BMP"
+    ],
+    "unchanged_atlases": 107,
+    "note": "The source handoff reuses these 107 atlas PNGs byte-for-byte. No new artwork was generated during integration."
+  },
+  "release_tests": {
+    "passed": 61,
+    "failed": 0,
+    "log": "captures/hd2d-tests.log"
+  },
+  "scene_browser": {
+    "scenes": 41,
+    "ticks": 55014,
+    "effects_enabled_captures": 328,
+    "registered_panorama_checks": 30,
+    "exact_audio_pcm_checks": 23,
+    "inventory": "evidence/hd2d-scene-review.tsv"
+  },
+  "native_performance": {
+    "resolution": [
+      3440,
+      1440
+    ],
+    "scene": "MJJOG.TTM",
+    "effects": true,
+    "frames": 717,
+    "seconds": 12.011,
+    "fps": 59.7,
+    "script_ticks": 720,
+    "log": "captures/hd2d-fps-optimized.log"
+  },
+  "native_controls": {
+    "style_1_2_3_verified_from_window_titles": true,
+    "effects_L_on_off_verified_from_window_titles": true,
+    "event_log": "captures/hd2d-live-controls.json"
+  },
+  "implementation": {
+    "backend": "Existing CPU compositor + SDL2 presentation",
+    "lighting": "Visible FIRE1 flame centroids, quadratic attenuation and gradient-noise flicker",
+    "water": "Two scrolling procedural normal tiles; provenance/material masks",
+    "particles": "24 deterministic embers per active fire, smoke",
+    "post": "Gaussian emissive bloom, cached linear-light gain/glow LUTs, ACES filmic tonemapping",
+    "details": "docs/HD2D.md"
+  },
+  "limitations": [
+    "The supplied art includes reused sprites and painted contact-surface/prop mismatches; runtime coordinates are preserved.",
+    "There is no new GPU shader backend or 3D geometry/depth reconstruction."
+  ],
+  "superseded_by": "evidence/hd2d-rebuild.json"
+}

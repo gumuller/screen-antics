@@ -14,7 +14,10 @@ pub fn next_present(deadline: Instant, now: Instant) -> Instant {
     if next > now {
         next
     } else {
-        now + PRESENT_INTERVAL
+        // An expensive frame has already consumed its interval. Present the
+        // next one as soon as it is ready; another full sleep would turn a
+        // 17 ms render into a 34 ms frame. Rebase without replaying a backlog.
+        now
     }
 }
 #[cfg(test)]
@@ -33,8 +36,21 @@ mod tests {
             next_present(start, start + Duration::from_millis(4)),
             start + PRESENT_INTERVAL
         );
-        assert!(
-            next_present(start, start + Duration::from_secs(2)) > start + Duration::from_secs(2)
+        assert_eq!(
+            next_present(start, start + Duration::from_secs(2)),
+            start + Duration::from_secs(2)
         );
+    }
+    #[test]
+    fn expensive_frames_do_not_pay_a_second_frame_interval() {
+        let start = Instant::now();
+        let mut deadline = start;
+        let mut clock = start;
+        for _ in 0..50 {
+            clock = clock.max(deadline) + Duration::from_millis(20);
+            deadline = next_present(deadline, clock);
+        }
+        assert_eq!(clock.duration_since(start), Duration::from_secs(1));
+        assert_eq!(deadline, clock);
     }
 }
